@@ -1,77 +1,111 @@
 #!/usr/bin/env python3
-"""Builds the Glow & Gilded static site. Run: python3 build.py"""
-import os, re, datetime, html
-BASE = os.environ.get("SITE_URL", "https://digitalprofitreview.com").rstrip("/")
-PIN = "https://www.pinterest.com/glowgilded/"
-NAME = "Glow & Gilded"
+"""Digital Profit Review static site. Run: python3 build.py
+To add a category: add an entry to CATEGORIES and a content/<key>.py with POSTS."""
+import os, re, html, importlib, datetime, shutil
+BASE = "https://digitalprofitreview.com"
 TAG = "hearthhaven0b-20"
-DISC = "As an Amazon Associate we earn from qualifying purchases. Some links on this site are affiliate links, which means we may earn a commission at no extra cost to you."
-FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">'
-def amz(asin): return f"https://www.amazon.com/dp/{asin}?tag={TAG}"
-def page(title, desc, body, path, image="assets/og.jpg", depth=0, kind="website"):
-    r = "../" * depth
-    url = f"{BASE}/{path}".replace("index.html", "")
-    t = html.escape(f"{title} | {NAME}")
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{t}</title><meta name="description" content="{html.escape(desc)}">
-<link rel="canonical" href="{url}"><link rel="icon" href="{r}assets/favicon.png">
-<meta property="og:type" content="{kind}"><meta property="og:site_name" content="{NAME}">
-<meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}">
-<meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/{image}">
-<meta name="twitter:card" content="summary_large_image">{FONTS}
-<link rel="stylesheet" href="{r}assets/style.css">
-<script async defer data-pin-hover="true" data-pin-tall="true" src="https://assets.pinterest.com/js/pinit.js"></script>
-</head><body><div class="topbar">Considered luxury beauty · Gift guides · Rituals worth keeping</div>
-<header class="site"><a class="brand" href="{r}index.html"><img src="{r}assets/logo.jpg" alt="{NAME} logo" width="48" height="48"><span>GLOW &amp; GILDED</span></a>
-<nav><a href="{r}index.html">Journal</a><a href="{r}about.html">About</a><a href="{PIN}" target="_blank" rel="noopener">Pinterest</a></nav></header>
+SITE = "Digital Profit Review"
+DISC = "As an Amazon Associate we earn from qualifying purchases."
+REL = 'rel="sponsored nofollow noopener"'
+
+CATEGORIES = [
+  dict(key="home", name="Home & Decor", blurb="Cozy, practical picks for every room, plus gift guides for people who love being home."),
+  dict(key="beauty", name="Beauty", blurb="Luxury skincare, routines and at-home spa rituals, with only highly rated products."),
+]
+# Amazon products for the Home & Decor posts (key -> ASIN)
+HOME_ASINS = dict(sherpa="B0158EQJSY", yankee="B0F3DPXQP1", lights="B00JR5N0JM", flameless="B0BNBFRFCM",
+  diffuser="B00V9JP8EE", reed="B0B24QJ217", lazy="B0BR1RYYFQ", board="B07P5JSMXG")
+amz = lambda asin: f"https://www.amazon.com/dp/{asin}?tag={TAG}"
+def aff(key, text): return f'<a href="{amz(HOME_ASINS[key])}" target="_blank" {REL}>{text}</a>'
+def btn(key, text="Check price on Amazon"):
+    return f'<p class="cta"><a class="btn" href="{amz(HOME_ASINS[key])}" target="_blank" {REL}>{text}</a></p>'
+
+def load():
+    posts = []
+    for c in CATEGORIES:
+        for p in importlib.import_module("content." + c["key"]).POSTS:
+            p = dict(p); b = p["body"]
+            b = b(aff, btn) if callable(b) else b
+            b = re.sub(r"\{\{AMZ:([A-Z0-9]+)\}\}", lambda m: amz(m.group(1)), b)
+            b = re.sub(r'rel="sponsored[^"]*"', REL, b)
+            p.update(body=b, cat=c, url=f"/{c['key']}/{p['slug']}/")
+            posts.append(p)
+    return posts
+
+LOGO = '<a class="wordmark" href="/" aria-label="Digital Profit Review home"><span class="mono">DPR</span><span class="wm">Digital Profit <em>Review</em></span></a>'
+def nav():
+    return "".join(f'<a href="/{c["key"]}/">{c["name"]}</a>' for c in CATEGORIES) + '<a href="/about/">About</a>'
+
+def page(title, desc, body, path, image=None, kind="website"):
+    url = BASE + path
+    og = BASE + "/" + (image or "assets/og.png")
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{html.escape(title)}</title><meta name="description" content="{html.escape(desc)}"><link rel="canonical" href="{url}">
+<meta property="og:type" content="{kind}"><meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{og}"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css"></head><body>
+<div class="discbar">{DISC} <a href="/affiliate-disclosure/">Learn more</a></div>
+<header class="site"><div class="wrap">{LOGO}<nav>{nav()}</nav></div></header>
 <main>{body}</main>
-<footer><p class="fbrand">GLOW &amp; GILDED</p><p class="disc">{DISC}</p>
-<p><a href="{PIN}" target="_blank" rel="noopener">Follow on Pinterest</a> · <a href="{r}affiliate-disclosure.html">Affiliate Disclosure</a> · <a href="{r}privacy.html">Privacy Policy</a> · <a href="{r}about.html">About</a></p>
-<p>Content is for general information and is not medical advice. Patch-test new products.</p><p>&copy; {datetime.date.today().year} {NAME}</p></footer></body></html>"""
+<footer class="site"><div class="wrap"><div class="fcol">{LOGO}<p>Independent, hands-on buying guides. We recommend only well-reviewed products and say why.</p></div>
+<div class="fcol"><h4>Categories</h4>{"".join(f'<a href="/{c["key"]}/">{c["name"]}</a>' for c in CATEGORIES)}</div>
+<div class="fcol"><h4>Company</h4><a href="/about/">About</a><a href="/affiliate-disclosure/">Affiliate disclosure</a><a href="/privacy/">Privacy</a></div></div>
+<div class="wrap legal">&copy; {datetime.date.today().year} {SITE}. {DISC} Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</div></footer></body></html>"""
 
-from posts import POSTS
-pages, cards = {}, ""
-for p in POSTS:
-    body = re.sub(r"\{\{AMZ:(\w+)\}\}", lambda m: amz(m.group(1)), p["body"])
-    share = f"https://www.pinterest.com/pin/create/button/?url={BASE}/posts/{p['slug']}.html&amp;media={BASE}/{p['image']}&amp;description={html.escape(p['title'])}"
-    art = f"""<article class="post"><p class="kicker">{p['kicker']}</p><h1>{p['title']}</h1><p class="meta">Updated {p['date']} · By the Glow &amp; Gilded editors</p>
-<p class="disc-top"><strong>Disclosure:</strong> {DISC}</p>
-<figure class="pinwrap"><img src="../{p['image']}" alt="{html.escape(p['title'])}" width="1000" height="1500" data-pin-description="{html.escape(p['title'])} | {NAME}" data-pin-url="{BASE}/posts/{p['slug']}.html"></figure>
-{body}
-<p class="pin-cta"><a class="btn" href="{share}" target="_blank" rel="noopener">Save this guide to Pinterest</a></p></article>"""
-    pages[f"posts/{p['slug']}.html"] = page(p["title"], p["desc"], art, f"posts/{p['slug']}.html", p["image"], 1, "article")
-    cards += f"""<a class="card" href="posts/{p['slug']}.html"><img src="{p['image']}" alt="" loading="lazy" width="1000" height="1500"><div><p class="kicker">{p['kicker']}</p><h3>{p['title']}</h3><p>{p['desc']}</p></div></a>"""
+def card(p):
+    return f"""<a class="card" href="{p['url']}"><div class="thumb"><img src="/{p['image']}" alt="" loading="lazy"></div>
+<span class="label">{p['cat']['name']}</span><h3>{p['title']}</h3><p>{p['desc']}</p><span class="more">Read the guide &rarr;</span></a>"""
 
-pages["index.html"] = page("Luxury Beauty Gift Guides & Skincare Rituals", "Considered luxury beauty: curated skincare gift guides, premium routines and at-home spa rituals.",
- f"""<section class="hero"><div><p class="eyebrow">The Glow &amp; Gilded Journal</p><h1>Beauty that feels like a little luxury, every day</h1>
-<p class="lead">We curate the creams, cleansers and spa-night rituals worth the splurge, and we skip the ones that aren't. Highly rated picks only, explained in plain language.</p>
-<p><a class="btn" href="#latest">Read the journal</a> &nbsp; <a class="btn ghost" href="{PIN}" target="_blank" rel="noopener">Follow on Pinterest</a></p></div>
-<div class="art"><img src="assets/hero-gift-guide.jpg" alt="Luxury skincare gift guide" width="1000" height="1500"></div></section>
-<h2 class="sec" id="latest">Latest from the journal</h2><hr class="divider"><div class="grid">{cards}</div>
-<section class="band"><p class="eyebrow">Our promise</p><h2>Only well-loved, in-stock picks</h2><p>Every product we feature is rated 4.3 stars or higher by real buyers and was in stock when we checked. When something sells out, we update the guide.</p></section>""", "index.html")
-pages["about.html"] = page("About", f"About {NAME}.", f"""<article class="post"><p class="kicker">About</p><h1>About {NAME}</h1>
-<p>{NAME} is a small beauty journal for people who love a good ritual: the cleanser that melts away the day, the cream that makes skin feel cared for, the quiet ten minutes that feel like a spa visit at home.</p>
-<p>We focus on premium, well-reviewed skincare and beauty tools, and we try to explain <em>why</em> something earns a place in a routine instead of just telling you to buy it. We favor products with large numbers of real buyer reviews, and we re-check availability when we update a guide.</p>
-<p>We are not dermatologists, and nothing here is medical advice. If you have a skin condition, are pregnant, or use prescription skincare, check with a qualified professional before adding new actives or devices.</p>
-<p>Find daily inspiration on <a href="{PIN}" target="_blank" rel="noopener">our Pinterest</a>.</p></article>""", "about.html")
-pages["affiliate-disclosure.html"] = page("Affiliate Disclosure", f"How {NAME} earns money.", f"""<article class="post"><p class="kicker">Transparency</p><h1>Affiliate Disclosure</h1>
-<p>{NAME} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
-<p><strong>As an Amazon Associate we earn from qualifying purchases.</strong> If you click a product link on this site or on our Pinterest pins and then buy something, we may earn a small commission. It costs you nothing extra.</p>
-<p>Commissions never decide what we feature. We choose products based on ingredients, design, buyer ratings and review volume. Prices and availability change often, so always check the current details on Amazon before you buy.</p>
-<p>Questions? Message us through <a href="{PIN}" target="_blank" rel="noopener">Pinterest</a>.</p></article>""", "affiliate-disclosure.html")
-pages["privacy.html"] = page("Privacy Policy", f"Privacy policy for {NAME}.", f"""<article class="post"><p class="kicker">Legal</p><h1>Privacy Policy</h1><p class="meta">Last updated {datetime.date.today():%B %d, %Y}</p>
-<p>This site does not ask you to create an account and does not collect your name, email or payment details.</p>
-<h2>Third parties</h2><ul><li><strong>Hosting:</strong> our host (Vercel) may keep standard server logs (IP address, browser, pages requested) for security and reliability.</li>
-<li><strong>Google Fonts:</strong> fonts load from Google, which receives your IP address under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</li>
-<li><strong>Pinterest:</strong> the Pinterest Save button loads a script from Pinterest, which may set cookies under <a href="https://policy.pinterest.com/privacy-policy" target="_blank" rel="noopener">Pinterest's privacy policy</a>.</li>
-<li><strong>Amazon:</strong> if you click an Amazon link, Amazon may use cookies to credit the referral to us, under <a href="https://www.amazon.com/privacy" target="_blank" rel="noopener">Amazon's privacy notice</a>.</li></ul>
-<h2>Your choices</h2><p>You can block or delete cookies in your browser settings. We don't sell personal information because we don't collect it. You can contact us through Pinterest with any privacy request.</p>
-<h2>Children</h2><p>This site is not directed at children under 13.</p></article>""", "privacy.html")
-for path, h in pages.items():
-    open(path, "w").write(h)
-today = datetime.date.today().isoformat()
-open("sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
- "".join(f"  <url><loc>{BASE}/{p.replace('index.html','')}</loc><lastmod>{today}</lastmod></url>\n" for p in pages) + "</urlset>\n")
-open("robots.txt", "w").write(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
-for p in POSTS: print(p["slug"], len(re.sub("<[^>]+>", " ", p["body"]).split()), "words")
+def crumbs(*items):
+    out = ['<a href="/">Home</a>'] + [f'<a href="{u}">{t}</a>' if u else f'<span>{t}</span>' for t, u in items]
+    return '<nav class="crumbs" aria-label="Breadcrumb">' + '<i>/</i>'.join(out) + '</nav>'
+
+def write(path, s):
+    f = "." + path + ("index.html" if path.endswith("/") else "")
+    os.makedirs(os.path.dirname(f), exist_ok=True); open(f, "w").write(s)
+
+def main():
+    for c in CATEGORIES:
+        shutil.rmtree(c["key"], ignore_errors=True)
+    for d in ("about", "affiliate-disclosure", "privacy"): shutil.rmtree(d, ignore_errors=True)
+    posts = load(); urls = ["/"]
+    # home
+    cats = "".join(f'<a class="catcard" href="/{c["key"]}/"><span class="n">{i+1:02d}</span><h3>{c["name"]}</h3><p>{c["blurb"]}</p><span class="more">{sum(p["cat"] is c for p in posts)} guides &rarr;</span></a>' for i, c in enumerate(CATEGORIES))
+    feat = posts[-1] if False else posts[0]
+    body = f"""<section class="hero"><div class="wrap"><p class="eyebrow">Buying guides &middot; Reviews &middot; Gift edits</p>
+<h1>Smart picks, honestly reviewed.</h1><p class="lede">Digital Profit Review researches the products worth your money across home, beauty and more, so you can buy once and buy well.</p>
+<p><a class="btn" href="#latest">Read the latest</a> <a class="btn ghost" href="#categories">Browse categories</a></p></div></section>
+<section class="sec" id="categories"><div class="wrap"><div class="sechead"><h2>Categories</h2></div><div class="catgrid">{cats}</div></div></section>
+<section class="sec" id="latest"><div class="wrap"><div class="sechead"><h2>Latest guides</h2></div><div class="grid">{"".join(card(p) for p in posts)}</div></div></section>
+<section class="band"><div class="wrap"><h2>How we choose</h2><p>We favour products with a long track record of strong buyer ratings, explain who each pick suits, and never invent prices. If a product slips in quality or goes out of stock, we replace it.</p></div></section>"""
+    write("/", page(f"{SITE}: Honest Buying Guides for Home, Beauty & More", "Independent buying guides and gift edits across home & decor, beauty and more.", body, "/"))
+    for c in CATEGORIES:
+        cp = [p for p in posts if p["cat"] is c]
+        b = f"""<section class="cathero"><div class="wrap">{crumbs((c['name'], None))}<h1>{c['name']}</h1><p class="lede">{c['blurb']}</p></div></section>
+<section class="sec"><div class="wrap"><div class="grid">{"".join(card(p) for p in cp)}</div></div></section>"""
+        write(f"/{c['key']}/", page(f"{c['name']} Guides | {SITE}", c["blurb"], b, f"/{c['key']}/")); urls.append(f"/{c['key']}/")
+        for p in cp:
+            others = [q for q in cp if q is not p][:2]
+            b = f"""<article class="post"><div class="wrap narrow">{crumbs((c['name'], f"/{c['key']}/"), (p['title'], None))}
+<span class="label">{c['name']}</span><h1>{p['title']}</h1><p class="meta">Updated {p['date']} &middot; By the {SITE} editors</p>
+<p class="disc-top"><strong>Disclosure:</strong> {DISC} Some links on this page are affiliate links, which means we may earn a commission at no extra cost to you.</p>
+<figure class="heroimg"><img src="/{p['image']}" alt="{html.escape(p['title'])}"></figure>
+<div class="body">{p['body']}</div>
+<p class="disc-bottom">{DISC} Prices and availability change; check Amazon for current details.</p></div></article>
+<section class="sec related"><div class="wrap"><div class="sechead"><h2>More in {c['name']}</h2><a href="/{c['key']}/">View all &rarr;</a></div><div class="grid two">{"".join(card(q) for q in others)}</div></div></section>"""
+            write(p["url"], page(f"{p['title']} | {SITE}", p["desc"], b, p["url"], p["image"], "article")); urls.append(p["url"])
+    static = {
+     "about": ("About", f"<p>{SITE} publishes practical buying guides across categories, starting with Home &amp; Decor and Beauty. We focus on products with a strong track record of buyer reviews, explain who each pick is for, and keep guides updated when products change.</p><p>We are reader-supported. When you buy through links on our site we may earn an affiliate commission, which never changes the price you pay.</p>"),
+     "affiliate-disclosure": ("Affiliate Disclosure", f"<p>{SITE} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. <strong>{DISC}</strong></p><p>Links to Amazon are marked as sponsored. Commissions come at no extra cost to you and do not affect which products we recommend. Prices and availability are accurate as of the date shown and are subject to change.</p>"),
+     "privacy": ("Privacy Policy", f"<p>This site is hosted on Vercel, which may log standard request data (such as IP address and browser type) for security and performance. We do not run our own analytics, ads or newsletter signup, and we do not sell personal information.</p><p>When you click an Amazon link, Amazon may set cookies to attribute purchases to us; see Amazon's privacy notice. Questions: contact the site owner via the details on our About page.</p><p>Last updated October 29, 2026.</p>"),
+    }
+    for slug, (t, txt) in static.items():
+        b = f'<article class="post"><div class="wrap narrow">{crumbs((t, None))}<h1>{t}</h1><div class="body">{txt}</div></div></article>'
+        write(f"/{slug}/", page(f"{t} | {SITE}", f"{t} for {SITE}.", b, f"/{slug}/")); urls.append(f"/{slug}/")
+    open("sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{BASE}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
+    open("robots.txt", "w").write(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
+    open("404.html", "w").write(page(f"Page not found | {SITE}", "Page not found", '<section class="cathero"><div class="wrap"><h1>Page not found</h1><p class="lede"><a href="/">Back to the home page</a></p></div></section>', "/404"))
+    for p in posts: print(p["url"], len(re.sub("<[^>]+>", " ", p["body"]).split()), "words")
+main()

@@ -11,7 +11,7 @@ PC = ("Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant", "B00949CTQQ", "4
 SM = ("Shark CryoGlow LED Face Mask", "B0DSGJCS47", "4.4 stars on Amazon")
 
 POSTS = [
-dict(slug="luxury-skincare-gift-guide", kicker="The Gift Edit", image="assets/hero-gift-guide.jpg", date="October 29, 2026",
+dict(slug="luxury-skincare-gift-guide", kicker="The Gift Edit", image="assets/beauty/hero-gift-guide.jpg", date="October 29, 2026",
 title="The Luxury Skincare Gift Guide: 5 Splurges She'll Actually Use",
 desc="Five highly rated luxury skincare and beauty gifts, from a cult cleansing balm to a pure silk pillowcase, and how to choose the right one for her.",
 body=f"""
@@ -31,7 +31,7 @@ body=f"""
 <p>Skincare gifts look most considered when presented as a ritual. Tuck the products into a soft towel or a small basket, add a handwritten card with the order to use them (cleanse, moisturize, lip mask last), and finish with a ribbon. It turns a few jars into an experience.</p>
 <p>Prices and stock change quickly in gifting season, so check the current listing before you buy. If an item has sold out, we'll swap in an alternative when we update this guide.</p>
 """),
-dict(slug="premium-skincare-routine", kicker="The Routine", image="assets/hero-routine.jpg", date="October 29, 2026",
+dict(slug="premium-skincare-routine", kicker="The Routine", image="assets/beauty/hero-routine.jpg", date="October 29, 2026",
 title="A Premium Skincare Routine, Step by Step (Morning & Night)",
 desc="A simple, luxurious morning and evening skincare routine built on five well-reviewed products, with the right order and how often to use each one.",
 body=f"""
@@ -52,7 +52,7 @@ body=f"""
 <h2>How long until you see a difference?</h2>
 <p>Hydration you can feel immediately. Texture and glow usually take four to six weeks of consistent use, because that's roughly how long skin takes to renew its surface. Consistency matters more than any single product, so pick a routine you'll genuinely enjoy doing.</p>
 """),
-dict(slug="at-home-spa-night-beauty-tech", kicker="At-Home Spa", image="assets/hero-spa.jpg", date="October 29, 2026",
+dict(slug="at-home-spa-night-beauty-tech", kicker="At-Home Spa", image="assets/beauty/hero-spa.jpg", date="October 29, 2026",
 title="The At-Home Spa Night: Beauty Tech & Rituals Worth the Splurge",
 desc="Recreate a spa facial at home with an LED mask, a melting cleansing balm and a silk pillowcase, plus a simple 45-minute spa-night ritual.",
 body=f"""
