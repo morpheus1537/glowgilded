@@ -1,0 +1,77 @@
+# Amazon products used in articles. Re-verify rating/count on Amazon and update `checked` (YYYY-MM-DD) when you add or recheck one.
+products:
+  B0158EQJSY:
+    name: Bedsure GentleSoft Sherpa Fleece Throw
+    rating: '4.7'
+    count: 98,117
+    checked: '2026-10-29'
+  B0F3DPXQP1:
+    name: Yankee Candle Balsam & Cedar Large Jar (22 oz)
+    rating: '4.6'
+    count: 2,803
+    checked: '2026-10-29'
+  B00JR5N0JM:
+    name: Minetom Plug-In Fairy Lights (33 ft, 100 LEDs)
+    rating: '4.5'
+    count: 13,129
+    checked: '2026-10-29'
+  B0BNBFRFCM:
+    name: Homemory Flickering Flameless Candles (Set of 3)
+    rating: '4.6'
+    count: 10,385
+    checked: '2026-10-29'
+  B00V9JP8EE:
+    name: InnoGear 100ml Essential Oil Diffuser
+    rating: '4.4'
+    count: 123,467
+    checked: '2026-10-29'
+  B0B24QJ217:
+    name: Cocorrína Clean Linen Reed Diffuser Set
+    rating: '4.4'
+    count: 4,614
+    checked: '2026-10-29'
+  B0BR1RYYFQ:
+    name: Amazon Basics 2-Tier Lazy Susan (12 in)
+    rating: '4.7'
+    count: 3,741
+    checked: '2026-10-29'
+  B07P5JSMXG:
+    name: Shanik Acacia Wood Charcuterie Board Set
+    rating: '4.6'
+    count: '388'
+    checked: '2026-10-29'
+  B00BEEK5II:
+    name: ELEMIS Pro-Collagen Marine Cream
+    rating: '4.6'
+    count: 2,912
+    checked: '2026-10-29'
+  B08MJZYW8P:
+    name: ELEMIS Pro-Collagen Cleansing Balm
+    rating: '4.5'
+    count: 16,167
+    checked: '2026-10-29'
+  B00175YVOS:
+    name: ELEMIS Pro-Collagen Night Cream
+    rating: '4.7'
+    count: 1,728
+    checked: '2026-10-29'
+  B00949CTQQ:
+    name: Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant
+    rating: '4.5'
+    count: 117,331
+    checked: '2026-10-29'
+  B07XXPHQZK:
+    name: LANEIGE Lip Sleeping Mask (Berry)
+    rating: '4.6'
+    count: 37,761
+    checked: '2026-10-29'
+  B0FJYZH32G:
+    name: Slip Pure Silk Queen Pillowcase
+    rating: '4.6'
+    count: 1,744
+    checked: '2026-10-29'
+  B0DSGJCS47:
+    name: Shark CryoGlow LED Face Mask
+    rating: '4.4'
+    count: 1,136
+    checked: '2026-10-29'

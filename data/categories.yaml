@@ -1,0 +1,7 @@
+# Site categories. Add one entry and create content/<key>/ to add a category.
+- key: home
+  name: Home & Decor
+  blurb: Cozy, practical picks for every room, plus gift guides for people who love being home.
+- key: beauty
+  name: Beauty
+  blurb: Luxury skincare, routines and at-home spa rituals, with only highly rated products.

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Digital Profit Review static site generator. Run: python3 build.py  (see README.md)"""
-import os, re, html, json, glob, runpy, shutil, math
-from content.products import PRODUCTS, CHECKED
+import os, re, sys, html, json, glob, shutil, math
+import yaml, markdown
+PRODUCTS = yaml.safe_load(open("data/products.yaml"))["products"]
 
 BASE = "https://digitalprofitreview.com"
 TAG = "hearthhaven0b-20"
@@ -9,10 +10,7 @@ SITE = "Digital Profit Review"
 AUTHOR = "Digital Profit Review Editors"
 DISC = "As an Amazon Associate we earn from qualifying purchases."
 REL = 'rel="sponsored nofollow noopener" target="_blank"'
-CATEGORIES = [
-  dict(key="home", name="Home & Decor", blurb="Cozy, practical picks for every room, plus gift guides for people who love being home."),
-  dict(key="beauty", name="Beauty", blurb="Luxury skincare, routines and at-home spa rituals, with only highly rated products."),
-]
+CATEGORIES = yaml.safe_load(open("data/categories.yaml"))
 E = html.escape
 CSS = open("assets/fonts.css").read() + open("assets/style.css").read()
 CSS = re.sub(r"\s*\n\s*", "", CSS)
@@ -29,16 +27,64 @@ def img(base, kind):  # base like assets/home/1-x ; kind lg|sm
     w, h = Image.open(f"{base}-{kind}.webp").size
     return f"/{base}-{kind}.webp", w, h
 
+REQUIRED = ["title", "slug", "category", "description", "date", "updated", "author", "hero", "products", "faq"]
+SHORT = re.compile(r"\{\{\s*product\s+([A-Z0-9]{10})\s*\}\}")
+ERRORS = []
+def err(f, msg): ERRORS.append(f"{f}: {msg}")
+
 def load():
     posts = []
+    keys = {c["key"]: c for c in CATEGORIES}
     for c in CATEGORIES:
-        for f in sorted(glob.glob(f"content/{c['key']}/*.py")):
-            p = dict(runpy.run_path(f)["POST"]); p["cat"] = c
-            p["url"] = f"/{c['key']}/{p['slug']}/"; p["base"] = p["image"].rsplit(".", 1)[0]
-            for pr in p["products"]:
-                assert pr["asin"] in PRODUCTS, f"{f}: unknown ASIN {pr['asin']} (add it to content/products.py)"
-            posts.append(p)
+        for f in sorted(glob.glob(f"content/{c['key']}/*.md")):
+            raw = open(f, encoding="utf-8").read()
+            m = re.match(r"^---\n(.*?)\n---\n(.*)$", raw, re.S)
+            if not m: err(f, "missing YAML front matter"); continue
+            fm = yaml.safe_load(m.group(1)) or {}
+            miss = [k for k in REQUIRED if not fm.get(k)]
+            if miss: err(f, "missing front matter fields: " + ", ".join(miss)); continue
+            if not (isinstance(fm["hero"], dict) and fm["hero"].get("image") and fm["hero"].get("alt")): err(f, "hero needs image and alt"); continue
+            if fm["category"] != c["key"]: err(f, f"category '{fm['category']}' does not match folder '{c['key']}'")
+            if fm["slug"] + ".md" != os.path.basename(f): err(f, "slug must match the file name")
+            for k in ("date", "updated"): fm[k] = str(fm[k])
+            used = SHORT.findall(m.group(2))
+            for asin in set(fm["products"]) | set(used) | {r["asin"] for r in fm.get("comparison") or []}:
+                if asin not in PRODUCTS: err(f, f"unknown ASIN {asin} (add it to data/products.yaml)")
+            for asin in used:
+                if asin not in fm["products"]: err(f, f"shortcode ASIN {asin} not listed in front matter products")
+            for x in fm["faq"]:
+                if not (x.get("question") and x.get("answer")): err(f, "each faq item needs question and answer")
+            base = fm["hero"]["image"].rsplit(".", 1)[0] if fm["hero"]["image"].endswith((".jpg", ".webp", ".png")) else fm["hero"]["image"]
+            base = base.lstrip("/").replace("-lg", "")
+            for suf in ("-lg.webp", "-sm.webp", "-og.jpg"):
+                if not os.path.exists(base + suf): err(f, f"missing image {base + suf}")
+            fm.update(cat=c, file=f, body_md=m.group(2), base=base, url=f"/{c['key']}/{fm['slug']}/")
+            posts.append(fm)
     return posts
+
+def md(text): return markdown.markdown(text, extensions=["extra"])
+
+def parse_body(text):
+    parts = re.split(r"^## +(.+)$", text, flags=re.M)
+    intro = parts[0].strip(); secs = []
+    for i in range(1, len(parts), 2):
+        h, b = parts[i].strip(), parts[i+1].strip()
+        found = SHORT.findall(b)
+        secs.append(dict(h=h, md=b, asin=found[0] if found else None))
+    return intro, secs
+
+def render_product(b, asin):
+    out = []; pc = {}
+    def take(name):
+        nonlocal b
+        m = re.search(rf"^### +{name}\s*\n(.*?)(?=^### |^\{{\{{|\Z)", b, re.S | re.M)
+        if m: pc[name] = md(m.group(1).strip()); b = b[:m.start()] + b[m.end():]
+    take("Pros"); take("Cons")
+    b = SHORT.sub("", b).strip()
+    out.append(md(b))
+    if pc: out.append('<div class="pc"><div><h4>Pros</h4>' + pc.get("Pros", "") + '</div><div><h4>Cons</h4>' + pc.get("Cons", "") + "</div></div>")
+    out.append(btn(asin))
+    return "".join(out)
 
 LOGO = '<a class="wordmark" href="/"><span class="mono">DPR</span><span class="wm">Digital Profit <em>Review</em></span></a>'
 def nav(): return "".join(f'<a href="/{c["key"]}/">{E(c["name"])}</a>' for c in CATEGORIES) + '<a href="/about/">About</a>'
@@ -72,54 +118,59 @@ def page(title, desc, body, path, schema, image="/assets/og.png", kind="website"
 
 def card(p, eager=False):
     src, w, h = img(p["base"], "sm")
-    return f"""<a class="card" href="{p['url']}"><div class="thumb"><img src="{src}" alt="{E(p['image_alt'])}" width="{w}" height="{h}" {'fetchpriority="high"' if eager else 'loading="lazy"'} decoding="async"></div>
-<span class="label">{E(p['cat']['name'])}</span><h3>{E(p['title'])}</h3><p>{E(p['desc'])}</p><span class="more">Read the guide &rarr;</span></a>"""
+    return f"""<a class="card" href="{p['url']}"><div class="thumb"><img src="{src}" alt="{E(p['hero']['alt'])}" width="{w}" height="{h}" {'fetchpriority="high"' if eager else 'loading="lazy"'} decoding="async"></div>
+<span class="label">{E(p['cat']['name'])}</span><h3>{E(p['title'])}</h3><p>{E(p['description'])}</p><span class="more">Read the guide &rarr;</span></a>"""
 
 def words(s): return len(re.sub(r"<[^>]+>", " ", s).split())
 
 def article(p, related):
-    c = p["cat"]; prods = p["products"]
-    toc = [("At a glance: our picks compared", "at-a-glance")] + [(pr["h2"], slugify(pr["h2"].split(":")[-1])) for pr in prods] + [(h, slugify(h)) for h, _ in p["sections"]] + [("Frequently asked questions", "faq"), ("The bottom line", "bottom-line")]
-    rows = "".join(f'<tr><td>{alink(pr["asin"])}</td><td>{E(pr["best"])}</td><td>{PRODUCTS[pr["asin"]]["rating"]}/5 ({PRODUCTS[pr["asin"]]["count"]} ratings)</td><td>{alink(pr["asin"], "Check price")}</td></tr>' for pr in prods)
+    c = p["cat"]
+    intro, secs = parse_body(p["body_md"])
+    prods = [x for x in secs if x["asin"]]
+    bottom = [x for x in secs if x["h"].lower() == "the bottom line"]
+    others = [x for x in secs if not x["asin"] and x not in bottom]
+    sid = lambda x: "bottom-line" if x in bottom else slugify(x["h"].split(":")[-1] if x["asin"] else x["h"])
+    comp = p.get("comparison") or []
+    toc = ([("At a glance: our picks compared", "at-a-glance")] if comp else []) + [(x["h"], sid(x)) for x in prods + others] + [("Frequently asked questions", "faq")] + [(x["h"], sid(x)) for x in bottom]
+    checked = fmt(max(PRODUCTS[a]["checked"] for a in p["products"]))
     disc = f'<p class="disc-top"><strong>Disclosure:</strong> {DISC} Product links on this page go to Amazon and are affiliate links, so we may earn a commission at no extra cost to you. We do not list prices because they change often; use the buttons to check the current price.</p>'
-    out = [f"<p>{x}</p>" for x in p["intro"]]
+    out = [md(intro)]
     out.append('<nav class="toc" aria-label="Table of contents"><h2>In this guide</h2><ol>' + "".join(f'<li><a href="#{a}">{E(t)}</a></li>' for t, a in toc) + "</ol></nav>")
-    out.append(f'<h2 id="at-a-glance">At a glance: our picks compared</h2><div class="tablewrap"><table class="cmp"><caption class="verified">Amazon ratings as checked on {CHECKED}. Ratings change over time.</caption><thead><tr><th scope="col">Product</th><th scope="col">Best for</th><th scope="col">Amazon rating</th><th scope="col">Price</th></tr></thead><tbody>{rows}</tbody></table></div>')
-    for i, pr in enumerate(prods, 1):
-        info = PRODUCTS[pr["asin"]]; lead, _, _ = pr["h2"].partition(":")
-        out.append(f'<section class="pick"><h2 id="{slugify(pr["h2"].split(":")[-1])}">{i}. {E(lead)}: {alink(pr["asin"])}</h2>')
-        out.append(f'<p class="verified">Rated {info["rating"]} out of 5 by {info["count"]} Amazon shoppers (checked {CHECKED}). Price: check current price on Amazon.</p>')
-        out.append("<h3>Why we like it</h3>" + "".join(f"<p>{x}</p>" for x in pr["why"]))
-        out.append(f"<h3>Who it's for</h3><p>{pr['who']}</p>")
-        out.append('<div class="pc"><div><h4>Pros</h4><ul>' + "".join(f"<li>{E(x)}</li>" for x in pr["pros"]) + '</ul></div><div><h4>Cons</h4><ul>' + "".join(f"<li>{E(x)}</li>" for x in pr["cons"]) + "</ul></div></div>")
-        out.append(btn(pr["asin"]) + "</section>")
-    for h, b in p["sections"]: out.append(f'<h2 id="{slugify(h)}">{E(h)}</h2>{b}')
-    out.append('<section class="faq"><h2 id="faq">Frequently asked questions</h2>' + "".join(f"<h3>{E(q)}</h3><p>{E(a)}</p>" for q, a in p["faqs"]) + "</section>")
-    out.append('<h2 id="bottom-line">The bottom line</h2>' + "".join(f"<p>{x}</p>" for x in p["conclusion"]) + f'<p>{p["related_text"]}</p>')
-    out.append(f'<p class="disc-bottom">{DISC} Ratings were checked on {CHECKED}; prices and availability change, so check Amazon for current details.</p>')
+    if comp:
+        rows = "".join(f'<tr><td>{alink(r["asin"])}</td><td>{E(r["best_for"])}</td><td>{PRODUCTS[r["asin"]]["rating"]}/5 ({PRODUCTS[r["asin"]]["count"]} ratings)</td><td>{alink(r["asin"], "Check price")}</td></tr>' for r in comp)
+        out.append(f'<h2 id="at-a-glance">At a glance: our picks compared</h2><div class="tablewrap"><table class="cmp"><caption class="verified">Amazon ratings as checked on {checked}. Ratings change over time.</caption><thead><tr><th scope="col">Product</th><th scope="col">Best for</th><th scope="col">Amazon rating</th><th scope="col">Price</th></tr></thead><tbody>{rows}</tbody></table></div>')
+    for i, x in enumerate(prods, 1):
+        info = PRODUCTS[x["asin"]]; lead = x["h"].partition(":")[0]
+        out.append(f'<section class="pick"><h2 id="{sid(x)}">{i}. {E(lead)}: {alink(x["asin"])}</h2>')
+        out.append(f'<p class="verified">Rated {info["rating"]} out of 5 by {info["count"]} Amazon shoppers (checked {fmt(info["checked"])}). Price: check current price on Amazon.</p>')
+        out.append(render_product(x["md"], x["asin"]) + "</section>")
+    for x in others: out.append(f'<h2 id="{sid(x)}">{E(x["h"])}</h2>' + md(SHORT.sub(lambda m: btn(m.group(1)), x["md"])))
+    out.append('<section class="faq"><h2 id="faq">Frequently asked questions</h2>' + "".join(f"<h3>{E(q['question'])}</h3><p>{E(q['answer'])}</p>" for q in p["faq"]) + "</section>")
+    for x in bottom: out.append(f'<h2 id="bottom-line">{E(x["h"])}</h2>' + md(x["md"]))
+    out.append(f'<p class="disc-bottom">{DISC} Ratings were checked on {checked}; prices and availability change, so check Amazon for current details.</p>')
     body = "".join(out)
     mins = max(1, math.ceil(words(body) / 230))
     vis, bc = crumbs([(c["name"], f"/{c['key']}/"), (p["title"], None)])
     src, w, h = img(p["base"], "lg")
     html_ = f"""<article class="post"><div class="wrap narrow">{vis}
 <span class="label">{E(c['name'])}</span><h1>{E(p['title'])}</h1>
-<p class="byline">By <a href="/about/">{AUTHOR}</a> &middot; Published <time datetime="{p['published']}">{fmt(p['published'])}</time> &middot; Updated <time datetime="{p['updated']}">{fmt(p['updated'])}</time> &middot; {mins} min read</p>
-{disc}<figure class="heroimg"><img src="{src}" alt="{E(p['image_alt'])}" width="{w}" height="{h}" fetchpriority="high" decoding="async"></figure>
+<p class="byline">By <a href="/about/">{E(p["author"])}</a> &middot; Published <time datetime="{p['date']}">{fmt(p['date'])}</time> &middot; Updated <time datetime="{p['updated']}">{fmt(p['updated'])}</time> &middot; {mins} min read</p>
+{disc}<figure class="heroimg"><img src="{src}" alt="{E(p['hero']['alt'])}" width="{w}" height="{h}" fetchpriority="high" decoding="async"></figure>
 <div class="body">{body}</div></div></article>
 <section class="sec related"><div class="wrap"><div class="sechead"><h2>More in {E(c['name'])}</h2><a href="/{c['key']}/">View all &rarr;</a></div><div class="grid two">{"".join(card(q) for q in related)}</div></div></section>"""
     og = "/" + p["base"] + "-og.jpg"
     schema = [
-      {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["title"], "description": p["desc"], "image": [BASE + og, BASE + src],
-       "datePublished": p["published"] + "T08:00:00+08:00", "dateModified": p["updated"] + "T08:00:00+08:00",
-       "author": {"@type": "Organization", "name": AUTHOR, "url": BASE + "/about/"}, "publisher": ORG,
+      {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["title"], "description": p["description"], "image": [BASE + og, BASE + src],
+       "datePublished": p["date"] + "T08:00:00+08:00", "dateModified": p["updated"] + "T08:00:00+08:00",
+       "author": {"@type": "Organization", "name": p["author"], "url": BASE + "/about/"}, "publisher": ORG,
        "mainEntityOfPage": {"@type": "WebPage", "@id": BASE + p["url"]}, "articleSection": c["name"], "wordCount": words(body), "inLanguage": "en-US"},
-      {"@context": "https://schema.org", "@type": "ItemList", "name": p["title"], "numberOfItems": len(prods), "itemListElement": [
-        {"@type": "ListItem", "position": i, "name": PRODUCTS[pr["asin"]]["name"], "url": amz(pr["asin"])} for i, pr in enumerate(prods, 1)]},
-      {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faqs"]]},
+      {"@context": "https://schema.org", "@type": "ItemList", "name": p["title"], "numberOfItems": len(p["products"]), "itemListElement": [
+        {"@type": "ListItem", "position": i, "name": PRODUCTS[a]["name"], "url": amz(a)} for i, a in enumerate(p["products"], 1)]},
+      {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q["question"], "acceptedAnswer": {"@type": "Answer", "text": q["answer"]}} for q in p["faq"]]},
       bc]
-    head = f'<link rel="preload" as="image" href="{src}" fetchpriority="high"><meta property="article:published_time" content="{p["published"]}"><meta property="article:modified_time" content="{p["updated"]}">'
+    head = f'<link rel="preload" as="image" href="{src}" fetchpriority="high"><meta property="article:published_time" content="{p["date"]}"><meta property="article:modified_time" content="{p["updated"]}">'
     return page(p.get("seo_title", p["title"]) + f" | {SITE}" if len(p.get("seo_title", p["title"])) < 45 else p.get("seo_title", p["title"]),
-                p["desc"], html_, p["url"], schema, og, "article", head), words(body), mins
+                p["description"], html_, p["url"], schema, og, "article", head), words(body), mins
 
 def write(path, s):
     f = "." + path + ("index.html" if path.endswith("/") else "")
@@ -128,9 +179,11 @@ def write(path, s):
 def main():
     for c in CATEGORIES: shutil.rmtree(c["key"], ignore_errors=True)
     for d in ("about", "affiliate-disclosure", "privacy"): shutil.rmtree(d, ignore_errors=True)
-    posts = load(); latest = max(p["updated"] for p in posts)
+    posts = load()
+    if ERRORS: print("BUILD FAILED:\n  " + "\n  ".join(ERRORS), file=sys.stderr); sys.exit(1)
+    latest = max(p["updated"] for p in posts)
     sm = [("/", latest)]
-    posts_sorted = sorted(posts, key=lambda p: (p["published"], p["slug"]), reverse=True)
+    posts_sorted = sorted(posts, key=lambda p: (p["date"], p["slug"]), reverse=True)
     cats = "".join(f'<a class="catcard" href="/{c["key"]}/"><span class="n">{i+1:02d}</span><h3>{E(c["name"])}</h3><p>{E(c["blurb"])}</p><span class="more">{sum(p["cat"] is c for p in posts)} guides &rarr;</span></a>' for i, c in enumerate(CATEGORIES))
     body = f"""<section class="hero"><div class="wrap"><p class="eyebrow">Buying guides &middot; Reviews &middot; Gift edits</p>
 <h1>Smart picks, honestly reviewed.</h1><p class="lede">Digital Profit Review researches the products worth your money across home, beauty and more, so you can buy once and buy well.</p>
@@ -143,7 +196,7 @@ def main():
     write("/", page(f"{SITE}: Honest Buying Guides for Home & Beauty", "Independent buying guides and gift edits for home & decor and beauty, featuring only well-reviewed products, with honest pros and cons.", body, "/", home_schema))
     report = []
     for c in CATEGORIES:
-        cp = sorted([p for p in posts if p["cat"] is c], key=lambda p: (p["published"], p["slug"]), reverse=True)
+        cp = sorted([p for p in posts if p["cat"] is c], key=lambda p: (p["date"], p["slug"]), reverse=True)
         vis, bc = crumbs([(c["name"], None)])
         b = f"""<section class="cathero"><div class="wrap">{vis}<h1>{E(c['name'])} Buying Guides</h1><p class="lede">{E(c['blurb'])}</p></div></section>
 <section class="sec"><div class="wrap"><h2 class="sr">All {E(c['name'])} guides</h2><div class="grid">{"".join(card(p, i == 0) for i, p in enumerate(cp))}</div></div></section>"""
@@ -166,5 +219,16 @@ def main():
     vis, bc = crumbs([("Page not found", None)])
     nf = f'<section class="cathero"><div class="wrap"><h1>Page not found</h1><p class="lede">Sorry, that page does not exist. Try one of our categories or the <a href="/">home page</a>.</p><p>{"".join(f"<a class=btn href=/{c["key"]}/>{E(c["name"])}</a>" for c in CATEGORIES)}</p></div></section>'
     write("/404.html", page(f"Page Not Found | {SITE}", "The page you were looking for could not be found.", nf, "/404.html", [bc]).replace('content="index,follow,max-image-preview:large"', 'content="noindex"'))
+    validate_output()
     for r in report: print(*r)
-main()
+
+def validate_output():
+    for f in glob.glob("**/*.html", recursive=True):
+        s = open(f, encoding="utf-8").read()
+        for a in re.findall(r"<a\b[^>]*>", s):
+            if re.search(r"amazon\.|amzn\.", a) and not (f"tag={TAG}" in a and 'rel="sponsored nofollow noopener"' in a and 'target="_blank"' in a):
+                err(f, "untagged or unmarked Amazon link: " + a)
+    if ERRORS:
+        print("BUILD FAILED:\n  " + "\n  ".join(ERRORS), file=sys.stderr); sys.exit(1)
+
+posts_ok = main()
