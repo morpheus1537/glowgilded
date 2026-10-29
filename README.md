@@ -11,6 +11,7 @@ content/
 data/
   products.yaml           every Amazon product: ASIN -> name, rating, count, checked (YYYY-MM-DD)
   categories.yaml         list of categories (key, name, blurb)
+  site.yaml               site-wide settings: verification meta tags (Pinterest, Google, Bing) for every page
 assets/<category>/        hero images: <name>-lg.webp (900w), <name>-sm.webp (480w), <name>-og.jpg (1200x630)
 build.py                  generator + validation
 requirements.txt          pinned: markdown, PyYAML, Pillow

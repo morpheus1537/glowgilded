@@ -11,6 +11,8 @@ AUTHOR = "Digital Profit Review Editors"
 DISC = "As an Amazon Associate we earn from qualifying purchases."
 REL = 'rel="sponsored nofollow noopener" target="_blank"'
 CATEGORIES = yaml.safe_load(open("data/categories.yaml"))
+SITECFG = yaml.safe_load(open("data/site.yaml")) or {}
+VERIFY = "".join(f'<meta name="{v["name"]}" content="{v["content"]}"/>' for v in SITECFG.get("verification") or [])
 E = html.escape
 CSS = open("assets/fonts.css").read() + open("assets/style.css").read()
 CSS = re.sub(r"\s*\n\s*", "", CSS)
@@ -101,7 +103,7 @@ def crumbs(items):  # items: [(name, path or None)], Home prepended
 def page(title, desc, body, path, schema, image="/assets/og.png", kind="website", extra_head=""):
     url = BASE + path
     og = BASE + image
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{VERIFY}
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}"><meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:site_name" content="{SITE}"><meta property="og:type" content="{kind}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{E(title)}"><meta name="twitter:description" content="{E(desc)}"><meta name="twitter:image" content="{og}">
