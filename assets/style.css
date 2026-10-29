@@ -1,0 +1,42 @@
+:root{--blush:#f6eae4;--blush2:#fbf4f0;--espresso:#3e271e;--gold:#b08d57;--ink:#4a3a33;--line:#e7d5cb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--blush2);color:var(--ink);font:17px/1.75 "Montserrat",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--espresso);text-decoration-color:var(--gold);text-underline-offset:3px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--espresso);line-height:1.2;font-weight:700}
+.topbar{background:var(--espresso);color:#f3e3d6;text-align:center;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:9px 12px}
+header.site{display:flex;justify-content:space-between;align-items:center;max-width:1120px;margin:0 auto;padding:22px 24px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}.brand img{border-radius:50%}
+.brand span{font-family:"Playfair Display",serif;font-size:24px;letter-spacing:.06em;color:var(--espresso)}
+nav a{margin-left:26px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+nav a:hover{color:var(--gold)}
+main{max-width:1120px;margin:0 auto;padding:0 24px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding:72px 0 56px}
+.eyebrow,.kicker{color:var(--gold);font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;margin:0 0 14px}
+.hero h1{font-size:clamp(38px,5vw,60px);margin:0 0 20px}.hero p.lead{font-size:19px;max-width:520px}
+.hero .art{background:var(--blush);border-radius:220px 220px 18px 18px;padding:26px;box-shadow:0 30px 60px -30px rgba(62,39,30,.35)}
+.hero .art img{width:100%;height:auto;display:block;border-radius:200px 200px 10px 10px}
+.btn{display:inline-block;background:var(--espresso);color:#fbf4f0;padding:13px 30px;border-radius:40px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--espresso);transition:.2s}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:#fff}.btn.ghost{background:transparent;color:var(--espresso)}
+.sec{text-align:center;font-size:34px;margin:30px 0 6px}.sec+p{text-align:center;margin:0 0 34px;color:#7a655b}
+.divider{width:70px;height:1px;background:var(--gold);margin:16px auto 28px;border:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-bottom:70px}
+.card{background:#fff;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 12px 30px -18px rgba(62,39,30,.3);transition:transform .25s}
+.card:hover{transform:translateY(-4px)}.card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
+.card div{padding:20px 22px 26px}.card h3{font-size:21px;margin:4px 0 8px}.card p{font-size:15px;margin:0;color:#6b5850}
+.band{background:var(--blush);border-radius:18px;padding:48px;text-align:center;margin:0 0 70px}
+.band h2{font-size:30px;margin:0 0 10px}
+article.post{max-width:740px;margin:0 auto;padding:56px 0 40px}
+article.post h1{font-size:clamp(34px,4.4vw,48px);margin:0 0 10px}article.post h2{font-size:29px;margin:46px 0 12px}
+.meta{color:#8e776c;font-size:14px}
+.disc-top{background:var(--blush);border-left:3px solid var(--gold);padding:12px 18px;font-size:14px;border-radius:6px;margin:22px 0}
+.pinwrap{margin:28px auto;max-width:520px;text-align:center}.pinwrap img{width:100%;height:auto;border-radius:12px;box-shadow:0 20px 40px -24px rgba(62,39,30,.45)}
+.product{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:22px 0}
+.product .num{font-family:"Playfair Display",serif;font-size:40px;color:var(--gold);line-height:1;min-width:46px}
+.product h3{margin:0 0 4px;font-size:22px}.product .rating{font-size:13px;color:#8e776c;margin:0 0 8px;letter-spacing:.03em}
+.product p{margin:0 0 12px}.product .btn{padding:10px 22px;font-size:12px}
+.tip{background:var(--blush);border-radius:12px;padding:18px 22px;margin:26px 0}
+.pin-cta{text-align:center;margin:44px 0 10px}
+footer{background:var(--espresso);color:#e9d8cc;text-align:center;padding:50px 24px;font-size:14px;margin-top:40px}
+footer a{color:#f3e3d6}footer .fbrand{font-family:"Playfair Display",serif;font-size:26px;color:#fff;letter-spacing:.08em;margin:0 0 10px}
+footer .disc{max-width:640px;margin:0 auto 16px;opacity:.85}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:36px;padding:44px 0}.grid{grid-template-columns:1fr}nav a{margin-left:14px;font-size:11px}header.site{flex-direction:column;gap:12px}.band{padding:32px 22px}}
