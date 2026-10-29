@@ -1,6 +1,6 @@
 def P(n, name, asin, rating, text, cta="View on Amazon"):
     return f"""<div class="product"><div class="num">{n:02d}</div><div><h3>{name}</h3><p class="rating">{rating} · checked October 2026</p><p>{text}</p>
-<a class="btn" href="{{{{AMZ:{asin}}}}}" target="_blank" rel="sponsored noopener">{cta}</a></div></div>"""
+<a class="btn" href="{{{{AMZ:{asin}}}}}" target="_blank" rel="sponsored nofollow noopener">{cta}</a></div></div>"""
 
 MC = ("ELEMIS Pro-Collagen Marine Cream", "B00BEEK5II", "4.6 stars on Amazon from 2,900+ ratings")
 CB = ("ELEMIS Pro-Collagen Cleansing Balm", "B08MJZYW8P", "4.5 stars on Amazon from 16,000+ ratings")
