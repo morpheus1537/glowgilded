@@ -1,5 +1,10 @@
 {"trailingSlash": true,
+ "cleanUrls": true,
  "redirects": [
   {"source": "/posts/:slug.html", "destination": "/beauty/:slug/", "permanent": true},
   {"source": "/:p(about|affiliate-disclosure|privacy).html", "destination": "/:p/", "permanent": true}
+ ],
+ "headers": [
+  {"source": "/assets/fonts/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
+  {"source": "/assets/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=604800"}]}
  ]}
