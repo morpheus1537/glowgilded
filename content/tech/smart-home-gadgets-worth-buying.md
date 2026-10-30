@@ -9,9 +9,9 @@ date: '2026-10-30'
 updated: '2026-10-30'
 author: Digital Profit Review Editors
 hero:
-  image: assets/tech/1-smart-home-gadgets
+  image: assets/tech/2-smart-home-gadgets
   alt: >-
-    Walnut media console with a round smart speaker, a portable bluetooth speaker, a streaming remote and small item trackers next to keys and a wallet
+    Walnut media console in a sunlit living room with a round smart speaker, a smart plug powering a glowing table lamp, a streaming stick with voice remote and a red portable bluetooth speaker
 products:
 - B09B8V1LZ3
 - B0BP9SNVH9

@@ -9,9 +9,9 @@ date: '2026-10-30'
 updated: '2026-10-30'
 author: Digital Profit Review Editors
 hero:
-  image: assets/pets/1-dog-essentials
+  image: assets/pets/2-dog-essentials
   alt: >-
-    Smiling golden retriever lying on a cream rug in a sunny living room next to a red chew toy, a wishbone chew, a glowing ball and a slicker brush
+    Happy golden retriever lying on a cream rug in a bright living room next to a red rubber stuffable toy, a wishbone chew, two rubber fetch balls and a slicker brush
 products:
 - B0002AR0I8
 - B00CPDWT2M
