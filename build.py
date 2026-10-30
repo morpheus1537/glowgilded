@@ -107,7 +107,7 @@ def page(title, desc, body, path, schema, image="/assets/og.png", kind="website"
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}"><meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:site_name" content="{SITE}"><meta property="og:type" content="{kind}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{E(title)}"><meta name="twitter:description" content="{E(desc)}"><meta name="twitter:image" content="{og}">
-<meta name="theme-color" content="#14261f"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#14261f"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="{SITE}" href="{BASE}/feed.xml">
 <link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>{extra_head}
 <style>{CSS}</style>{"".join(ld(s) for s in schema)}</head><body>
 <div class="discbar">{DISC} <a href="/affiliate-disclosure/">Read our affiliate disclosure</a></div>
@@ -159,7 +159,7 @@ def article(p, related):
 <p class="byline">By <a href="/about/">{E(p["author"])}</a> &middot; Published <time datetime="{p['date']}">{fmt(p['date'])}</time> &middot; Updated <time datetime="{p['updated']}">{fmt(p['updated'])}</time> &middot; {mins} min read</p>
 {disc}<figure class="heroimg"><img src="{src}" alt="{E(p['hero']['alt'])}" width="{w}" height="{h}" fetchpriority="high" decoding="async"></figure>
 <div class="body">{body}</div></div></article>
-<section class="sec related"><div class="wrap"><div class="sechead"><h2>More in {E(c['name'])}</h2><a href="/{c['key']}/">View all &rarr;</a></div><div class="grid two">{"".join(card(q) for q in related)}</div></div></section>"""
+<section class="sec related"><div class="wrap"><div class="sechead"><h2>Related guides</h2><a href="/{c['key']}/">View all &rarr;</a></div><div class="grid two">{"".join(card(q) for q in related)}</div></div></section>"""
     og = "/" + p["base"] + "-og.jpg"
     schema = [
       {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["title"], "description": p["description"], "image": [BASE + og, BASE + src],
@@ -170,7 +170,7 @@ def article(p, related):
         {"@type": "ListItem", "position": i, "name": PRODUCTS[a]["name"], "url": amz(a)} for i, a in enumerate(p["products"], 1)]},
       {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q["question"], "acceptedAnswer": {"@type": "Answer", "text": q["answer"]}} for q in p["faq"]]},
       bc]
-    head = f'<link rel="preload" as="image" href="{src}" fetchpriority="high"><meta property="article:published_time" content="{p["date"]}"><meta property="article:modified_time" content="{p["updated"]}">'
+    head = f'<link rel="preload" as="image" href="{src}" fetchpriority="high"><meta property="article:published_time" content="{p["date"]}"><meta property="article:modified_time" content="{p["updated"]}"><meta property="article:section" content="{E(c["name"])}"><meta property="article:author" content="{BASE}/about/">'
     return page(p.get("seo_title", p["title"]) + f" | {SITE}" if len(p.get("seo_title", p["title"])) < 45 else p.get("seo_title", p["title"]),
                 p["description"], html_, p["url"], schema, og, "article", head), words(body), mins
 
@@ -205,7 +205,7 @@ def main():
         write(f"/{c['key']}/", page(c.get("seo_title", f"{c['name']} Buying Guides & Gift Ideas | {SITE}"), c.get("seo_description", c["blurb"] + " Honest pros and cons for every pick."), b, f"/{c['key']}/", [bc]))
         sm.append((f"/{c['key']}/", max(p["updated"] for p in cp)))
         for p in cp:
-            rel = [q for q in posts_sorted if q is not p and q["cat"] is c][:2]
+            rel = ([q for q in posts_sorted if q is not p and q["cat"] is c] + [q for q in posts_sorted if q["cat"] is not c])[:2]
             s, wc, mins = article(p, rel); write(p["url"], s); sm.append((p["url"], p["updated"])); report.append((p["url"], wc, mins))
     static = {
      "about": ("About Digital Profit Review", "Who we are and how Digital Profit Review researches and selects the products in our buying guides.", f"<p>{SITE} publishes practical buying guides across categories, including home &amp; decor, beauty, kitchen, tech, fitness, pets and gifts. Our guides are written by the {AUTHOR}. We focus on products with a strong track record of buyer reviews, explain who each pick is for, list honest drawbacks, and update guides when products change or sell out.</p><h2>How we choose products</h2><p>We read product listings, specifications and buyer reviews, and we check each product's Amazon rating and availability on the date shown in every guide. We never invent prices or ratings, and we do not publish star ratings of our own.</p><h2>How we make money</h2><p>We are reader-supported. When you buy through links on our site we may earn an affiliate commission, which never changes the price you pay. See our <a href=\"/affiliate-disclosure/\">affiliate disclosure</a>.</p>"),
@@ -221,6 +221,12 @@ def main():
     vis, bc = crumbs([("Page not found", None)])
     nf = f'<section class="cathero"><div class="wrap"><h1>Page not found</h1><p class="lede">Sorry, that page does not exist. Try one of our categories or the <a href="/">home page</a>.</p><p>{"".join(f"<a class=btn href=/{c["key"]}/>{E(c["name"])}</a>" for c in CATEGORIES)}</p></div></section>'
     write("/404.html", page(f"Page Not Found | {SITE}", "The page you were looking for could not be found.", nf, "/404.html", [bc]).replace('content="index,follow,max-image-preview:large"', 'content="noindex"'))
+    from email.utils import format_datetime
+    from datetime import datetime, timezone, timedelta
+    rfc = lambda d: format_datetime(datetime.strptime(d, "%Y-%m-%d").replace(hour=8, tzinfo=timezone(timedelta(hours=8))))
+    items = "".join(f"<item><title>{E(p['title'])}</title><link>{BASE}{p['url']}</link><guid>{BASE}{p['url']}</guid><pubDate>{rfc(p['date'])}</pubDate><category>{E(p['cat']['name'])}</category><description>{E(p['description'])}</description></item>\n" for p in posts_sorted[:50])
+    open("feed.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>{SITE}</title><link>{BASE}/</link><description>Honest buying guides</description><language>en-us</language><atom:link href="{BASE}/feed.xml" rel="self" type="application/rss+xml"/>\n{items}</channel></rss>\n')
+    open("urls.txt", "w").write("".join(f"{BASE}{u}\n" for u, _ in sm))
     validate_output()
     for r in report: print(*r)
 
