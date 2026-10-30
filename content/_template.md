@@ -9,6 +9,7 @@ description: >-
 date: '2026-10-29'                  # published date, YYYY-MM-DD
 updated: '2026-10-29'               # last updated, YYYY-MM-DD
 author: Digital Profit Review Editors
+# author_person: {name: Jane Doe, bio: One-line bio, url: https://digitalprofitreview.com/about/}  # optional; switches author schema to Person
 hero:
   image: assets/home/your-image     # base name; needs -lg.webp, -sm.webp and -og.jpg next to it
   alt: Describe what is in the hero image, in plain words
@@ -20,7 +21,7 @@ comparison:                         # optional "At a glance" table
   best_for: Anyone who curls up on the couch
 - asin: B00JR5N0JM
   best_for: Warming up a dark corner
-faq:
+faq:                                # write each question the way people ask it in Google/ChatGPT; answer in 1-2 direct sentences first
 - question: A question shoppers actually ask?
   answer: A short, honest answer.
 - question: Another question?
