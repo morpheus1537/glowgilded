@@ -186,7 +186,7 @@ def main():
     latest = max(p["updated"] for p in posts)
     sm = [("/", latest)]
     posts_sorted = sorted(posts, key=lambda p: (p["date"], p["slug"]), reverse=True)
-    cats = "".join(f'<a class="catcard" href="/{c["key"]}/"><span class="n">{i+1:02d}</span><h3>{E(c["name"])}</h3><p>{E(c["blurb"])}</p><span class="more">{sum(p["cat"] is c for p in posts)} guides &rarr;</span></a>' for i, c in enumerate(CATEGORIES))
+    cats = "".join(f'<a class="catcard" href="/{c["key"]}/"><span class="n">{i+1:02d}</span><h3>{E(c["name"])}</h3><p>{E(c["blurb"])}</p><span class="more">{(lambda n: f"{n} guide" + ("" if n == 1 else "s"))(sum(p["cat"] is c for p in posts))} &rarr;</span></a>' for i, c in enumerate(CATEGORIES))
     body = f"""<section class="hero"><div class="wrap"><p class="eyebrow">Buying guides &middot; Reviews &middot; Gift edits</p>
 <h1>Smart picks, honestly reviewed.</h1><p class="lede">Digital Profit Review researches the products worth your money across home, beauty and more, so you can buy once and buy well.</p>
 <p><a class="btn" href="#latest">Read the latest guides</a> <a class="btn ghost" href="#categories">Browse categories</a></p></div></section>
