@@ -39,4 +39,4 @@ Allow: /
 Disallow: /404.html
 Disallow: /search/
 
-Sitemap: {BASE}/sitemap.xml
+Sitemap: https://digitalprofitreview.com/sitemap.xml
