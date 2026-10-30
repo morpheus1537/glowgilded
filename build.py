@@ -89,7 +89,7 @@ def render_product(b, asin):
     return "".join(out)
 
 LOGO = '<a class="wordmark" href="/"><span class="mono">DPR</span><span class="wm">Digital Profit <em>Review</em></span></a>'
-def nav(): return "".join(f'<a href="/{c["key"]}/">{E(c["name"])}</a>' for c in CATEGORIES) + '<a href="/about/">About</a>'
+def nav(): return "".join(f'<a href="/{c["key"]}/">{E(c.get("short", c["name"]))}</a>' for c in CATEGORIES) + '<a href="/about/">About</a>'
 def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>"
 ORG = {"@type": "Organization", "@id": BASE + "/#org", "name": SITE, "url": BASE + "/", "logo": {"@type": "ImageObject", "url": BASE + "/assets/logo.png", "width": 512, "height": 512}}
 
@@ -195,20 +195,20 @@ def main():
 <section class="band"><div class="wrap"><h2>How we choose</h2><p>We favour products with a long track record of strong buyer ratings, explain who each pick suits, and never invent prices. If a product slips in quality or goes out of stock, we replace it. <a href="/about/">More about us</a>.</p></div></section>"""
     _, bc = crumbs([])
     home_schema = [{"@context": "https://schema.org", **ORG}, {"@context": "https://schema.org", "@type": "WebSite", "@id": BASE + "/#website", "name": SITE, "url": BASE + "/", "publisher": {"@id": BASE + "/#org"}, "inLanguage": "en-US"}, bc]
-    write("/", page(f"{SITE}: Honest Buying Guides for Home & Beauty", "Independent buying guides and gift edits for home & decor and beauty, featuring only well-reviewed products, with honest pros and cons.", body, "/", home_schema))
+    write("/", page(f"{SITE}: Honest Buying Guides for Home, Beauty, Tech & More", "Independent buying guides and gift edits for home, beauty, kitchen, tech, fitness, pets and gifts, featuring only well-reviewed products, with honest pros and cons.", body, "/", home_schema))
     report = []
     for c in CATEGORIES:
         cp = sorted([p for p in posts if p["cat"] is c], key=lambda p: (p["date"], p["slug"]), reverse=True)
         vis, bc = crumbs([(c["name"], None)])
         b = f"""<section class="cathero"><div class="wrap">{vis}<h1>{E(c['name'])} Buying Guides</h1><p class="lede">{E(c['blurb'])}</p></div></section>
 <section class="sec"><div class="wrap"><h2 class="sr">All {E(c['name'])} guides</h2><div class="grid">{"".join(card(p, i == 0) for i, p in enumerate(cp))}</div></div></section>"""
-        write(f"/{c['key']}/", page(f"{c['name']} Buying Guides & Gift Ideas | {SITE}", c["blurb"] + " Honest pros and cons for every pick.", b, f"/{c['key']}/", [bc]))
+        write(f"/{c['key']}/", page(c.get("seo_title", f"{c['name']} Buying Guides & Gift Ideas | {SITE}"), c.get("seo_description", c["blurb"] + " Honest pros and cons for every pick."), b, f"/{c['key']}/", [bc]))
         sm.append((f"/{c['key']}/", max(p["updated"] for p in cp)))
         for p in cp:
             rel = [q for q in posts_sorted if q is not p and q["cat"] is c][:2]
             s, wc, mins = article(p, rel); write(p["url"], s); sm.append((p["url"], p["updated"])); report.append((p["url"], wc, mins))
     static = {
-     "about": ("About Digital Profit Review", "Who we are and how Digital Profit Review researches and selects the products in our buying guides.", f"<p>{SITE} publishes practical buying guides across categories, starting with Home &amp; Decor and Beauty. Our guides are written by the {AUTHOR}. We focus on products with a strong track record of buyer reviews, explain who each pick is for, list honest drawbacks, and update guides when products change or sell out.</p><h2>How we choose products</h2><p>We read product listings, specifications and buyer reviews, and we check each product's Amazon rating and availability on the date shown in every guide. We never invent prices or ratings, and we do not publish star ratings of our own.</p><h2>How we make money</h2><p>We are reader-supported. When you buy through links on our site we may earn an affiliate commission, which never changes the price you pay. See our <a href=\"/affiliate-disclosure/\">affiliate disclosure</a>.</p>"),
+     "about": ("About Digital Profit Review", "Who we are and how Digital Profit Review researches and selects the products in our buying guides.", f"<p>{SITE} publishes practical buying guides across categories, including home &amp; decor, beauty, kitchen, tech, fitness, pets and gifts. Our guides are written by the {AUTHOR}. We focus on products with a strong track record of buyer reviews, explain who each pick is for, list honest drawbacks, and update guides when products change or sell out.</p><h2>How we choose products</h2><p>We read product listings, specifications and buyer reviews, and we check each product's Amazon rating and availability on the date shown in every guide. We never invent prices or ratings, and we do not publish star ratings of our own.</p><h2>How we make money</h2><p>We are reader-supported. When you buy through links on our site we may earn an affiliate commission, which never changes the price you pay. See our <a href=\"/affiliate-disclosure/\">affiliate disclosure</a>.</p>"),
      "affiliate-disclosure": ("Affiliate Disclosure", "How Digital Profit Review earns money through the Amazon Associates program.", f"<p>{SITE} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. <strong>{DISC}</strong></p><p>Links to Amazon are marked as sponsored. Commissions come at no extra cost to you and do not affect which products we recommend. Ratings and availability are accurate as of the date shown and are subject to change.</p>"),
      "privacy": ("Privacy Policy", "Privacy policy for Digital Profit Review: what data is collected and how Amazon affiliate links work.", "<p>This site is hosted on Vercel, which may log standard request data (such as IP address and browser type) for security and performance. We do not run our own analytics, ads or newsletter signup, and we do not sell personal information.</p><p>When you click an Amazon link, Amazon may set cookies to attribute purchases to us; see Amazon's privacy notice.</p><p>Last updated October 29, 2026.</p>"),
     }

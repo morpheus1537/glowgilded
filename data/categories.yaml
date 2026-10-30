@@ -1,7 +1,40 @@
 # Site categories. Add one entry and create content/<key>/ to add a category.
+# short = label in the top nav; seo_title / seo_description = category page <title> and meta description (optional).
 - key: home
   name: Home & Decor
+  short: Home
   blurb: Cozy, practical picks for every room, plus gift guides for people who love being home.
 - key: beauty
   name: Beauty
+  short: Beauty
   blurb: Luxury skincare, routines and at-home spa rituals, with only highly rated products.
+- key: kitchen
+  name: Kitchen
+  short: Kitchen
+  blurb: Hard-working cookware, appliances and tools that home cooks actually reach for every day.
+  seo_title: Best Kitchen Gadgets, Cookware & Appliances | Digital Profit Review
+  seo_description: Honest kitchen buying guides covering cookware, small appliances and prep tools, featuring only highly rated Amazon picks with clear pros and cons.
+- key: tech
+  name: Tech & Gadgets
+  short: Tech
+  blurb: Smart home gear, streaming devices, speakers and everyday gadgets worth the money.
+  seo_title: Best Tech & Gadgets for Home and Gifting | Digital Profit Review
+  seo_description: Tech and gadget buying guides for smart speakers, streaming sticks, trackers and portable speakers, with only well-reviewed picks and honest drawbacks.
+- key: fitness
+  name: Fitness & Wellness
+  short: Fitness
+  blurb: Simple, well-reviewed gear for home workouts, recovery and healthy daily habits.
+  seo_title: Best Home Fitness & Wellness Gear | Digital Profit Review
+  seo_description: Home fitness and wellness buying guides covering yoga mats, resistance bands, foam rollers and smart scales, with honest pros and cons for every pick.
+- key: pets
+  name: Pets
+  short: Pets
+  blurb: Tough toys, grooming tools and everyday essentials that dogs, cats and their owners love.
+  seo_title: Best Pet Products, Dog Toys & Grooming Tools | Digital Profit Review
+  seo_description: Pet buying guides featuring durable dog toys, chews and grooming brushes with strong Amazon ratings, plus honest notes on who each pick suits.
+- key: gifts
+  name: Gifts
+  short: Gifts
+  blurb: Thoughtful, well-reviewed gift ideas for every budget, person and occasion.
+  seo_title: Gift Ideas and Gift Guides for Every Budget | Digital Profit Review
+  seo_description: Curated gift guides with well-reviewed ideas for holidays, birthdays and hostess gifts, organized by budget and person, with honest pros and cons.
