@@ -38,3 +38,33 @@
   blurb: Thoughtful, well-reviewed gift ideas for every budget, person and occasion.
   seo_title: Gift Ideas and Gift Guides for Every Budget | Digital Profit Review
   seo_description: Curated gift guides with well-reviewed ideas for holidays, birthdays and hostess gifts, organized by budget and person, with honest pros and cons.
+- key: baby
+  name: Baby & Kids
+  short: Baby
+  blurb: Registry essentials, nursery helpers and everyday gear that new parents rely on.
+  seo_title: Best Baby Products & Registry Essentials | Digital Profit Review
+  seo_description: Baby and kids buying guides covering registry must-haves, nursery gear, carriers and everyday essentials, with only highly rated Amazon picks and honest pros and cons.
+- key: outdoor
+  name: Outdoor & Patio
+  short: Outdoor
+  blurb: Lighting, comfort and easy upgrades that make your patio, yard and garden feel finished.
+  seo_title: Best Outdoor & Patio Products and Ideas | Digital Profit Review
+  seo_description: Outdoor and patio buying guides for string lights, solar lights and backyard upgrades, featuring well-reviewed Amazon picks with clear pros and cons.
+- key: office
+  name: Home Office
+  short: Office
+  blurb: Ergonomic, tidy and well-lit desk setups for people who work from home.
+  seo_title: Best Home Office Setup Essentials | Digital Profit Review
+  seo_description: Home office buying guides covering laptop stands, desk lighting, keyboards and desk mats, with only highly rated picks and honest notes on who each suits.
+- key: car
+  name: Car Accessories
+  short: Car
+  blurb: Organizers, mounts and cleaning gear that keep your car tidy and your drive easier.
+  seo_title: Best Car Accessories & Organization Gear | Digital Profit Review
+  seo_description: Car accessory buying guides for trunk organizers, phone mounts, car trash cans and hand vacuums, featuring well-reviewed Amazon picks with honest pros and cons.
+- key: travel
+  name: Travel
+  short: Travel
+  blurb: Packing, comfort and charging essentials that make every trip lighter and calmer.
+  seo_title: Best Travel Essentials & Packing Gear | Digital Profit Review
+  seo_description: Travel buying guides covering packing cubes, toiletry bags, travel adapters and neck pillows, with only highly rated Amazon picks and clear pros and cons.

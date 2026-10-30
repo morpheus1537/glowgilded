@@ -7,7 +7,7 @@ h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;
 .discbar{background:var(--acc);color:#d9dfd9;font-size:12.5px;text-align:center;padding:7px 16px}.discbar a{color:#fff}
 header.site{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
-header nav a{text-decoration:none;font-size:14px;font-weight:500;margin-left:20px;color:var(--mut)}header nav a:hover{color:var(--ink)}
+header nav a{text-decoration:none;font-size:14px;font-weight:500;margin-left:20px;color:var(--mut)}header nav a:hover{color:var(--ink)}header nav a.x{display:none}header nav .more{position:relative;display:inline-block;margin-left:20px;font-size:14px;font-weight:500;color:var(--mut);cursor:pointer}header nav .more>span{outline:none}header nav .more .dd{display:none;position:absolute;right:0;top:100%;padding:8px 0;min-width:190px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.08);z-index:9}header nav .more:hover .dd,header nav .more:focus-within .dd{display:block}header nav .more .dd a{display:block;margin:0;padding:8px 16px}
 .wordmark{display:flex;align-items:center;gap:11px;text-decoration:none}
 .mono{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:8px;background:var(--acc);color:#f6f3ec;font:600 12px Inter;letter-spacing:.08em}
 .wm{font-family:Fraunces,Georgia,serif;font-size:21px;font-weight:600;letter-spacing:-.01em}.wm em{font-style:italic;font-weight:400;color:var(--goldt)}
@@ -61,4 +61,4 @@ footer .wm em{color:#d8b878}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .band a{color:#fff}
 
-@media(max-width:1020px){header.site .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:0;gap:6px}header.site nav{width:100%;display:flex;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:10px}header.site nav::-webkit-scrollbar{display:none}header.site nav a{margin:0 16px 0 0;flex:none}header.site nav a:last-child{display:inline}}
+@media(max-width:1020px){header.site .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:0;gap:6px}header.site nav{width:100%;display:flex;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:10px}header.site nav::-webkit-scrollbar{display:none}header.site nav a{margin:0 16px 0 0;flex:none}header.site nav a:last-child{display:inline}header.site nav a.x{display:inline}header.site nav .more{display:none}}

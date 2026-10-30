@@ -89,7 +89,12 @@ def render_product(b, asin):
     return "".join(out)
 
 LOGO = '<a class="wordmark" href="/"><span class="mono">DPR</span><span class="wm">Digital Profit <em>Review</em></span></a>'
-def nav(): return "".join(f'<a href="/{c["key"]}/">{E(c.get("short", c["name"]))}</a>' for c in CATEGORIES) + '<a href="/about/">About</a>'
+NAV_TOP = 6  # categories shown directly in the desktop nav; the rest go under "More" (all show in the mobile swipe nav)
+def nav():
+    lk = lambda c, cls="": f'<a{cls} href="/{c["key"]}/">{E(c.get("short", c["name"]))}</a>'
+    top, rest = CATEGORIES[:NAV_TOP], CATEGORIES[NAV_TOP:]
+    more = (f'<div class="more"><span tabindex="0" aria-haspopup="true">More &#9662;</span><div class="dd">{"".join(lk(c) for c in rest)}</div></div>' if rest else "")
+    return "".join(lk(c) for c in top) + "".join(lk(c, ' class="x"') for c in rest) + more + '<a href="/about/">About</a>'
 def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>"
 ORG = {"@type": "Organization", "@id": BASE + "/#org", "name": SITE, "url": BASE + "/", "logo": {"@type": "ImageObject", "url": BASE + "/assets/logo.png", "width": 512, "height": 512}}
 
