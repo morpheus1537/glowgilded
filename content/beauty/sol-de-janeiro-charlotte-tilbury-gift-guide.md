@@ -69,7 +69,7 @@ The person who loves body care and fragrance, someone who has always been curiou
 - Includes the brand's signature Brazilian Bum Bum Cream
 - A richer body butter option for drier skin days
 - Minis are easy to travel with
-- Rated 4.4 stars from 488 ratings as of our check
+- Rated 4.4 stars from 495 ratings as of our check
 
 ### Cons
 
@@ -98,7 +98,7 @@ Fragrance fans, frequent travelers, and anyone who likes a light scent she can r
 - Two distinct scents in one gift
 - Travel-friendly size with a reusable pouch
 - Easy to layer with Sol de Janeiro body creams
-- The highest rating of this edit: 4.7 stars from 165 ratings as of our check
+- The highest rating of this edit: 4.7 stars from 168 ratings as of our check
 
 ### Cons
 
@@ -128,7 +128,7 @@ Anyone who likes a "my lips but better" look, someone building a party makeup ba
 - Buildable color for day or night
 - Angled tip makes application precise
 - Luxurious, giftable packaging
-- 4.3 stars from 3,004 ratings as of our check
+- 4.3 stars from 3,008 ratings as of our check
 
 ### Cons
 

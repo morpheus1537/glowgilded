@@ -65,7 +65,7 @@ Secret Santa and stocking stuffer shoppers, frequent travelers, and anyone curio
 
 - Four best sellers in one box, including the cult Lip Sleeping Mask
 - Travel sizes are carry-on friendly
-- 4.6 stars from 858 ratings
+- 4.6 stars from 859 ratings
 
 ### Cons
 
@@ -119,7 +119,7 @@ Beauty tech fans, partners looking for a big "wow" gift, and anyone who already 
 
 - Cordless, with dual straps, so she can relax while it runs
 - Three light settings in one device
-- Sold by iRestore and shipped by Amazon, with 4.5 stars from 1,055 ratings
+- Sold by iRestore and shipped by Amazon, with 4.5 stars from 1,056 ratings
 
 ### Cons
 
