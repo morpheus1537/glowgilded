@@ -94,7 +94,7 @@ def nav():
     lk = lambda c, cls="": f'<a{cls} href="/{c["key"]}/">{E(c.get("short", c["name"]))}</a>'
     top, rest = CATEGORIES[:NAV_TOP], CATEGORIES[NAV_TOP:]
     more = (f'<div class="more"><span tabindex="0" aria-haspopup="true">More &#9662;</span><div class="dd">{"".join(lk(c) for c in rest)}</div></div>' if rest else "")
-    return "".join(lk(c) for c in top) + "".join(lk(c, ' class="x"') for c in rest) + more + '<a href="/gift-finder/">Gift finder</a><a href="/search/">Search</a><a href="/about/">About</a>'
+    return "".join(lk(c) for c in top) + "".join(lk(c, ' class="x"') for c in rest) + more + '<a href="/holiday-gift-guide/">Holiday gifts</a><a href="/gift-finder/">Gift finder</a><a href="/search/">Search</a><a href="/about/">About</a>'
 def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>"
 ORG = {"@type": "Organization", "@id": BASE + "/#org", "name": SITE, "url": BASE + "/", "logo": {"@type": "ImageObject", "url": BASE + "/assets/logo.png", "width": 512, "height": 512}, "description": "Independent product research site publishing buying guides and gift guides for home, beauty, kitchen, tech, fitness, pets, baby, outdoor, office, car and travel.", "sameAs": ["https://www.pinterest.com/hearthhavenhome99/", "https://www.pinterest.com/glowgilded/"]}
 def cnt(asin): return int(str(PRODUCTS[asin]["count"]).replace(",", ""))
@@ -174,7 +174,7 @@ def article(p, related):
 <p class="byline">By <a href="/about/">{E(p["author"])}</a> &middot; Published <time datetime="{p['date']}">{fmt(p['date'])}</time> &middot; Updated <time datetime="{p['updated']}">{fmt(p['updated'])}</time> &middot; {mins} min read</p>
 {disc}<figure class="heroimg"><img src="{src}" alt="{E(p['hero']['alt'])}" width="{w}" height="{h}" fetchpriority="high" decoding="async"></figure>
 <div class="body">{body}</div></div></article>{sticky}
-<section class="sec related"><div class="wrap"><div class="sechead"><h2>Related guides</h2><a href="/{c['key']}/">View all &rarr;</a></div><div class="grid two">{"".join(card(q) for q in related)}</div></div></section>"""
+<section class="sec related"><div class="wrap"><div class="sechead"><h2>Related guides</h2><a href="/{c['key']}/">View all &rarr;</a></div><div class="grid">{"".join(card(q) for q in related)}</div></div></section>"""
     og = "/" + p["base"] + "-og.jpg"
     schema = [
       {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["title"], "description": p["description"], "image": [BASE + og, BASE + src],
@@ -195,7 +195,7 @@ def write(path, s):
 
 def main():
     for c in CATEGORIES: shutil.rmtree(c["key"], ignore_errors=True)
-    for d in ("about", "affiliate-disclosure", "privacy", "gift-finder", "search"): shutil.rmtree(d, ignore_errors=True)
+    for d in ("about", "affiliate-disclosure", "privacy", "gift-finder", "search", "holiday-gift-guide"): shutil.rmtree(d, ignore_errors=True)
     posts = load()
     if ERRORS: print("BUILD FAILED:\n  " + "\n  ".join(ERRORS), file=sys.stderr); sys.exit(1)
     latest = max(p["updated"] for p in posts)
@@ -204,7 +204,7 @@ def main():
     cats = "".join(f'<a class="catcard" href="/{c["key"]}/"><span class="n">{i+1:02d}</span><h3>{E(c["name"])}</h3><p>{E(c["blurb"])}</p><span class="more">{(lambda n: f"{n} guide" + ("" if n == 1 else "s"))(sum(p["cat"] is c for p in posts))} &rarr;</span></a>' for i, c in enumerate(CATEGORIES))
     body = f"""<section class="hero"><div class="wrap"><p class="eyebrow">Buying guides &middot; Reviews &middot; Gift edits</p>
 <h1>Smart picks, honestly reviewed.</h1><p class="lede">Digital Profit Review researches the products worth your money across home, beauty and more, so you can buy once and buy well.</p>
-<p><a class="btn" href="#latest">Read the latest guides</a> <a class="btn ghost" href="#categories">Browse categories</a></p></div></section>
+<p><a class="btn" href="/holiday-gift-guide/">Holiday Gift Guide 2026</a> <a class="btn ghost" href="#latest">Read the latest guides</a> <a class="btn ghost" href="#categories">Browse categories</a></p></div></section>
 <section class="sec" id="categories"><div class="wrap"><div class="sechead"><h2>Categories</h2></div><div class="catgrid">{cats}</div></div></section>
 {{TRENDING}}<section class="sec" id="latest"><div class="wrap"><div class="sechead"><h2>Latest guides</h2></div><div class="grid">{"".join(card(p) for p in posts_sorted)}</div></div></section>
 <section class="band"><div class="wrap"><h2>How we choose</h2><p>We favour products with a long track record of strong buyer ratings, explain who each pick suits, and never invent prices. If a product slips in quality or goes out of stock, we replace it. <a href="/about/">More about us</a>.</p></div></section>"""
@@ -226,7 +226,7 @@ def main():
         write(f"/{c['key']}/", page(c.get("seo_title", f"{c['name']} Buying Guides & Gift Ideas | {SITE}"), c.get("seo_description", c["blurb"] + " Honest pros and cons for every pick."), b, f"/{c['key']}/", [bc]))
         sm.append((f"/{c['key']}/", max(p["updated"] for p in cp)))
         for p in cp:
-            rel = ([q for q in posts_sorted if q is not p and q["cat"] is c] + [q for q in posts_sorted if q["cat"] is not c])[:2]
+            rel = ([q for q in posts_sorted if q is not p and q["cat"] is c] + [q for q in posts_sorted if q["cat"] is not c])[:3]
             s, wc, mins = article(p, rel); write(p["url"], s); sm.append((p["url"], p["updated"])); report.append((p["url"], wc, mins))
     static = {
      "about": ("About Digital Profit Review", "Who we are and how Digital Profit Review researches and selects the products in our buying guides.", f"<p>{SITE} publishes practical buying guides across categories, including home &amp; decor, beauty, kitchen, tech, fitness, pets and gifts. Our guides are written by the {AUTHOR}. We focus on products with a strong track record of buyer reviews, explain who each pick is for, list honest drawbacks, and update guides when products change or sell out.</p><h2>How we choose products</h2><p>We read product listings, specifications and buyer reviews, and we check each product's Amazon rating and availability on the date shown in every guide. We never invent prices or ratings, and we do not publish star ratings of our own.</p><h2>How we make money</h2><p>We are reader-supported. When you buy through links on our site we may earn an affiliate commission, which never changes the price you pay. See our <a href=\"/affiliate-disclosure/\">affiliate disclosure</a>.</p><h2>At a glance</h2><ul><li><strong>Name:</strong> {SITE}</li><li><strong>Website:</strong> {BASE}</li><li><strong>What we publish:</strong> buying guides and gift guides across {len(CATEGORIES)} categories: {", ".join(E(c["name"]) for c in CATEGORIES)}</li><li><strong>Written by:</strong> the {AUTHOR}</li><li><strong>Affiliation:</strong> Amazon Associates participant; links to Amazon are affiliate links</li><li><strong>Find us on Pinterest:</strong> <a href=\"https://www.pinterest.com/hearthhavenhome99/\">Hearth &amp; Haven Home</a> and <a href=\"https://www.pinterest.com/glowgilded/\">Glow &amp; Gilded</a></li></ul>"),
@@ -237,6 +237,15 @@ def main():
         vis, bc = crumbs([(t, None)])
         b = f'<article class="post"><div class="wrap narrow">{vis}<h1>{t}</h1><div class="body">{txt}</div></div></article>'
         write(f"/{slug}/", page(f"{t} | {SITE}", d, b, f"/{slug}/", [bc] + ([{"@context": "https://schema.org", **ORG}, {"@context": "https://schema.org", "@type": "AboutPage", "url": BASE + "/about/", "name": t, "mainEntity": {"@id": BASE + "/#org"}}] if slug == "about" else []))); sm.append((f"/{slug}/", "2026-10-29"))
+    # --- holiday gift guide hub (cross-category internal links) ---
+    HUBKEYS = ("gift", "christmas", "stocking", "registry")
+    hubp = [p for p in posts_sorted if any(k in p["slug"] for k in HUBKEYS)]
+    if hubp:
+        groups = "".join(f'<section class="sec"><div class="wrap"><div class="sechead"><h2>{"More gift ideas" if c["key"] == "gifts" else E(c["name"]) + " gift ideas"}</h2><a href="/{c["key"]}/">All {E(c["name"])} guides &rarr;</a></div><div class="grid">{"".join(card(p) for p in hubp if p["cat"] is c)}</div></div></section>' for c in CATEGORIES if any(p["cat"] is c for p in hubp))
+        vis, bc = crumbs([("Holiday Gift Guide 2026", None)])
+        hb = f"""<section class="cathero"><div class="wrap">{vis}<h1>Holiday Gift Guide 2026</h1><p class="lede">Every gift guide we have published this season in one place, grouped by category: Christmas gifts, stocking stuffers and thoughtful picks for her, dad, home cooks, travelers, book lovers, dogs and little ones. Each guide features well-reviewed Amazon products with honest pros and cons. Shopping for Black Friday? Check each product's current price on Amazon, since deals change daily.</p><p><a class="btn" href="/gift-finder/">Filter gifts by rating</a></p></div></section>{groups}"""
+        hl = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Holiday Gift Guide 2026", "url": BASE + "/holiday-gift-guide/", "hasPart": [{"@type": "Article", "headline": p["title"], "url": BASE + p["url"]} for p in hubp]}
+        write("/holiday-gift-guide/", page(f"Holiday Gift Guide 2026: Christmas Gift Ideas for Everyone | {SITE}", "Our 2026 holiday gift guide: Christmas gift ideas, stocking stuffers and Black Friday shopping picks for her, dad, home cooks, travelers, dogs and kids, all well reviewed on Amazon.", hb, "/holiday-gift-guide/", [bc, hl])); sm.append(("/holiday-gift-guide/", max(p["updated"] for p in hubp)))
     # --- gift finder + search (static JSON, no cookies) ---
     GIFTY = ("gift", "stocking", "registry")
     def gifty(a): return any(any(g in (q["slug"] + q["cat"]["key"]) for g in GIFTY) for q in posts if a in q["products"])
@@ -256,7 +265,7 @@ def main():
 <script>(function(){{var D=[],q=document.getElementById("sq"),n=document.getElementById("sn"),l=document.getElementById("sl"),e=function(s){{return String(s).replace(/[&<>"]/g,function(c){{return{{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}}[c]}})}};function R(){{var t=q.value.toLowerCase().split(/\\s+/).filter(Boolean),o=t.length?D.filter(function(d){{var h=(d.t+" "+d.d+" "+d.c+" "+d.p).toLowerCase();return t.every(function(w){{return h.indexOf(w)>-1}})}}):[];n.textContent=t.length?o.length+" guides found":"";l.innerHTML=o.map(function(d){{return'<p><a href="'+d.u+'"><strong>'+e(d.t)+'</strong></a><br><span class="label">'+e(d.c)+'</span> '+e(d.d)+'</p>'}}).join("")}}q.oninput=R;q.value=new URLSearchParams(location.search).get("q")||"";fetch("/search/index.json").then(function(r){{return r.json()}}).then(function(d){{D=d;R()}})}})();</script>"""
     write("/search/", page(f"Search | {SITE}", "Search Digital Profit Review buying guides and products.", se, "/search/", [crumbs([("Search", None)])[1]]).replace('content="index,follow,max-image-preview:large"', 'content="noindex,follow"'))
     # --- llms.txt for AI answer engines ---
-    L = [f"# {SITE}", "", f"> Independent buying guides and gift guides ({BASE}). Each guide recommends a few well-reviewed Amazon products, with who each is for, honest pros and cons, Amazon ratings checked on a stated date, and an FAQ. We never invent prices. {DISC}", "", "## Key pages", f"- [About]({BASE}/about/): who we are and how we choose products", f"- [Gift finder]({BASE}/gift-finder/): filter all recommended products by category and rating", f"- [Affiliate disclosure]({BASE}/affiliate-disclosure/)", f"- [Sitemap]({BASE}/sitemap.xml)", ""]
+    L = [f"# {SITE}", "", f"> Independent buying guides and gift guides ({BASE}). Each guide recommends a few well-reviewed Amazon products, with who each is for, honest pros and cons, Amazon ratings checked on a stated date, and an FAQ. We never invent prices. {DISC}", "", "## Key pages", f"- [About]({BASE}/about/): who we are and how we choose products", f"- [Holiday Gift Guide 2026]({BASE}/holiday-gift-guide/): every Christmas and holiday gift guide on the site, grouped by category", f"- [Gift finder]({BASE}/gift-finder/): filter all recommended products by category and rating", f"- [Affiliate disclosure]({BASE}/affiliate-disclosure/)", f"- [Sitemap]({BASE}/sitemap.xml)", ""]
     for c in CATEGORIES:
         L += [f"## {c['name']}", f"[{c['name']} guides]({BASE}/{c['key']}/): {c['blurb']}"] + [f"- [{p['title']}]({BASE}{p['url']}): {p['description'].strip()} (updated {p['updated']})" for p in posts_sorted if p["cat"] is c] + [""]
     open("llms.txt", "w").write("\n".join(L))

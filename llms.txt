@@ -4,6 +4,7 @@
 
 ## Key pages
 - [About](https://digitalprofitreview.com/about/): who we are and how we choose products
+- [Holiday Gift Guide 2026](https://digitalprofitreview.com/holiday-gift-guide/): every Christmas and holiday gift guide on the site, grouped by category
 - [Gift finder](https://digitalprofitreview.com/gift-finder/): filter all recommended products by category and rating
 - [Affiliate disclosure](https://digitalprofitreview.com/affiliate-disclosure/)
 - [Sitemap](https://digitalprofitreview.com/sitemap.xml)
