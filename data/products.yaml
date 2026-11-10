@@ -1008,8 +1008,8 @@ products:
   B0CTJGJL2T:
     name: 'GODONLIF Candle Warmer Lamp with Timer'
     rating: '4.6'
-    count: 11,790
-    checked: '2026-11-04'
+    count: 11,960
+    checked: '2026-11-10'
   B000BTNLBK:
     name: 'HALO Micro-Fleece SleepSack Swaddle, TOG 3.0'
     rating: '4.8'
@@ -2139,4 +2139,14 @@ products:
     name: 'Caudalie Vinotherapist Hand and Nail Cream'
     rating: '4.6'
     count: 1,427
+    checked: '2026-11-10'
+  B07YHPRWSF:
+    name: 'GenSwin Flameless Taper Candles with Remote and Timer, Ivory, Set of 6'
+    rating: '4.5'
+    count: 15,930
+    checked: '2026-11-10'
+  B07BDFWBYN:
+    name: 'InnoGear Essential Oil Diffuser, 100 ml, Brown Wood Grain'
+    rating: '4.4'
+    count: 123,524
     checked: '2026-11-10'
