@@ -163,8 +163,8 @@ products:
   B0BP9SNVH9:
     name: Amazon Fire TV Stick 4K Max
     rating: '4.6'
-    count: 84,085
-    checked: '2026-10-31'
+    count: 84,478
+    checked: '2026-11-14'
   B089DR29T6:
     name: Amazon Smart Plug (works with Alexa)
     rating: '4.7'
@@ -193,8 +193,8 @@ products:
   B01N1UX8RW:
     name: RENPHO Smart Body Fat Scale
     rating: '4.6'
-    count: 339,957
-    checked: '2026-10-31'
+    count: 340,336
+    checked: '2026-11-14'
   B0002AR0I8:
     name: KONG Classic Stuffable Dog Toy (Large)
     rating: '4.6'
@@ -933,8 +933,8 @@ products:
   B0F7Z4QZTT:
     name: 'Amazon Fire TV Stick 4K Plus'
     rating: '4.6'
-    count: 116,067
-    checked: '2026-11-04'
+    count: 116,435
+    checked: '2026-11-14'
   B09WF4GPPC:
     name: 'Gaiam Premium 6mm Print Yoga Mat'
     rating: '4.7'
@@ -3005,3 +3005,288 @@ products:
     rating: '4.6'
     count: 15,372
     checked: '2026-11-13'
+  B08FQZJMGM:
+    name: 'Reaks Heated Mattress Pad King, Dual Control, 3D Air Fabric'
+    rating: '4.5'
+    count: 5,564
+    checked: '2026-11-14'
+  B0D5M8WQ4V:
+    name: 'VALUXE Quilted Heated Mattress Pad Queen, Dual Control'
+    rating: '4.6'
+    count: 1,208
+    checked: '2026-11-14'
+  B091H7J7Q7:
+    name: 'Serta Waterproof Heated Mattress Pad King, Dual Control'
+    rating: '4.4'
+    count: 2,606
+    checked: '2026-11-14'
+  B0B28WYBJ3:
+    name: 'Sealy Heated Mattress Pad Queen, Dual Control, 10 Heat Settings'
+    rating: '4.4'
+    count: 1,945
+    checked: '2026-11-14'
+  B0DPW49SV7:
+    name: 'GOTCOZY Mini Twin Heated Mattress Pad, 31 x 55 in'
+    rating: '4.4'
+    count: 3,145
+    checked: '2026-11-14'
+  B00GP3XLYI:
+    name: 'Circulon Nonstick Roasting Pan with Rack, 17 x 13 in'
+    rating: '4.7'
+    count: 9,115
+    checked: '2026-11-14'
+  B0041Q409G:
+    name: 'Cuisinart MultiClad Pro 16 in Stainless Roasting Pan and Rack'
+    rating: '4.7'
+    count: 1,404
+    checked: '2026-11-14'
+  B089XY4QVV:
+    name: 'E-far Stainless Steel Roasting Pan with V-Rack and Flat Rack, 16 x 11.5 in'
+    rating: '4.7'
+    count: 1,168
+    checked: '2026-11-14'
+  B003YKGRG4:
+    name: 'Chicago Metallic Roasting Pan with Rack, 13.5 x 9.5 in'
+    rating: '4.5'
+    count: 5,688
+    checked: '2026-11-14'
+  B000QRAMMS:
+    name: 'Granite Ware 13 in Oval Roaster with Lid'
+    rating: '4.4'
+    count: 14,059
+    checked: '2026-11-14'
+  B0DXXYS4BJ:
+    name: 'Roku Streaming Stick HD with Voice Remote'
+    rating: '4.6'
+    count: 26,399
+    checked: '2026-11-14'
+  B09X5DL9S5:
+    name: 'Roku Streaming Stick 4K'
+    rating: '4.4'
+    count: 6,076
+    checked: '2026-11-14'
+  B0D8WJYSF9:
+    name: 'Google TV Streamer 4K'
+    rating: '4.3'
+    count: 4,479
+    checked: '2026-11-14'
+  B0GYF5PST1:
+    name: 'Wyze Smart Scale BodyScan with Handle'
+    rating: '4.6'
+    count: 24,664
+    checked: '2026-11-14'
+  B0FJFL8KP4:
+    name: 'RENPHO MorphoScan Nova Smart Scale with Handle Display'
+    rating: '4.5'
+    count: 33,017
+    checked: '2026-11-14'
+  B0H2Z199N8:
+    name: 'arboleaf 8-Electrode Dual-Frequency Smart Scale'
+    rating: '4.7'
+    count: 18,288
+    checked: '2026-11-14'
+  B0D96373RS:
+    name: 'GE Smart Scale Body Composition Analyzer, 8-Electrode'
+    rating: '4.3'
+    count: 4,551
+    checked: '2026-11-14'
+  B0787FVCBW:
+    name: 'Outward Hound Fun Feeder Slo Bowl, Notch, 2 Cups'
+    rating: '4.6'
+    count: 135,774
+    checked: '2026-11-14'
+  B0C5HSCS8J:
+    name: 'MateeyLife Slow Feeder Dog Bowls, 2-Pack, 2 Cups'
+    rating: '4.6'
+    count: 10,706
+    checked: '2026-11-14'
+  B0965CYRT1:
+    name: 'LE TAUCI Ceramic Slow Feeder Dog Bowl, 1.5 Cups'
+    rating: '4.7'
+    count: 3,098
+    checked: '2026-11-14'
+  B015G2DU80:
+    name: 'Neater Pet Brands Stainless Steel Slow Feed Bowl, 3 Cups'
+    rating: '4.4'
+    count: 7,484
+    checked: '2026-11-14'
+  B0D1FMP3S5:
+    name: 'Feedoo Stainless Steel Slow Feeder Dog Bowl, 2 Cups'
+    rating: '4.5'
+    count: 1,461
+    checked: '2026-11-14'
+  B001B6CH0S:
+    name: 'PUTT-A-BOUT Par Three Putting Green, 3 x 9 ft'
+    rating: '4.6'
+    count: 24,562
+    checked: '2026-11-14'
+  B06XKDWL83:
+    name: 'SKLZ Putting Green, 8.5 x 3 ft'
+    rating: '4.6'
+    count: 4,583
+    checked: '2026-11-14'
+  B08BXBDRDY:
+    name: 'GoSports Elite Golf Hitting Mat'
+    rating: '4.6'
+    count: 3,657
+    checked: '2026-11-14'
+  B006YTYM8W:
+    name: 'Callaway Swing-Easy Golf Swing Trainer'
+    rating: '4.5'
+    count: 1,570
+    checked: '2026-11-14'
+  B074XT6CRZ:
+    name: 'KINGTOP Golf Putting Mirror'
+    rating: '4.4'
+    count: 1,740
+    checked: '2026-11-14'
+  B00PTL13LA:
+    name: 'Graco Slim Snacker High Chair'
+    rating: '4.7'
+    count: 26,730
+    checked: '2026-11-14'
+  B01JRY07BQ:
+    name: 'Cosco Kids Simple Fold High Chair'
+    rating: '4.6'
+    count: 27,250
+    checked: '2026-11-14'
+  B00IOGIM9S:
+    name: 'Inglesina Fast Table Chair'
+    rating: '4.8'
+    count: 8,395
+    checked: '2026-11-14'
+  B078K1W9B3:
+    name: 'Hiccapop OmniBoost Booster Seat with Tray'
+    rating: '4.8'
+    count: 26,599
+    checked: '2026-11-14'
+  B0CZCX792S:
+    name: 'Bright Starts Pop ''N Sit Portable Booster Seat'
+    rating: '4.5'
+    count: 11,122
+    checked: '2026-11-14'
+  B07MRLGKH4:
+    name: 'ULTCOVER Waterproof Patio Furniture Cover, 111 x 74 in'
+    rating: '4.5'
+    count: 21,855
+    checked: '2026-11-14'
+  B07FNN38XR:
+    name: 'Vailge Heavy-Duty Waterproof Patio Chair Cover'
+    rating: '4.7'
+    count: 31,543
+    checked: '2026-11-14'
+  B08BS2MR1C:
+    name: 'Vailge Waterproof Patio Sofa Cover, 3-Seater'
+    rating: '4.6'
+    count: 7,861
+    checked: '2026-11-14'
+  B09W9G4HW5:
+    name: 'Kipiea Heavy-Duty Patio Furniture Set Cover, 110 x 84 in'
+    rating: '4.6'
+    count: 4,642
+    checked: '2026-11-14'
+  B07L54ZV6M:
+    name: 'ULTCOVER Waterproof Offset Umbrella Cover'
+    rating: '4.7'
+    count: 8,627
+    checked: '2026-11-14'
+  B07M6Y7355:
+    name: 'EMEET C960 1080P Webcam with 2 Mics'
+    rating: '4.4'
+    count: 33,951
+    checked: '2026-11-14'
+  B0BXGFFSL1:
+    name: 'Logitech Brio 101 Full HD 1080p Webcam'
+    rating: '4.3'
+    count: 7,185
+    checked: '2026-11-14'
+  B088TSR6YJ:
+    name: 'NexiGo N60 1080P Webcam'
+    rating: '4.3'
+    count: 48,857
+    checked: '2026-11-14'
+  B09MFMTMPD:
+    name: 'Anker PowerConf C200 2K Webcam'
+    rating: '4.4'
+    count: 9,654
+    checked: '2026-11-14'
+  B0CY2C7H6S:
+    name: 'EMEET NOVA 4K Webcam'
+    rating: '4.4'
+    count: 2,483
+    checked: '2026-11-14'
+  B07QR4Q42L:
+    name: 'AstroAI AIRUN H 12V Tire Inflator'
+    rating: '4.5'
+    count: 107,390
+    checked: '2026-11-14'
+  B0948WY5YX:
+    name: 'AstroAI Cordless Tire Inflator, 160 PSI'
+    rating: '4.5'
+    count: 16,968
+    checked: '2026-11-14'
+  B07CTGM2LD:
+    name: 'AVID POWER Cordless Tire Inflator, 20V'
+    rating: '4.4'
+    count: 28,864
+    checked: '2026-11-14'
+  B0C6GS6JR3:
+    name: 'ROCGORLD R8 12V Tire Inflator'
+    rating: '4.5'
+    count: 11,331
+    checked: '2026-11-14'
+  B0B1VHG484:
+    name: 'Milwaukee M18 Inflator 2848-20'
+    rating: '4.7'
+    count: 5,286
+    checked: '2026-11-14'
+  B08SW9YJ47:
+    name: 'BAGSMART Hanging Toiletry Bag with TSA Bag, Medium'
+    rating: '4.8'
+    count: 17,055
+    checked: '2026-11-14'
+  B0CXDVNL64:
+    name: 'NISHEL Hanging Travel Toiletry Bag'
+    rating: '4.8'
+    count: 20,503
+    checked: '2026-11-14'
+  B0CMLFBTHK:
+    name: 'HOTOR Hanging Travel Toiletry Bag'
+    rating: '4.5'
+    count: 6,107
+    checked: '2026-11-14'
+  B08NCD92ZM:
+    name: 'Vorspack Water-Resistant Travel Toiletry Bag, Medium'
+    rating: '4.6'
+    count: 10,002
+    checked: '2026-11-14'
+  B084GS82RV:
+    name: 'BAGSMART Toiletry Bag for Men (Dopp Kit)'
+    rating: '4.7'
+    count: 20,688
+    checked: '2026-11-14'
+  B0CTTR375V:
+    name: 'CeraVe Vitamin C Eye Cream, 0.5 oz'
+    rating: '4.4'
+    count: 2,567
+    checked: '2026-11-14'
+  B0DJV1SCHP:
+    name: 'Eucerin Radiant Tone Eye Cream, 0.5 oz'
+    rating: '4.4'
+    count: 1,244
+    checked: '2026-11-14'
+  B00JJPMXDO:
+    name: 'CeraVe Eye Repair Cream, 0.5 oz'
+    rating: '4.3'
+    count: 76,159
+    checked: '2026-11-14'
+  B0009RFB76:
+    name: 'RoC Retinol Correxion Eye Cream, 0.5 oz'
+    rating: '4.3'
+    count: 34,810
+    checked: '2026-11-14'
+  B01D1DR514:
+    name: 'e.l.f. SKIN Holy Hydration! Eye Cream'
+    rating: '4.5'
+    count: 9,050
+    checked: '2026-11-14'
