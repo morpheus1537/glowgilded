@@ -1978,8 +1978,8 @@ products:
   B0C5X2G933:
     name: 'oneisall Automatic Cat Feeder for 2 Cats, 5L'
     rating: '4.6'
-    count: 4,530
-    checked: '2026-11-10'
+    count: 4,558
+    checked: '2026-11-16'
   B09LD2CD1L:
     name: 'VOLUAS Automatic Cat Feeder, 4L'
     rating: '4.4'
@@ -2123,8 +2123,8 @@ products:
   B0148PKYXU:
     name: 'O''Keeffe''s Working Hands Hand Cream, 3 oz (2 Pack)'
     rating: '4.8'
-    count: 51,413
-    checked: '2026-11-10'
+    count: 51,354
+    checked: '2026-11-16'
   B00BN2UF54:
     name: 'CeraVe Therapeutic Hand Cream, 3 oz'
     rating: '4.5'
@@ -3305,3 +3305,293 @@ products:
     rating: '4.4'
     count: 55,021
     checked: '2026-11-15'
+  B07C3SWZXK:
+    name: 'RUVALINO Diaper Bag Backpack'
+    rating: '4.8'
+    count: 36,222
+    checked: '2026-11-16'
+  B07X3QBP6P:
+    name: 'BabbleRoo Diaper Bag Backpack'
+    rating: '4.8'
+    count: 12,744
+    checked: '2026-11-16'
+  B0731TBBWF:
+    name: 'Skip Hop Forma Diaper Bag Backpack'
+    rating: '4.7'
+    count: 3,159
+    checked: '2026-11-16'
+  B0BDZ3WWV6:
+    name: 'Tenot Diaper Bag Backpack'
+    rating: '4.7'
+    count: 3,559
+    checked: '2026-11-16'
+  B0C86S6GLQ:
+    name: 'Astro alan Diaper Bag with Changing Station'
+    rating: '4.7'
+    count: 3,159
+    checked: '2026-11-16'
+  B0GHBN5241:
+    name: 'e.l.f. SKIN Holy Hydration! Makeup Melting Cleansing Balm (Jumbo)'
+    rating: '4.7'
+    count: 18,197
+    checked: '2026-11-16'
+  B08Q3CQM7X:
+    name: 'JUNO & Co. Clean 10 Cleansing Balm'
+    rating: '4.6'
+    count: 18,242
+    checked: '2026-11-16'
+  B0B1PP1XCM:
+    name: 'CeraVe Hydrating Cleansing Balm'
+    rating: '4.4'
+    count: 8,504
+    checked: '2026-11-16'
+  B0BBFPX2HD:
+    name: 'HEIMISH All Clean Balm Mandarin'
+    rating: '4.6'
+    count: 6,123
+    checked: '2026-11-16'
+  B0BG21WM6R:
+    name: 'APRILSKIN Carrotene IPMP Cleansing Balm'
+    rating: '4.5'
+    count: 1,215
+    checked: '2026-11-16'
+  B0875RKTQF:
+    name: 'iOttie Easy One Touch Signature Dash/Windshield Mount'
+    rating: '4.4'
+    count: 49,080
+    checked: '2026-11-16'
+  B09CMV7YVJ:
+    name: 'VANMASS Car Phone Holder'
+    rating: '4.4'
+    count: 51,000
+    checked: '2026-11-16'
+  B00I608BJ8:
+    name: 'Scosche MagicMount Dash'
+    rating: '4.4'
+    count: 41,312
+    checked: '2026-11-16'
+  B094QVTL37:
+    name: 'Miracase Cup Phone Holder for Car'
+    rating: '4.5'
+    count: 15,115
+    checked: '2026-11-16'
+  B0BG55XJZ5:
+    name: 'andobil Magnetic Car Mount Pro'
+    rating: '4.5'
+    count: 2,051
+    checked: '2026-11-16'
+  B0731DWW5K:
+    name: 'Amazon Basics Cast Iron Kettlebell'
+    rating: '4.8'
+    count: 28,650
+    checked: '2026-11-16'
+  B0093CMYSM:
+    name: 'Yes4All Vinyl Kettlebell'
+    rating: '4.8'
+    count: 26,022
+    checked: '2026-11-16'
+  B07X64MXBS:
+    name: 'BowFlex SelectTech 840 Adjustable Kettlebell'
+    rating: '4.8'
+    count: 7,741
+    checked: '2026-11-16'
+  B08ZHNQTCW:
+    name: 'Yes4All Neoprene Kettlebell'
+    rating: '4.7'
+    count: 2,017
+    checked: '2026-11-16'
+  B06XRCKFZH:
+    name: 'Yes4All Powder Coated Kettlebell'
+    rating: '4.6'
+    count: 5,152
+    checked: '2026-11-16'
+  B00QESFO80:
+    name: '3M Littmann Classic III Stethoscope'
+    rating: '4.8'
+    count: 81,373
+    checked: '2026-11-16'
+  B0BLN73C9F:
+    name: 'hello momoya Compression Socks, 8 Pairs'
+    rating: '4.6'
+    count: 4,812
+    checked: '2026-11-16'
+  B01M7VGCTI:
+    name: 'Dr. Scholl''s Work All-Day Superior Comfort Insoles'
+    rating: '4.5'
+    count: 62,164
+    checked: '2026-11-16'
+  B0B56CHMSC:
+    name: 'Lifewit Medium Insulated Lunch Bag'
+    rating: '4.4'
+    count: 65,110
+    checked: '2026-11-16'
+  B015SJ7RYY:
+    name: 'NICETOWN Grey Blackout Curtains, 52 x 84 Inches'
+    rating: '4.7'
+    count: 63,271
+    checked: '2026-11-16'
+  B01CS31R94:
+    name: 'NICETOWN Black Blackout Curtains, 42 x 63 Inches'
+    rating: '4.6'
+    count: 134,724
+    checked: '2026-11-16'
+  B07C9HL1G1:
+    name: 'H.VERSAILTEX 100% Blackout Linen Curtains'
+    rating: '4.6'
+    count: 26,214
+    checked: '2026-11-16'
+  B08SBYPF14:
+    name: 'MIULEE 100% Blackout Linen Curtains'
+    rating: '4.6'
+    count: 10,845
+    checked: '2026-11-16'
+  B0881QG5WK:
+    name: 'ChrisDowa Blackout Curtains, 42 x 63 Inches'
+    rating: '4.6'
+    count: 32,278
+    checked: '2026-11-16'
+  B00S93EQUK:
+    name: 'Alpha Grillers Instant Read Meat Thermometer'
+    rating: '4.8'
+    count: 93,408
+    checked: '2026-11-16'
+  B01F59K0KA:
+    name: 'Lavatools Javelin PRO Classic'
+    rating: '4.7'
+    count: 18,441
+    checked: '2026-11-16'
+  B07477NMF4:
+    name: 'TempPro TempTrack Dual Probe Thermometer'
+    rating: '4.5'
+    count: 26,400
+    checked: '2026-11-16'
+  B07H8WTFHW:
+    name: 'MEATER Plus Smart Meat Thermometer'
+    rating: '4.3'
+    count: 48,668
+    checked: '2026-11-16'
+  B0793MSG7S:
+    name: 'TempPro TempSwift'
+    rating: '4.5'
+    count: 26,185
+    checked: '2026-11-16'
+  B0C3HCD34R:
+    name: 'soundcore by Anker Q20i'
+    rating: '4.5'
+    count: 79,932
+    checked: '2026-11-16'
+  B0F2LCBKVN:
+    name: 'Bose QuietComfort Headphones'
+    rating: '4.5'
+    count: 22,845
+    checked: '2026-11-16'
+  B0BS1QCFHX:
+    name: 'Sony WH-CH720N'
+    rating: '4.3'
+    count: 17,416
+    checked: '2026-11-16'
+  B0C8PR4W22:
+    name: 'Beats Studio Pro'
+    rating: '4.5'
+    count: 29,306
+    checked: '2026-11-16'
+  B0CRLXZ5J6:
+    name: 'JLab JBuds Lux ANC'
+    rating: '4.5'
+    count: 9,673
+    checked: '2026-11-16'
+  B077BFM2W5:
+    name: 'Aootek Solar Motion Sensor Lights, 2500 Lumens (2 Pack)'
+    rating: '4.5'
+    count: 34,689
+    checked: '2026-11-16'
+  B0DSKF9KDR:
+    name: 'Aootek Solar Motion Sensor Lights, 6 Pack'
+    rating: '4.4'
+    count: 57,537
+    checked: '2026-11-16'
+  B0DT95J4QC:
+    name: 'HMCITY 120 LED Solar Wall Lights, 6 Pack'
+    rating: '4.4'
+    count: 69,870
+    checked: '2026-11-16'
+  B09F3DJNGF:
+    name: 'Tuffenough 2500LM Solar Lights, 2 Pack'
+    rating: '4.4'
+    count: 42,272
+    checked: '2026-11-16'
+  B0DFLDYNVD:
+    name: 'MIHANI Solar Flood Lights, 2 Pack'
+    rating: '4.4'
+    count: 12,218
+    checked: '2026-11-16'
+  B09L15DBFF:
+    name: 'Petory Timed Automatic Cat Feeder'
+    rating: '4.4'
+    count: 5,583
+    checked: '2026-11-16'
+  B0BR5VST5N:
+    name: 'IMIPAW Automatic Cat Feeder'
+    rating: '4.4'
+    count: 5,416
+    checked: '2026-11-16'
+  B0DF7H6SGZ:
+    name: 'ANDOLL HOME 4L Automatic Cat Feeder'
+    rating: '4.4'
+    count: 3,576
+    checked: '2026-11-16'
+  B0DCNNN5FC:
+    name: 'Frienhund Automatic Cat Feeder with 2K Camera'
+    rating: '4.3'
+    count: 1,887
+    checked: '2026-11-16'
+  B0DDQ71B9P:
+    name: 'Anker MagGo 3-in-1 Qi2 Charging Station'
+    rating: '4.5'
+    count: 2,646
+    checked: '2026-11-16'
+  B0CNTH3F7P:
+    name: 'Ouotoo 3-in-1 Mag-Safe Wireless Charger Stand'
+    rating: '4.5'
+    count: 10,121
+    checked: '2026-11-16'
+  B0C2BMNHW2:
+    name: 'GETPALS Wireless Charging Station'
+    rating: '4.3'
+    count: 42,217
+    checked: '2026-11-16'
+  B0CM6V5GL2:
+    name: 'Anker 112W 6-Port Desktop Charger'
+    rating: '4.7'
+    count: 3,280
+    checked: '2026-11-16'
+  B0CT2NQ7WG:
+    name: 'Anker Prime 200W 6-Port Charging Station'
+    rating: '4.6'
+    count: 3,621
+    checked: '2026-11-16'
+  B07543D21Q:
+    name: 'CHARMKING Compression Socks, 15-20 mmHg (3 Pairs)'
+    rating: '4.4'
+    count: 91,953
+    checked: '2026-11-16'
+  B01LA8QK68:
+    name: 'SB SOX Compression Socks, 20-30 mmHg'
+    rating: '4.4'
+    count: 55,376
+    checked: '2026-11-16'
+  B0BN75Z32T:
+    name: 'Iseasoo Compression Socks, 15-20 mmHg (4 Pairs)'
+    rating: '4.5'
+    count: 11,757
+    checked: '2026-11-16'
+  B0BWF64QPV:
+    name: 'LEVSOX Plus Size Compression Socks, 15-20 mmHg'
+    rating: '4.5'
+    count: 5,123
+    checked: '2026-11-16'
+  B07P7M18C6:
+    name: 'Copper Fit Easy On/Off Energy Compression Socks'
+    rating: '4.4'
+    count: 24,358
+    checked: '2026-11-16'
