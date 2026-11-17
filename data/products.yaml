@@ -183,8 +183,8 @@ products:
   B01AVDVHTI:
     name: Fit Simplify Resistance Loop Exercise Bands (Set of 5)
     rating: '4.5'
-    count: 137,423
-    checked: '2026-10-31'
+    count: 137,601
+    checked: '2026-11-18'
   B0040EKZDY:
     name: TriggerPoint GRID Foam Roller
     rating: '4.7'
@@ -753,8 +753,8 @@ products:
   B0GY5VCZ2D:
     name: Everlasting Comfort Memory Foam Neck Pillow for Airplanes
     rating: '4.4'
-    count: 8,747
-    checked: '2026-11-01'
+    count: 8,750
+    checked: '2026-11-18'
   B08P61K3BY:
     name: Physix Gear Compression Socks 20-30 mmHg
     rating: '4.4'
@@ -1118,8 +1118,8 @@ products:
   B0CG65PYBV:
     name: 'UNIHAND Rechargeable Hand Warmers, 2-Pack'
     rating: '4.6'
-    count: 9,501
-    checked: '2026-11-04'
+    count: 9,673
+    checked: '2026-11-18'
   B001J4HQ76:
     name: 'PEET Original Electric Boot Dryer'
     rating: '4.7'
@@ -3905,3 +3905,288 @@ products:
     rating: '4.6'
     count: 61,622
     checked: '2026-11-17'
+  B07VVK39F7:
+    name: 'Levoit Core 300-P True HEPA Air Purifier'
+    rating: '4.7'
+    count: 110,988
+    checked: '2026-11-18'
+  B0BGPF71Q6:
+    name: 'LEVOIT Vital 200S-P Smart Air Purifier'
+    rating: '4.7'
+    count: 15,122
+    checked: '2026-11-18'
+  B08KPJ76RR:
+    name: 'BLUEAIR Blue Pure 511i Max Air Purifier'
+    rating: '4.5'
+    count: 2,142
+    checked: '2026-11-18'
+  B09GTRVJQM:
+    name: 'Levoit Core Mini-P Air Purifier'
+    rating: '4.6'
+    count: 105,632
+    checked: '2026-11-18'
+  B0B9SL7894:
+    name: 'Purivortex PX500 HEPA Air Purifier'
+    rating: '4.5'
+    count: 3,415
+    checked: '2026-11-18'
+  B08BR9HBZ3:
+    name: 'Rubbermaid Brilliance Glass Food Storage Containers, 9-Count'
+    rating: '4.6'
+    count: 14,829
+    checked: '2026-11-18'
+  B07L51SFVS:
+    name: 'Pyrex Simply Store Glass Food Storage Containers, 12-Pack'
+    rating: '4.7'
+    count: 29,774
+    checked: '2026-11-18'
+  B09N4ZKCH6:
+    name: 'JoyJolt 24-Piece Borosilicate Glass Storage Containers with Lids'
+    rating: '4.5'
+    count: 19,412
+    checked: '2026-11-18'
+  B07Q498XSZ:
+    name: 'M MCIRCO 8-Pack 30 oz Glass Food Storage Containers'
+    rating: '4.7'
+    count: 7,517
+    checked: '2026-11-18'
+  B08BS7RYM8:
+    name: 'Amazon Basics Glass Food Storage Containers, Set of 7'
+    rating: '4.5'
+    count: 8,576
+    checked: '2026-11-18'
+  B0DXJQT19B:
+    name: 'Anker USB-C Hub 7-in-1 with 4K@60Hz HDMI'
+    rating: '4.6'
+    count: 6,143
+    checked: '2026-11-18'
+  B0BNZ5V1TF:
+    name: 'Anker 547 USB-C Hub for MacBook (7-in-2)'
+    rating: '4.5'
+    count: 3,665
+    checked: '2026-11-18'
+  B07WPTG7NX:
+    name: 'Hiearcool 7-in-1 USB C Hub'
+    rating: '4.6'
+    count: 52,175
+    checked: '2026-11-18'
+  B0D1XLNWP2:
+    name: 'UGREEN Revodok Pro 6-in-1 10Gbps USB-C Hub'
+    rating: '4.4'
+    count: 8,645
+    checked: '2026-11-18'
+  B08C9HZ5YT:
+    name: 'Anker PowerExpand 6-in-1 USB-C Hub with Ethernet'
+    rating: '4.6'
+    count: 3,776
+    checked: '2026-11-18'
+  B08M95LC2K:
+    name: 'Bob and Brad Resistance Bands Set with Handles and Door Anchor'
+    rating: '4.7'
+    count: 2,338
+    checked: '2026-11-18'
+  B01A58FHQ8:
+    name: 'THERABAND Resistance Bands Set, Beginner'
+    rating: '4.6'
+    count: 15,284
+    checked: '2026-11-18'
+  B09TT55M8M:
+    name: 'WHATAFIT Exercise Bands with Handles and Door Anchor'
+    rating: '4.6'
+    count: 9,971
+    checked: '2026-11-18'
+  B07WQLDKN2:
+    name: 'Tribe Lifting Fabric Resistance Bands, 5-Band Set'
+    rating: '4.7'
+    count: 5,588
+    checked: '2026-11-18'
+  B08CDT1YMZ:
+    name: 'Casfuy Dog Nail Grinder with LED Light, 2-Speed'
+    rating: '4.5'
+    count: 10,064
+    checked: '2026-11-18'
+  B08YKFJ3FR:
+    name: 'Dremel 7350-PET Dog Nail Grinder'
+    rating: '4.4'
+    count: 6,435
+    checked: '2026-11-18'
+  B0DJ3JR93D:
+    name: 'Dremel PawControl 7760-PET Dog Nail Grinder'
+    rating: '4.4'
+    count: 1,074
+    checked: '2026-11-18'
+  B0C72S38F3:
+    name: 'LOPSIC Whisper Quiet Dog Nail Grinder'
+    rating: '4.4'
+    count: 11,473
+    checked: '2026-11-18'
+  B0BXPLF79Z:
+    name: 'VIWIK Dog Nail Grinder, 2-Speed Rechargeable'
+    rating: '4.4'
+    count: 6,505
+    checked: '2026-11-18'
+  B083L8RNJR:
+    name: 'TOLOCO Massage Gun with 10 Heads'
+    rating: '4.4'
+    count: 62,520
+    checked: '2026-11-18'
+  B0CLJLY4WS:
+    name: 'U·LANARO Slim Running Belt'
+    rating: '4.6'
+    count: 1,804
+    checked: '2026-11-18'
+  B075DW87S9:
+    name: 'JOEYOUNG Fleece Ear Warmers Headband'
+    rating: '4.4'
+    count: 6,711
+    checked: '2026-11-18'
+  B0B7XR7PPD:
+    name: 'OCOOPA MagTwins Rechargeable Hand Warmers, 2-Pack'
+    rating: '4.4'
+    count: 3,274
+    checked: '2026-11-18'
+  B07BR2CBT3:
+    name: 'Squirrel''s Nut Butter Anti Chafing Stick, 1.7 oz'
+    rating: '4.7'
+    count: 2,611
+    checked: '2026-11-18'
+  B00MJXHM48:
+    name: 'Love To Dream Swaddle Up, Newborn, 1.0 TOG'
+    rating: '4.6'
+    count: 30,172
+    checked: '2026-11-18'
+  B001D7E0YQ:
+    name: 'HALO SleepSack Swaddle, Cotton, Newborn'
+    rating: '4.6'
+    count: 25,070
+    checked: '2026-11-18'
+  B082XTJ8WR:
+    name: 'SwaddleMe by Ingenuity Swaddle Pod'
+    rating: '4.5'
+    count: 5,926
+    checked: '2026-11-18'
+  B07X7CR9YR:
+    name: 'SwaddleDesigns 6-Way Omni Swaddle Sack'
+    rating: '4.5'
+    count: 2,386
+    checked: '2026-11-18'
+  B0DVCGX73C:
+    name: 'aden + anais Essentials Cotton Muslin Swaddle'
+    rating: '4.8'
+    count: 6,367
+    checked: '2026-11-18'
+  B0CG8L7Y3S:
+    name: 'AaoLin Rechargeable Hand Warmers, 2-Pack'
+    rating: '4.7'
+    count: 2,073
+    checked: '2026-11-18'
+  B0BG9TB26K:
+    name: 'Gutimo Rechargeable Hand Warmers, 2-Pack'
+    rating: '4.5'
+    count: 6,885
+    checked: '2026-11-18'
+  B0DFCMKTPV:
+    name: 'VIMWING Rechargeable Hand Warmers with Charging Case'
+    rating: '4.5'
+    count: 1,548
+    checked: '2026-11-18'
+  B013HLGU02:
+    name: 'Zippo 12-Hour Refillable Hand Warmer'
+    rating: '4.5'
+    count: 14,749
+    checked: '2026-11-18'
+  B00JI6NCCK:
+    name: 'Vari Pro Plus 36 Standing Desk Converter'
+    rating: '4.7'
+    count: 3,163
+    checked: '2026-11-18'
+  B075JYG2TB:
+    name: 'VIVO 32" Standing Desk Converter'
+    rating: '4.6'
+    count: 15,723
+    checked: '2026-11-18'
+  B0784HWPN6:
+    name: 'VIVO Dual Tier 36" Standing Desk Converter'
+    rating: '4.6'
+    count: 10,134
+    checked: '2026-11-18'
+  B07LCCT6VS:
+    name: 'FITUEYES 36" Sit to Stand Desk Converter'
+    rating: '4.6'
+    count: 2,564
+    checked: '2026-11-18'
+  B0828B7GNG:
+    name: 'TechOrbits 32" Standing Desk Converter'
+    rating: '4.5'
+    count: 1,181
+    checked: '2026-11-18'
+  B0GL9RL3XS:
+    name: 'BlueDriver Pro Bluetooth OBD2 Scanner'
+    rating: '4.5'
+    count: 63,391
+    checked: '2026-11-18'
+  B073XKQQQW:
+    name: 'Veepeak OBDCheck BLE Bluetooth OBD2 Scanner'
+    rating: '4.5'
+    count: 24,492
+    checked: '2026-11-18'
+  B07PQH6HSQ:
+    name: 'Autel AutoLink AL519 OBD2 Scanner'
+    rating: '4.5'
+    count: 2,649
+    checked: '2026-11-18'
+  B0BY1TS725:
+    name: 'VDIAGTOOL VD10 OBD2 Code Reader'
+    rating: '4.6'
+    count: 3,542
+    checked: '2026-11-18'
+  B076XVQMVS:
+    name: 'Veepeak OBDCheck BLE+ Bluetooth OBD2 Adapter'
+    rating: '4.5'
+    count: 11,595
+    checked: '2026-11-18'
+  B0CL9SXSBD:
+    name: 'SAIREIDER Memory Foam Travel Neck Pillow'
+    rating: '4.6'
+    count: 3,248
+    checked: '2026-11-18'
+  B082K8ZNQ1:
+    name: 'MLVOC Travel Neck Pillow with Eye Mask and Earplugs'
+    rating: '4.3'
+    count: 35,528
+    checked: '2026-11-18'
+  B0B8V6Y2X8:
+    name: 'GDEOUP Memory Foam U-Shaped Travel Pillow'
+    rating: '4.4'
+    count: 5,840
+    checked: '2026-11-18'
+  B0982TPZTW:
+    name: 'Gosider U-Shaped Memory Foam Travel Neck Pillow'
+    rating: '4.4'
+    count: 5,687
+    checked: '2026-11-18'
+  B01MDTVZTZ:
+    name: 'The Ordinary Niacinamide 10% + Zinc 1% Serum'
+    rating: '4.7'
+    count: 71,216
+    checked: '2026-11-18'
+  B0CLLV2T1P:
+    name: 'Anua Niacinamide 10 + TXA 4 Serum'
+    rating: '4.5'
+    count: 17,745
+    checked: '2026-11-18'
+  B0B2KM4MKQ:
+    name: 'Naturium Niacinamide Serum 12% + Zinc 2%, Jumbo'
+    rating: '4.5'
+    count: 16,367
+    checked: '2026-11-18'
+  B08F9MF314:
+    name: 'Minimalist Niacinamide 10% + Zinc Serum'
+    rating: '4.4'
+    count: 22,988
+    checked: '2026-11-18'
+  B083N1H6P7:
+    name: 'Paula''s Choice CLINICAL 20% Niacinamide Serum'
+    rating: '4.5'
+    count: 2,137
+    checked: '2026-11-18'
