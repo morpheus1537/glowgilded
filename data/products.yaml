@@ -323,8 +323,8 @@ products:
   B078S3M2NX:
     name: EPICKA Universal Travel Adapter (1 AC, 3 USB-C, 2 USB-A)
     rating: '4.7'
-    count: 19,241
-    checked: '2026-10-31'
+    count: 19,328
+    checked: '2026-11-19'
   B00B2KV5D8:
     name: Cloudz Dual Comfort Microbead Travel Neck Pillow
     rating: '4.4'
@@ -1873,8 +1873,8 @@ products:
   B07T1CH2HH:
     name: COSORI Gooseneck Electric Kettle with Temperature Control, 0.8L, Black
     rating: '4.6'
-    count: 17,065
-    checked: '2026-11-09'
+    count: 17,116
+    checked: '2026-11-19'
   B016IL75S4:
     name: VAHDAM Top Favorites Tea Sampler Gift Set (10 Loose Leaf Teas)
     rating: '4.6'
@@ -4210,3 +4210,283 @@ products:
     rating: '4.5'
     count: 49,676
     checked: '2026-11-18'
+  B07Q4MYZNC:
+    name: 'FEELSO Filtered Shower Head with Shower Filter (5 Spray Modes)'
+    rating: '4.6'
+    count: 14,082
+    checked: '2026-11-19'
+  B0CXYYF5HW:
+    name: 'Afina Filtered Shower Head, High Pressure Rainfall (Brushed Nickel)'
+    rating: '4.5'
+    count: 2,617
+    checked: '2026-11-19'
+  B0BNPMJDB6:
+    name: 'MakeFit Filtered Shower Head with 7 Spray Settings'
+    rating: '4.5'
+    count: 3,508
+    checked: '2026-11-19'
+  B09N72QYD4:
+    name: 'NearMoon Filtered Rain Shower Head and Handheld Combo'
+    rating: '4.4'
+    count: 4,127
+    checked: '2026-11-19'
+  B01MUBU0YC:
+    name: 'Aquabliss SF100 Shower Filter for Shower Head'
+    rating: '4.4'
+    count: 70,410
+    checked: '2026-11-19'
+  B0CKY6C2ZV:
+    name: 'Elite Gourmet 1L Digital Gooseneck Kettle, 13 Temps'
+    rating: '4.5'
+    count: 18,046
+    checked: '2026-11-19'
+  B07FNW57J7:
+    name: 'Chefman Electric Kettle with Temperature Control and Tea Infuser'
+    rating: '4.4'
+    count: 17,888
+    checked: '2026-11-19'
+  B0FD9TD752:
+    name: 'Mecity 1.7L Temperature Control Electric Kettle'
+    rating: '4.6'
+    count: 697
+    checked: '2026-11-19'
+  B0874XN4D8:
+    name: 'Samsung T7 Portable SSD 1TB'
+    rating: '4.7'
+    count: 12,259
+    checked: '2026-11-19'
+  B09VLK9W3S:
+    name: 'Samsung T7 Shield Portable SSD 1TB'
+    rating: '4.7'
+    count: 16,443
+    checked: '2026-11-19'
+  B08HN37XC1:
+    name: 'SanDisk 2TB Extreme Portable SSD'
+    rating: '4.6'
+    count: 25,664
+    checked: '2026-11-19'
+  B0DYDHLN81:
+    name: 'Lexar ES3 1TB Portable SSD'
+    rating: '4.5'
+    count: 1,061
+    checked: '2026-11-19'
+  B0HHD792FF:
+    name: 'pooboo Folding Magnetic X-Bike'
+    rating: '4.5'
+    count: 6,921
+    checked: '2026-11-19'
+  B0FD9NY3TM:
+    name: 'BARWING 5-in-1 Foldable Exercise Bike'
+    rating: '4.4'
+    count: 7,117
+    checked: '2026-11-19'
+  B0C9L1ZRHM:
+    name: 'Sunny Health & Fitness Smart Foldable Magnetic X-Bike'
+    rating: '4.4'
+    count: 2,895
+    checked: '2026-11-19'
+  B09JFX6QPM:
+    name: 'YYFITT 3-in-1 Foldable Exercise Bike with XXL Backrest'
+    rating: '4.5'
+    count: 1,202
+    checked: '2026-11-19'
+  B0FJ1Z4VYB:
+    name: 'Caromix 5-in-1 Folding Exercise Bike'
+    rating: '4.4'
+    count: 1,770
+    checked: '2026-11-19'
+  B07V4SGDDZ:
+    name: 'Yaheetech 63in Sturdy Large Cat Tree'
+    rating: '4.7'
+    count: 8,400
+    checked: '2026-11-19'
+  B0DGKR5MMP:
+    name: 'Globlazer F70 Pro Heavy Duty Cat Tree'
+    rating: '4.7'
+    count: 1,910
+    checked: '2026-11-19'
+  B0CNCHGMCX:
+    name: 'Globlazer S72 Heavy Duty Cat Tree for Large Cats'
+    rating: '4.6'
+    count: 1,798
+    checked: '2026-11-19'
+  B0CQ85Z17L:
+    name: 'Gitelsnour 63-Inch Cat Tower with Big Hammock'
+    rating: '4.5'
+    count: 1,227
+    checked: '2026-11-19'
+  B0H3CCRBKY:
+    name: 'Hey-brother Cat Tree Tower with Extended Base (MPJ078W)'
+    rating: '4.4'
+    count: 1,239
+    checked: '2026-11-19'
+  B07L68MRQL:
+    name: 'CADeN Camera Backpack'
+    rating: '4.7'
+    count: 9,337
+    checked: '2026-11-19'
+  B0B1HYVVTV:
+    name: 'K&F Concept 64-Inch Lightweight Travel Tripod'
+    rating: '4.6'
+    count: 4,547
+    checked: '2026-11-19'
+  B0098QH2BC:
+    name: 'Altura Photo Camera Lens Cleaning Kit'
+    rating: '4.7'
+    count: 6,253
+    checked: '2026-11-19'
+  B07SYPYH5M:
+    name: 'JJC Memory Card Case (12 SD + 24 microSD)'
+    rating: '4.8'
+    count: 16,170
+    checked: '2026-11-19'
+  B01N1WYQYT:
+    name: 'STRATA CUPS Camera Lens Coffee Mug, 13.5 oz'
+    rating: '4.6'
+    count: 8,824
+    checked: '2026-11-19'
+  B0793D9WBY:
+    name: 'Fisher-Price Deluxe Kick & Play Piano Gym & Maracas'
+    rating: '4.8'
+    count: 18,085
+    checked: '2026-11-19'
+  B07MPCCDM7:
+    name: 'Baby Einstein 4-in-1 Kickin'' Tunes Play Gym'
+    rating: '4.6'
+    count: 28,192
+    checked: '2026-11-19'
+  B0GCFP3FXZ:
+    name: 'Skip Hop Discoverosity Montessori-Inspired Play Gym'
+    rating: '4.8'
+    count: 1,633
+    checked: '2026-11-19'
+  B0BX4N2SSJ:
+    name: 'Blissful Diary Baby Play Gym Mat'
+    rating: '4.8'
+    count: 2,015
+    checked: '2026-11-19'
+  B07G12YBC9:
+    name: 'Mallify Wooden Baby Gym with 6 Toys'
+    rating: '4.4'
+    count: 2,061
+    checked: '2026-11-19'
+  B07DTC857W:
+    name: 'DEWENWILS 25FT Outdoor Extension Cord with 3 Spaced Outlets'
+    rating: '4.8'
+    count: 5,205
+    checked: '2026-11-19'
+  B07N4H4SQX:
+    name: 'Amazon Basics 25-Foot Indoor/Outdoor Extension Cord, 3 Outlets'
+    rating: '4.7'
+    count: 30,354
+    checked: '2026-11-19'
+  B0DJ1BVZGX:
+    name: 'Skrizcable 16/3 25 FT Black Outdoor Extension Cord'
+    rating: '4.7'
+    count: 7,142
+    checked: '2026-11-19'
+  B0B36Y4J8L:
+    name: 'HUANCHAIN 16/3 Green Outdoor Extension Cord, 25 ft'
+    rating: '4.7'
+    count: 1,437
+    checked: '2026-11-19'
+  B07HYHK6BK:
+    name: 'BN-LINK Outdoor Power Stake Timer with Remote, 6 Outlets'
+    rating: '4.5'
+    count: 4,207
+    checked: '2026-11-19'
+  B000YGO7HW:
+    name: 'Fellowes Powershred 99Ci 18-Sheet Cross-Cut Shredder'
+    rating: '4.6'
+    count: 11,115
+    checked: '2026-11-19'
+  B07CX4DZ4Z:
+    name: 'Aurora AU1210MA 12-Sheet Micro-Cut Shredder'
+    rating: '4.7'
+    count: 9,197
+    checked: '2026-11-19'
+  B08NTZ4VWN:
+    name: 'Fellowes Powershred 12-Sheet Cross-Cut Shredder'
+    rating: '4.4'
+    count: 6,688
+    checked: '2026-11-19'
+  B0DK73XJCX:
+    name: 'Bonsaii 9-Sheet Cross-Cut Paper Shredder'
+    rating: '4.5'
+    count: 10,848
+    checked: '2026-11-19'
+  B0C6LZG69W:
+    name: 'Amazon Basics 12-Sheet Cross-Cut Paper Shredder'
+    rating: '4.3'
+    count: 80,065
+    checked: '2026-11-19'
+  B07VGR4611:
+    name: 'AstroAI 27" 2-in-1 Detachable Snow Brush & Ice Scraper'
+    rating: '4.6'
+    count: 32,440
+    checked: '2026-11-19'
+  B08SC32J5H:
+    name: 'AstroAI 46" Extendable 3-in-1 Snow Brush'
+    rating: '4.5'
+    count: 2,905
+    checked: '2026-11-19'
+  B076PVN38H:
+    name: 'Snow MOOver 39" Extendable Snow Brush with Squeegee'
+    rating: '4.6'
+    count: 4,954
+    checked: '2026-11-19'
+  B07Y83VBD6:
+    name: 'JOYTUTUS 47" Extendable Car Snow Brush'
+    rating: '4.4'
+    count: 3,698
+    checked: '2026-11-19'
+  B09DT8Z793:
+    name: 'EcoNour 27" Snow Brush and Ice Scraper'
+    rating: '4.4'
+    count: 3,594
+    checked: '2026-11-19'
+  B08112XB28:
+    name: 'Ceptics 45W Universal Travel Adapter'
+    rating: '4.6'
+    count: 18,212
+    checked: '2026-11-19'
+  B0FKBN2FX4:
+    name: 'Ceptics Universal Travel Adapter, GaN 100W'
+    rating: '4.7'
+    count: 3,334
+    checked: '2026-11-19'
+  B0B2PD7VW4:
+    name: 'TESSAN Universal Travel Adapter 28W'
+    rating: '4.6'
+    count: 5,741
+    checked: '2026-11-19'
+  B0DHVNPN7J:
+    name: 'Anker Nano Travel Adapter (5-in-1, 20W)'
+    rating: '4.5'
+    count: 4,292
+    checked: '2026-11-19'
+  B07YLKXV11:
+    name: 'CeraVe Tinted Mineral Sunscreen for Face SPF 30 (Medium)'
+    rating: '4.4'
+    count: 74,848
+    checked: '2026-11-19'
+  B00C8FVZZY:
+    name: 'EltaMD UV Physical Tinted Mineral Face Sunscreen SPF 41'
+    rating: '4.5'
+    count: 15,308
+    checked: '2026-11-19'
+  B0BF3831F6:
+    name: 'Eucerin Tinted Sensitive Mineral Face Sunscreen SPF 35'
+    rating: '4.4'
+    count: 4,907
+    checked: '2026-11-19'
+  B09J9X2NNR:
+    name: 'Supergoop! Mattescreen Mineral Tinted Sunscreen SPF 40'
+    rating: '4.5'
+    count: 1,885
+    checked: '2026-11-19'
+  B072QYD2P4:
+    name: 'Sun Bum Mineral SPF 30 Tinted Face Sunscreen'
+    rating: '4.5'
+    count: 4,773
+    checked: '2026-11-19'
