@@ -1558,8 +1558,8 @@ products:
   B08D66HCXW:
     name: 'LHKNL Rechargeable Motion Sensor Headlamp, 2 Pack'
     rating: '4.5'
-    count: 37,780
-    checked: '2026-11-06'
+    count: 38,072
+    checked: '2026-11-21'
   B083CTYYM4:
     name: 'Chiwo Adjustable Reflective Running Vest, 2 Pack'
     rating: '4.5'
@@ -4805,3 +4805,298 @@ products:
     rating: '4.4'
     count: 4,587
     checked: '2026-11-20'
+  B07YKLSMFM:
+    name: 'Bedsure Down Alternative Comforter Duvet Insert, Queen'
+    rating: '4.7'
+    count: 78,489
+    checked: '2026-11-21'
+  B07D276DRM:
+    name: 'EASELAND Down Alternative Comforter, Queen, White'
+    rating: '4.6'
+    count: 41,592
+    checked: '2026-11-21'
+  B07PSGJ3R7:
+    name: 'Homelike Moment Lightweight Reversible Comforter, Queen'
+    rating: '4.6'
+    count: 28,694
+    checked: '2026-11-21'
+  B071F2V3KT:
+    name: 'Amazon Basics Down Alternative Comforter and Duvet Insert, Full/Queen'
+    rating: '4.6'
+    count: 5,931
+    checked: '2026-11-21'
+  B01LY50QR6:
+    name: 'Lavish Comforts Fluffy Down Alternative Comforter, Queen'
+    rating: '4.5'
+    count: 3,775
+    checked: '2026-11-21'
+  B001CH0ZLE:
+    name: 'Hamilton Beach 6-Speed Hand Mixer with QuickBurst and Bowl Rest (62682G)'
+    rating: '4.5'
+    count: 67,212
+    checked: '2026-11-21'
+  B009VUHLHA:
+    name: 'KitchenAid 5-Speed Ultra Power Hand Mixer (KHM512)'
+    rating: '4.6'
+    count: 29,032
+    checked: '2026-11-21'
+  B0034A8C4O:
+    name: 'Cuisinart Power Advantage Plus 9-Speed Hand Mixer (HM-90S)'
+    rating: '4.6'
+    count: 11,309
+    checked: '2026-11-21'
+  B00CPSRE4U:
+    name: 'KitchenAid 9-Speed Hand Mixer (KHM926)'
+    rating: '4.6'
+    count: 8,848
+    checked: '2026-11-21'
+  B08XFJ7CKG:
+    name: 'Hamilton Beach 6-Speed Hand Mixer with Easy Clean Beaters (62636J)'
+    rating: '4.6'
+    count: 5,526
+    checked: '2026-11-21'
+  B07NSJMSK3:
+    name: 'Amazon Basics 6-Outlet Surge Protector Power Strip with 2 USB Ports, 1000J'
+    rating: '4.8'
+    count: 12,653
+    checked: '2026-11-21'
+  B0CCYKVVRH:
+    name: 'Belkin 6-Outlet Wall Surge Protector with USB-A and USB-C, 1680J'
+    rating: '4.7'
+    count: 1,308
+    checked: '2026-11-21'
+  B087RKKXM5:
+    name: 'Addtam Surge Protector Outlet Extender, 5 AC and 4 USB Ports, 1800J'
+    rating: '4.7'
+    count: 52,859
+    checked: '2026-11-21'
+  B08LV3Q5CQ:
+    name: 'Mifaso Wall Outlet Extender with Surge Protector and Shelf, 6 AC and 3 USB'
+    rating: '4.5'
+    count: 11,621
+    checked: '2026-11-21'
+  B0D4TTKDXG:
+    name: 'Addtam Rotating Wall Surge Protector, 6 AC Outlets and 4 USB Ports, 1800J'
+    rating: '4.7'
+    count: 1,382
+    checked: '2026-11-21'
+  B00B1N0R6C:
+    name: 'Perfect Fitness Ab Carver Roller Wheel with Spring Resistance'
+    rating: '4.6'
+    count: 14,024
+    checked: '2026-11-21'
+  B0CMP6Z2JV:
+    name: 'Abiarst Dual-Wheel Ab Roller with Knee Pad'
+    rating: '4.7'
+    count: 2,262
+    checked: '2026-11-21'
+  B0F25TMPFT:
+    name: 'EnterSports Ab Roller Wheel with 2 Knee Pads'
+    rating: '4.6'
+    count: 18,414
+    checked: '2026-11-21'
+  B0F9LRBKB3:
+    name: 'DMoose Ab Roller Wheel with Elbow Support and 2 Knee Pads'
+    rating: '4.6'
+    count: 1,064
+    checked: '2026-11-21'
+  B01NAXQGLV:
+    name: 'CAP Barbell Abdominal Wheel'
+    rating: '4.5'
+    count: 2,035
+    checked: '2026-11-21'
+  B08CKG31FJ:
+    name: 'Kuoser Waterproof Reversible Dog Coat with Leash Hole'
+    rating: '4.5'
+    count: 59,162
+    checked: '2026-11-21'
+  B0B5SPP5S9:
+    name: 'FUAMEY Fleece Dog Winter Jacket with Built-In Harness'
+    rating: '4.5'
+    count: 8,986
+    checked: '2026-11-21'
+  B07HC3W9GQ:
+    name: 'Vecomfy Warm Hooded Dog Coat for Small Dogs'
+    rating: '4.5'
+    count: 19,969
+    checked: '2026-11-21'
+  B08D3N7BR3:
+    name: 'JoyDaog Fleece-Lined Dog Jacket for Small Dogs'
+    rating: '4.5'
+    count: 13,116
+    checked: '2026-11-21'
+  B0B6ZTV36C:
+    name: 'Queenmore Warm Puffer Dog Coat with Sherpa Lining'
+    rating: '4.6'
+    count: 1,869
+    checked: '2026-11-21'
+  B000GA3KCE:
+    name: 'Vacu Vin Original Wine Saver Pump with 2 Vacuum Stoppers'
+    rating: '4.7'
+    count: 31,658
+    checked: '2026-11-21'
+  B00M72R5GG:
+    name: 'Rabbit Wine Aerator Pourer Spout'
+    rating: '4.6'
+    count: 4,064
+    checked: '2026-11-21'
+  B000UPOJ5W:
+    name: 'Vinturi V1010 Essential Red Wine Aerator with Base'
+    rating: '4.7'
+    count: 5,808
+    checked: '2026-11-21'
+  B07WXNQX7G:
+    name: 'Haley''s Corker 5-in-1 Wine Aerator, Stopper and Re-Corker, 2 Pack'
+    rating: '4.8'
+    count: 9,170
+    checked: '2026-11-21'
+  B005N0WCE4:
+    name: 'Rabbit Airtight Wine Bottle Stoppers, Set of 4'
+    rating: '4.7'
+    count: 18,288
+    checked: '2026-11-21'
+  B003N9M6YI:
+    name: 'Nuby Ice Gel Teether Keys'
+    rating: '4.7'
+    count: 105,390
+    checked: '2026-11-21'
+  B01LYHTATF:
+    name: 'Nuby NanaNubs Banana Gum Massager'
+    rating: '4.8'
+    count: 18,554
+    checked: '2026-11-21'
+  B000JWSO9I:
+    name: 'RaZbaby RaZberry Silicone Teether'
+    rating: '4.5'
+    count: 43,373
+    checked: '2026-11-21'
+  B06XHNCJHV:
+    name: 'Sophie la girafe Original Teether'
+    rating: '4.7'
+    count: 21,040
+    checked: '2026-11-21'
+  B07CZTLXG2:
+    name: 'Infantino Water Teethers, 3-Pack'
+    rating: '4.6'
+    count: 15,367
+    checked: '2026-11-21'
+  B01DNDMSLY:
+    name: 'Lepro Rechargeable LED Headlamp, IPX4'
+    rating: '4.5'
+    count: 29,874
+    checked: '2026-11-21'
+  B0BLVT2Y9N:
+    name: 'Blukar Rechargeable LED Headlamp with Motion Sensor'
+    rating: '4.5'
+    count: 23,271
+    checked: '2026-11-21'
+  B0BQN7HQ49:
+    name: 'Energizer PRO-400 Rechargeable Headlamps, 2-Pack'
+    rating: '4.5'
+    count: 6,670
+    checked: '2026-11-21'
+  B09NQK87MN:
+    name: 'Black Diamond Spot 400-R Rechargeable Headlamp'
+    rating: '4.4'
+    count: 549
+    checked: '2026-11-21'
+  B08BRCT4JH:
+    name: 'BESIGN LS03 Aluminum Laptop Stand'
+    rating: '4.8'
+    count: 24,575
+    checked: '2026-11-21'
+  B08M94BTYC:
+    name: 'Lamicall Adjustable Aluminum Laptop Stand'
+    rating: '4.7'
+    count: 10,585
+    checked: '2026-11-21'
+  B0BLRJ4R8F:
+    name: 'Amazon Basics Adjustable Foldable Laptop Stand'
+    rating: '4.6'
+    count: 3,953
+    checked: '2026-11-21'
+  B091B4SWR7:
+    name: 'UGREEN Vertical Laptop Stand'
+    rating: '4.7'
+    count: 12,431
+    checked: '2026-11-21'
+  B09Y8B81F7:
+    name: 'tounee Telescopic Sit-to-Stand Laptop Stand with 360-Degree Base'
+    rating: '4.7'
+    count: 4,398
+    checked: '2026-11-21'
+  B0BY2GD9VC:
+    name: 'ETENWOLF T300 Digital Tire Pressure Gauge, 200 PSI'
+    rating: '4.6'
+    count: 10,031
+    checked: '2026-11-21'
+  B07VV78RZ1:
+    name: 'JACO ElitePro Digital Tire Pressure Gauge, 100 PSI'
+    rating: '4.7'
+    count: 7,250
+    checked: '2026-11-21'
+  B07D3PVBJ4:
+    name: 'AstroAI Digital Tire Pressure Gauge with Inflator, 250 PSI'
+    rating: '4.6'
+    count: 34,853
+    checked: '2026-11-21'
+  B01NCX3H1G:
+    name: 'AstroAI Heavy Duty Digital Tire Pressure Gauge, 230 PSI'
+    rating: '4.6'
+    count: 16,124
+    checked: '2026-11-21'
+  B0DP2GW154:
+    name: 'HYVOHEX Digital Tire Pressure Gauge, 200 PSI'
+    rating: '4.6'
+    count: 1,171
+    checked: '2026-11-21'
+  B08S35399Y:
+    name: 'BAGAIL 8 Set Packing Cubes'
+    rating: '4.6'
+    count: 44,616
+    checked: '2026-11-21'
+  B0FH9QS56B:
+    name: 'Veken 9 Set Compression Packing Cubes'
+    rating: '4.7'
+    count: 14,048
+    checked: '2026-11-21'
+  B014VBGKFW:
+    name: 'Amazon Essentials 4-Piece Packing Cubes'
+    rating: '4.6'
+    count: 43,837
+    checked: '2026-11-21'
+  B081JSFHZK:
+    name: 'BAGAIL Compression Packing Cubes, 6 Set'
+    rating: '4.6'
+    count: 6,268
+    checked: '2026-11-21'
+  B0CY3KFPHD:
+    name: 'Thule Compression Packing Cube Set'
+    rating: '4.8'
+    count: 1,181
+    checked: '2026-11-21'
+  B00VXO5RPK:
+    name: 'Moroccanoil Dry Shampoo Light Tones'
+    rating: '4.6'
+    count: 13,454
+    checked: '2026-11-21'
+  B0BTVTH9CW:
+    name: 'Batiste Dry Shampoo, Original, 5.71 oz'
+    rating: '4.5'
+    count: 1,996
+    checked: '2026-11-21'
+  B0F67KS3K1:
+    name: 'K18 AirWash Non-Aerosol Dry Shampoo'
+    rating: '4.4'
+    count: 2,756
+    checked: '2026-11-21'
+  B07H349CVV:
+    name: 'Amika Perk Up Dry Shampoo'
+    rating: '4.3'
+    count: 20,772
+    checked: '2026-11-21'
+  B0CWNJ75X1:
+    name: 'MONDAY Haircare Original Dry Shampoo with Keratin'
+    rating: '4.3'
+    count: 8,710
+    checked: '2026-11-21'
