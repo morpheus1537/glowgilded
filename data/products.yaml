@@ -834,7 +834,7 @@ products:
   B071XB18BF: {name: 'CAR GUYS Super Cleaner Interior Car Cleaner', rating: '4.5', count: '24,963', checked: '2026-11-03'}
   B08LN6CZKD: {name: 'HMPLL 10-Piece Car Detailing Brush Set', rating: '4.5', count: '10,003', checked: '2026-11-03'}
   B0BKNQ7YQW: {name: 'Chemical Guys Professional Microfiber Towels, 12 Pack', rating: '4.7', count: '26,185', checked: '2026-11-03'}
-  B006LXOJC0: {name: 'BLACK+DECKER dustbuster AdvancedClean Cordless Handheld Vacuum', rating: '4.4', count: '112,063', checked: '2026-11-03'}
+  B006LXOJC0: {name: 'BLACK+DECKER dustbuster AdvancedClean Cordless Handheld Vacuum', rating: '4.4', count: '112,284', checked: '2026-11-22'}
   B07RPQGJQB: {name: 'HERO RFID Blocking Neck Wallet Passport Holder', rating: '4.7', count: '12,499', checked: '2026-11-03'}
   B0GJTXVN9Z: {name: 'Apple AirTag (2nd Generation), 4 Pack', rating: '4.6', count: '12,614', checked: '2026-11-03'}
   B073NYB7R2: {name: 'SURE LOCK TSA Approved Cable Luggage Locks', rating: '4.7', count: '16,692', checked: '2026-11-03'}
@@ -1013,8 +1013,8 @@ products:
   B000BTNLBK:
     name: 'HALO Micro-Fleece SleepSack Swaddle, TOG 3.0'
     rating: '4.8'
-    count: 17,183
-    checked: '2026-11-04'
+    count: 17,102
+    checked: '2026-11-22'
   B074VFP9ZG:
     name: 'Cuddle Club Fleece Baby Bunting Bodysuit'
     rating: '4.7'
@@ -5115,3 +5115,293 @@ products:
     rating: '4.6'
     count: 4,933
     checked: '2026-11-21'
+  B0F9PJTQPP:
+    name: 'Yoofoss Baby Sleep Sack, 1.5 TOG Organic Cotton, 2-Way Zipper'
+    rating: '4.8'
+    count: 9,641
+    checked: '2026-11-22'
+  B07FNB81PH:
+    name: 'Woolino Ultimate Merino Wool Baby Sleep Sack, 2-24 Months'
+    rating: '4.7'
+    count: 4,406
+    checked: '2026-11-22'
+  B0CDX6HMSD:
+    name: 'Yoofoss Baby Sleep Sack, 1.5 TOG Plush Fleece, 2 Pack'
+    rating: '4.8'
+    count: 1,379
+    checked: '2026-11-22'
+  B07KL2CGTL:
+    name: 'HALO Easy Transition SleepSack, 1.0 TOG Cotton'
+    rating: '4.5'
+    count: 2,342
+    checked: '2026-11-22'
+  B017PCGABI:
+    name: 'Garnier Micellar Cleansing Water, 13.5 fl oz'
+    rating: '4.7'
+    count: 76,203
+    checked: '2026-11-22'
+  B0036SFTK4:
+    name: 'Bioderma Sensibio H2O Micellar Water for Sensitive Skin'
+    rating: '4.7'
+    count: 60,454
+    checked: '2026-11-22'
+  B005EZSUS0:
+    name: 'La Roche-Posay Micellar Water for Sensitive Skin'
+    rating: '4.7'
+    count: 7,285
+    checked: '2026-11-22'
+  B01ES79K4M:
+    name: 'Bioderma Hydrabio H2O Micellar Water for Dehydrated Sensitive Skin'
+    rating: '4.7'
+    count: 7,955
+    checked: '2026-11-22'
+  B09MJQ62DR:
+    name: 'Garnier Micellar Water with Rose Water and Glycerin, 23.7 fl oz'
+    rating: '4.7'
+    count: 24,547
+    checked: '2026-11-22'
+  B07R9GP85M:
+    name: 'BLACK+DECKER dustbuster AdvancedClean+ Cordless Handheld Vacuum (HHVK320J10)'
+    rating: '4.3'
+    count: 10,733
+    checked: '2026-11-22'
+  B0DXVJ5Y39:
+    name: 'Fanttik Slim V10 APEX Cordless Car Vacuum'
+    rating: '4.3'
+    count: 1,554
+    checked: '2026-11-22'
+  B0F8QG3MH9:
+    name: 'Blestan 3-in-1 Cordless Handheld Car Vacuum with LED Light'
+    rating: '4.3'
+    count: 4,104
+    checked: '2026-11-22'
+  B00Y5BX674:
+    name: 'Armor All 2.5 Gallon 2 Peak HP Wet/Dry Utility Vac'
+    rating: '4.5'
+    count: 3,524
+    checked: '2026-11-22'
+  B01FOS1S7G:
+    name: '321 STRONG 3-Zone Massage Foam Roller, Medium Density'
+    rating: '4.5'
+    count: 42,262
+    checked: '2026-11-22'
+  B00XM2MRGI:
+    name: 'Amazon Basics High-Density Foam Roller, 36 Inch'
+    rating: '4.6'
+    count: 31,885
+    checked: '2026-11-22'
+  B073M1FTQ7:
+    name: 'TriggerPoint CORE Foam Massage Roller, Softer Compression'
+    rating: '4.6'
+    count: 8,068
+    checked: '2026-11-22'
+  B07RWQ48P3:
+    name: 'ProsourceFit Half-Round High Density Foam Roller, 18 Inch'
+    rating: '4.5'
+    count: 4,736
+    checked: '2026-11-22'
+  B07HWKGQY8:
+    name: 'RumbleRoller Basic Bumpy Foam Roller'
+    rating: '4.4'
+    count: 1,245
+    checked: '2026-11-22'
+  B092Z1PYCD:
+    name: 'Prina 76 Pack Drawing and Sketching Set'
+    rating: '4.8'
+    count: 6,879
+    checked: '2026-11-22'
+  B004QHI43S:
+    name: 'Sakura Pigma Micron Fineliner Pens, Black, 8 Pack'
+    rating: '4.8'
+    count: 62,196
+    checked: '2026-11-22'
+  B00251EHJW:
+    name: 'Prismacolor Premier Graphite Drawing Set, 18 Count'
+    rating: '4.8'
+    count: 3,212
+    checked: '2026-11-22'
+  B0BHYGM2XG:
+    name: 'KALOUR 72 Count Colored Pencils'
+    rating: '4.7'
+    count: 13,558
+    checked: '2026-11-22'
+  B0010TEFFQ:
+    name: 'Buddha Board Original Water Painting Board'
+    rating: '4.7'
+    count: 9,106
+    checked: '2026-11-22'
+  B077XJ3KS4:
+    name: 'Bare Home Flannel Sheet Set, 100% Cotton, Queen'
+    rating: '4.4'
+    count: 24,057
+    checked: '2026-11-22'
+  B07W4SK5FH:
+    name: 'RUVANTI 100% Cotton Flannel Sheets, Queen'
+    rating: '4.4'
+    count: 14,342
+    checked: '2026-11-22'
+  B07D9J1KHH:
+    name: 'Sleep Philosophy Cozy Flannel Sheets, 100% Cotton, Queen'
+    rating: '4.4'
+    count: 16,214
+    checked: '2026-11-22'
+  B00LZKCDHW:
+    name: 'Eddie Bauer Cotton Flannel Sheet Set, Queen'
+    rating: '4.4'
+    count: 9,557
+    checked: '2026-11-22'
+  B0BVH3LPGK:
+    name: 'BEDELITE Fleece Flannel Sheets, Queen'
+    rating: '4.5'
+    count: 3,844
+    checked: '2026-11-22'
+  B06Y2GZWCJ:
+    name: 'Hamilton Beach 3 Cup Electric Vegetable Chopper and Mini Food Processor'
+    rating: '4.6'
+    count: 37,985
+    checked: '2026-11-22'
+  B0000645YL:
+    name: 'Cuisinart Mini-Prep Plus 3 Cup Food Processor'
+    rating: '4.5'
+    count: 25,573
+    checked: '2026-11-22'
+  B01LXVZI7F:
+    name: 'KitchenAid 3.5 Cup Food Chopper'
+    rating: '4.5'
+    count: 31,283
+    checked: '2026-11-22'
+  B01LYR6VNZ:
+    name: 'BLACK+DECKER 1.5-Cup Electric Food Chopper'
+    rating: '4.6'
+    count: 23,612
+    checked: '2026-11-22'
+  B007VZ0G1U:
+    name: 'Proctor Silex 1.5 Cup Electric Vegetable Chopper'
+    rating: '4.5'
+    count: 14,298
+    checked: '2026-11-22'
+  B015NBTAOW:
+    name: 'TECKNET 2.4G Wireless Mouse, 2600 DPI'
+    rating: '4.5'
+    count: 80,053
+    checked: '2026-11-22'
+  B004YAVF8I:
+    name: 'Logitech M185 Compact Wireless Mouse'
+    rating: '4.4'
+    count: 45,965
+    checked: '2026-11-22'
+  B0CPSP33T8:
+    name: 'Logitech Signature M550 L Full Size Wireless Mouse'
+    rating: '4.5'
+    count: 2,795
+    checked: '2026-11-22'
+  B00ADBY98A:
+    name: 'Logitech M317 Compact Wireless Mouse'
+    rating: '4.5'
+    count: 12,277
+    checked: '2026-11-22'
+  B0DL72PK1P:
+    name: 'Apple Magic Mouse'
+    rating: '4.4'
+    count: 3,962
+    checked: '2026-11-22'
+  B0F88K7RSS:
+    name: 'RAYMYLO Insulated Water Bottle, 24 oz'
+    rating: '4.6'
+    count: 19,472
+    checked: '2026-11-22'
+  B07XRXFWD4:
+    name: 'CamelBak Chute Mag Insulated Stainless Steel Water Bottle'
+    rating: '4.7'
+    count: 11,626
+    checked: '2026-11-22'
+  B0D8J2ZB8P:
+    name: 'POWCAN 26 oz Insulated Water Bottle with 2-in-1 Lid'
+    rating: '4.5'
+    count: 13,740
+    checked: '2026-11-22'
+  B0G9BFKBMP:
+    name: 'Hydro Flask 24 oz Insulated Water Bottle with Straw'
+    rating: '4.6'
+    count: 1,746
+    checked: '2026-11-22'
+  B0BN4281PV:
+    name: 'VICKNIY 40 oz Insulated Water Bottle with 2 Lids and Carrier Bag'
+    rating: '4.5'
+    count: 3,033
+    checked: '2026-11-22'
+  B07HMVNJC2:
+    name: 'K&H Thermo-Kitty Heated Cat Bed, Large 20 Inch'
+    rating: '4.5'
+    count: 7,025
+    checked: '2026-11-22'
+  B07HMPRTXF:
+    name: 'K&H Outdoor Heated Kitty House'
+    rating: '4.6'
+    count: 7,854
+    checked: '2026-11-22'
+  B07D9PCJL9:
+    name: 'K&H Thermo-Snuggle Cup Bomber Heated Cat Bed'
+    rating: '4.3'
+    count: 2,530
+    checked: '2026-11-22'
+  B0B6BSZX7X:
+    name: 'GASUR Heated Cat Bed Pad with Timer'
+    rating: '4.3'
+    count: 1,525
+    checked: '2026-11-22'
+  B0G4VV618K:
+    name: 'WanpeeGoo Self-Warming Reversible Cat Bed'
+    rating: '4.4'
+    count: 1,027
+    checked: '2026-11-22'
+  B0CSFT8MQW:
+    name: 'UBeesize 72 Inch Phone Tripod and Selfie Stick with Remote'
+    rating: '4.5'
+    count: 90,036
+    checked: '2026-11-22'
+  B0BQJ1CQXW:
+    name: 'EUCOS 62 Inch Phone Tripod with Remote'
+    rating: '4.6'
+    count: 24,580
+    checked: '2026-11-22'
+  B0CMM89Y6Z:
+    name: 'Liphisy 64 Inch Phone and Camera Tripod with Remote'
+    rating: '4.6'
+    count: 7,221
+    checked: '2026-11-22'
+  B0GCJKDXL4:
+    name: 'XXZU 75 Inch Aluminum Camera and Phone Tripod with Remote'
+    rating: '4.6'
+    count: 11,536
+    checked: '2026-11-22'
+  B07TV5BCVW:
+    name: 'Atumtek Selfie Stick Tripod with Rechargeable Bluetooth Remote'
+    rating: '4.5'
+    count: 43,830
+    checked: '2026-11-22'
+  B00NW62PCA:
+    name: 'Etekcity Digital Luggage Scale, 110 lb'
+    rating: '4.7'
+    count: 71,452
+    checked: '2026-11-22'
+  B07N1F68PZ:
+    name: 'Longang Digital Luggage Scale with Backlit Display'
+    rating: '4.7'
+    count: 8,714
+    checked: '2026-11-22'
+  B0BGPTV42P:
+    name: 'Luxebell Digital Luggage Scale, 110 lb'
+    rating: '4.5'
+    count: 10,643
+    checked: '2026-11-22'
+  B0DW8PRH9M:
+    name: 'travel inspira Battery-Free Digital Luggage Scale'
+    rating: '4.5'
+    count: 1,447
+    checked: '2026-11-22'
+  B01MQEWQE9:
+    name: 'Samsonite Manual Luggage Scale'
+    rating: '4.5'
+    count: 7,772
+    checked: '2026-11-22'
