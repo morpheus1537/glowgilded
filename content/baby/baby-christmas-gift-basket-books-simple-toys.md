@@ -1,6 +1,6 @@
 ---
 title: Baby Christmas Gift Basket With Books and Simple Toys
-seo_title: Baby Christmas Gift Basket With Books and Simple Toys
+seo_title: Baby Christmas Gift Basket With Books and Simple Toys (2026)
 slug: baby-christmas-gift-basket-books-simple-toys
 category: baby
 description: Compare practical picks for a compact baby Christmas basket built around a book and simple toys, with verified Amazon ratings, honest trade-offs and buying guid

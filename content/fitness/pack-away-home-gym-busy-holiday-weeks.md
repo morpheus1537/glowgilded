@@ -1,6 +1,6 @@
 ---
 title: Pack-Away Home Gym Gear for Busy Holiday Weeks
-seo_title: Pack-Away Home Gym Gear for Busy Holiday Weeks
+seo_title: Pack-Away Home Gym Gear for Busy Holiday Weeks (2026)
 slug: pack-away-home-gym-busy-holiday-weeks
 category: fitness
 description: Compare practical picks for a pack-away exercise routine during busy holiday weeks, with verified Amazon ratings, honest trade-offs and buying guidance.

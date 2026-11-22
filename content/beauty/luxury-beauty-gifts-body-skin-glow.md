@@ -1,6 +1,6 @@
 ---
 title: 'Luxury Beauty Gifts for Her: Bum Bum Cream, Protini & Glow Wand'
-seo_title: 'Luxury Beauty Gifts: Bum Bum, Protini & Glow Wand'
+seo_title: 'Luxury Beauty Gifts: Bum Bum, Protini & Glow Wand (2026)'
 slug: luxury-beauty-gifts-body-skin-glow
 category: beauty
 description: >-

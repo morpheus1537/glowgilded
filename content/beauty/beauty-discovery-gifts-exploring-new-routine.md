@@ -1,6 +1,6 @@
 ---
 title: Beauty Discovery Gifts for Someone Exploring a New Routine
-seo_title: Beauty Discovery Gifts for Someone Exploring a New Routine
+seo_title: Beauty Discovery Gifts for Someone Exploring a New Routine (2026)
 slug: beauty-discovery-gifts-exploring-new-routine
 category: beauty
 description: Compare practical picks for a beauty enthusiast exploring textures, scents and a new lip color, with verified Amazon ratings, honest trade-offs and buying guida

@@ -1,6 +1,6 @@
 ---
 title: 'Office Holiday Cocoa Corner: Small-Batch Serving Picks'
-seo_title: 'Office Holiday Cocoa Corner: Small-Batch Serving Picks'
+seo_title: 'Office Holiday Cocoa Corner: Small-Batch Serving Picks (2026)'
 slug: office-holiday-cocoa-corner-small-batch
 category: kitchen
 description: Compare practical picks for a small home-office holiday cocoa corner serving one or two people, with verified Amazon ratings, honest trade-offs and buying guida

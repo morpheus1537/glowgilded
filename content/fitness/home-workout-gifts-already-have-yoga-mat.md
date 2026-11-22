@@ -1,6 +1,6 @@
 ---
 title: Home Workout Gifts for People Who Already Have a Yoga Mat
-seo_title: Home Workout Gifts for People Who Already Have a Yoga Mat
+seo_title: Home Workout Gifts for People Who Already Have a Yoga Mat (2026)
 slug: home-workout-gifts-already-have-yoga-mat
 category: fitness
 description: Compare practical picks for a home workout gift for someone who already owns the usual yoga basics, with verified Amazon ratings, honest trade-offs and buying g

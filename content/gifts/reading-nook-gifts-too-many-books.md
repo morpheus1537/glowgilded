@@ -1,6 +1,6 @@
 ---
 title: Reading Nook Gifts for Someone Who Owns Too Many Books
-seo_title: Reading Nook Gifts for Someone Who Owns Too Many Books
+seo_title: Reading Nook Gifts for Someone Who Owns Too Many Books (2026)
 slug: reading-nook-gifts-too-many-books
 category: gifts
 description: Compare practical picks for a reader who already owns more books than shelf space, with verified Amazon ratings, honest trade-offs and buying guidance.

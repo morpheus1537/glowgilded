@@ -1,6 +1,6 @@
 ---
 title: 'First Christmas Gifts for Babies: Keepsakes vs Playtime'
-seo_title: 'First Christmas Gifts for Babies: Keepsakes vs Playtime'
+seo_title: 'First Christmas Gifts for Babies: Keepsakes vs Playtime (2026)'
 slug: first-christmas-baby-gifts-keepsakes-vs-playtime
 category: baby
 description: Compare practical picks for a first Christmas where adults want a keepsake and the baby needs age-appropriate play, with verified Amazon ratings, honest trade-o

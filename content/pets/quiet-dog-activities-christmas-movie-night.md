@@ -1,6 +1,6 @@
 ---
 title: Quiet Dog Activities During Christmas Movie Night
-seo_title: Quiet Dog Activities During Christmas Movie Night
+seo_title: Quiet Dog Activities During Christmas Movie Night (2026)
 slug: quiet-dog-activities-christmas-movie-night
 category: pets
 description: Compare practical picks for a Christmas movie night with a dog sharing the living room, with verified Amazon ratings, honest trade-offs and buying guidance.

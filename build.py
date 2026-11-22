@@ -136,7 +136,7 @@ def card(p, eager=False):
 
 def words(s): return len(re.sub(r"<[^>]+>", " ", s).split())
 
-def article(p, related):
+def article(p, related, more_gifts=None):
     c = p["cat"]
     intro, secs = parse_body(p["body_md"])
     prods = [x for x in secs if x["asin"]]
@@ -164,6 +164,8 @@ def article(p, related):
     for x in others: out.append(f'<h2 id="{sid(x)}">{E(x["h"])}</h2>' + md(SHORT.sub(lambda m: btn(m.group(1)), x["md"])))
     out.append('<section class="faq"><h2 id="faq">Frequently asked questions</h2>' + "".join(f"<h3 id=\"faq-{i}\">{E(q['question'])}</h3><p>{E(q['answer'])}</p>" for i, q in enumerate(p["faq"], 1)) + "</section>")
     for x in bottom: out.append(f'<h2 id="bottom-line">{E(x["h"])}</h2>' + md(x["md"]))
+    if more_gifts:  # cross-category holiday links for gift guides
+        out.append('<aside class="quick" aria-label="More holiday gift guides"><h2 id="more-gift-guides">More 2026 holiday gift guides</h2><ul>' + "".join(f'<li><a href="{q["url"]}">{E(q["title"])}</a> <span class="verified">({E(q["cat"]["name"])})</span></li>' for q in more_gifts) + '<li><strong><a href="/holiday-gift-guide/">See every guide in our Holiday Gift Guide 2026 &rarr;</a></strong></li></ul></aside>')
     out.append(f'<p class="disc-bottom">{DISC} Ratings were checked on {checked}; prices and availability change, so check Amazon for current details.</p>')
     body = "".join(out)
     mins = max(1, math.ceil(words(body) / 230))
@@ -201,6 +203,13 @@ def main():
     latest = max(p["updated"] for p in posts)
     sm = [("/", latest)]
     posts_sorted = sorted(posts, key=lambda p: (p["date"], p["slug"]), reverse=True)
+    HUBKEYS = ("gift", "christmas", "stocking", "registry")
+    hubp = [p for p in posts_sorted if any(k in p["slug"] for k in HUBKEYS)]
+    def more_gifts(p):  # newest gift guide from each other category (up to 5)
+        seen, out = set(), []
+        for q in hubp:
+            if q["cat"] is not p["cat"] and q["cat"]["key"] not in seen: seen.add(q["cat"]["key"]); out.append(q)
+        return out[:5]
     cats = "".join(f'<a class="catcard" href="/{c["key"]}/"><span class="n">{i+1:02d}</span><h3>{E(c["name"])}</h3><p>{E(c["blurb"])}</p><span class="more">{(lambda n: f"{n} guide" + ("" if n == 1 else "s"))(sum(p["cat"] is c for p in posts))} &rarr;</span></a>' for i, c in enumerate(CATEGORIES))
     body = f"""<section class="hero"><div class="wrap"><p class="eyebrow">Buying guides &middot; Reviews &middot; Gift edits</p>
 <h1>Smart picks, honestly reviewed.</h1><p class="lede">Digital Profit Review researches the products worth your money across home, beauty and more, so you can buy once and buy well.</p>
@@ -226,8 +235,9 @@ def main():
         write(f"/{c['key']}/", page(c.get("seo_title", f"{c['name']} Buying Guides & Gift Ideas | {SITE}"), c.get("seo_description", c["blurb"] + " Honest pros and cons for every pick."), b, f"/{c['key']}/", [bc]))
         sm.append((f"/{c['key']}/", max(p["updated"] for p in cp)))
         for p in cp:
-            rel = ([q for q in posts_sorted if q is not p and q["cat"] is c] + [q for q in posts_sorted if q["cat"] is not c])[:3]
-            s, wc, mins = article(p, rel); write(p["url"], s); sm.append((p["url"], p["updated"])); report.append((p["url"], wc, mins))
+            gift = p in hubp
+            rel = ([q for q in posts_sorted if q is not p and q["cat"] is c and (q in hubp) == gift] + [q for q in posts_sorted if q is not p and q["cat"] is c and (q in hubp) != gift] + [q for q in posts_sorted if q["cat"] is not c])[:3]
+            s, wc, mins = article(p, rel, more_gifts(p) if gift else None); write(p["url"], s); sm.append((p["url"], p["updated"])); report.append((p["url"], wc, mins))
     static = {
      "about": ("About Digital Profit Review", "Who we are and how Digital Profit Review researches and selects the products in our buying guides.", f"<p>{SITE} publishes practical buying guides across categories, including home &amp; decor, beauty, kitchen, tech, fitness, pets and gifts. Our guides are written by the {AUTHOR}. We focus on products with a strong track record of buyer reviews, explain who each pick is for, list honest drawbacks, and update guides when products change or sell out.</p><h2>How we choose products</h2><p>We read product listings, specifications and buyer reviews, and we check each product's Amazon rating and availability on the date shown in every guide. We never invent prices or ratings, and we do not publish star ratings of our own.</p><h2>How we make money</h2><p>We are reader-supported. When you buy through links on our site we may earn an affiliate commission, which never changes the price you pay. See our <a href=\"/affiliate-disclosure/\">affiliate disclosure</a>.</p><h2>At a glance</h2><ul><li><strong>Name:</strong> {SITE}</li><li><strong>Website:</strong> {BASE}</li><li><strong>What we publish:</strong> buying guides and gift guides across {len(CATEGORIES)} categories: {", ".join(E(c["name"]) for c in CATEGORIES)}</li><li><strong>Written by:</strong> the {AUTHOR}</li><li><strong>Affiliation:</strong> Amazon Associates participant; links to Amazon are affiliate links</li><li><strong>Find us on Pinterest:</strong> <a href=\"https://www.pinterest.com/hearthhavenhome99/\">Hearth &amp; Haven Home</a> and <a href=\"https://www.pinterest.com/glowgilded/\">Glow &amp; Gilded</a></li></ul>"),
      "affiliate-disclosure": ("Affiliate Disclosure", "How Digital Profit Review earns money through the Amazon Associates program.", f"<p>{SITE} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. <strong>{DISC}</strong></p><p>Links to Amazon are marked as sponsored. Commissions come at no extra cost to you and do not affect which products we recommend. Ratings and availability are accurate as of the date shown and are subject to change.</p>"),
@@ -238,14 +248,12 @@ def main():
         b = f'<article class="post"><div class="wrap narrow">{vis}<h1>{t}</h1><div class="body">{txt}</div></div></article>'
         write(f"/{slug}/", page(f"{t} | {SITE}", d, b, f"/{slug}/", [bc] + ([{"@context": "https://schema.org", **ORG}, {"@context": "https://schema.org", "@type": "AboutPage", "url": BASE + "/about/", "name": t, "mainEntity": {"@id": BASE + "/#org"}}] if slug == "about" else []))); sm.append((f"/{slug}/", "2026-10-29"))
     # --- holiday gift guide hub (cross-category internal links) ---
-    HUBKEYS = ("gift", "christmas", "stocking", "registry")
-    hubp = [p for p in posts_sorted if any(k in p["slug"] for k in HUBKEYS)]
     if hubp:
         groups = "".join(f'<section class="sec"><div class="wrap"><div class="sechead"><h2>{"More gift ideas" if c["key"] == "gifts" else E(c["name"]) + " gift ideas"}</h2><a href="/{c["key"]}/">All {E(c["name"])} guides &rarr;</a></div><div class="grid">{"".join(card(p) for p in hubp if p["cat"] is c)}</div></div></section>' for c in CATEGORIES if any(p["cat"] is c for p in hubp))
         vis, bc = crumbs([("Holiday Gift Guide 2026", None)])
-        hb = f"""<section class="cathero"><div class="wrap">{vis}<h1>Holiday Gift Guide 2026</h1><p class="lede">Every gift guide we have published this season in one place, grouped by category: Christmas gifts, stocking stuffers and thoughtful picks for her, dad, home cooks, travelers, book lovers, dogs and little ones. Each guide features well-reviewed Amazon products with honest pros and cons. Shopping for Black Friday? Check each product's current price on Amazon, since deals change daily.</p><p><a class="btn" href="/gift-finder/">Filter gifts by rating</a></p></div></section>{groups}"""
+        hb = f"""<section class="cathero"><div class="wrap">{vis}<h1>Holiday Gift Guide 2026</h1><p class="lede">Every gift guide we have published this season in one place, grouped by category: Christmas gifts, stocking stuffers and thoughtful picks for her, dad, home cooks, travelers, book lovers, dogs and little ones. Each guide features well-reviewed Amazon products with honest pros and cons. Shopping Black Friday (November 27, 2026) or Cyber Monday (November 30, 2026)? Check each product's current price on Amazon, since deals change daily.</p><p class="verified">Updated <time datetime="{max(p['updated'] for p in hubp)}">{fmt(max(p['updated'] for p in hubp))}</time> &middot; {len(hubp)} gift guides</p><p><a class="btn" href="/gift-finder/">Filter gifts by rating</a></p></div></section>{groups}"""
         hl = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Holiday Gift Guide 2026", "url": BASE + "/holiday-gift-guide/", "hasPart": [{"@type": "Article", "headline": p["title"], "url": BASE + p["url"]} for p in hubp]}
-        write("/holiday-gift-guide/", page(f"Holiday Gift Guide 2026: Christmas Gift Ideas for Everyone | {SITE}", "Our 2026 holiday gift guide: Christmas gift ideas, stocking stuffers and Black Friday shopping picks for her, dad, home cooks, travelers, dogs and kids, all well reviewed on Amazon.", hb, "/holiday-gift-guide/", [bc, hl])); sm.append(("/holiday-gift-guide/", max(p["updated"] for p in hubp)))
+        write("/holiday-gift-guide/", page(f"Holiday Gift Guide 2026: Christmas Gift Ideas for Everyone | {SITE}", "Our 2026 holiday gift guide: Christmas gift ideas, stocking stuffers and Black Friday & Cyber Monday 2026 shopping picks for her, dad, home cooks, travelers, dogs and kids, all well reviewed on Amazon.", hb, "/holiday-gift-guide/", [bc, hl])); sm.append(("/holiday-gift-guide/", max(p["updated"] for p in hubp)))
     # --- gift finder + search (static JSON, no cookies) ---
     GIFTY = ("gift", "stocking", "registry")
     def gifty(a): return any(any(g in (q["slug"] + q["cat"]["key"]) for g in GIFTY) for q in posts if a in q["products"])

@@ -1,6 +1,6 @@
 ---
 title: Portable Tech for a Low-Key Christmas Weekend at Home
-seo_title: Portable Tech for a Low-Key Christmas Weekend at Home
+seo_title: Portable Tech for a Low-Key Christmas Weekend at Home (2026)
 slug: portable-tech-low-key-christmas-weekend
 category: tech
 description: Compare practical picks for a low-key Christmas weekend split between reading, music and downtime, with verified Amazon ratings, honest trade-offs and buying gu

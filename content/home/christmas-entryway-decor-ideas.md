@@ -1,6 +1,6 @@
 ---
 title: 'Christmas Entryway Decor Ideas: A Festive Front Door That Handles Winter Boots'
-seo_title: 'Christmas Entryway Decor Ideas That Survive Winter Boots'
+seo_title: Christmas Entryway Decor Ideas That Survive Winter Boots (2026)
 slug: christmas-entryway-decor-ideas
 category: home
 description: >-

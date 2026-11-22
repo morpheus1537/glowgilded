@@ -1,6 +1,6 @@
 ---
 title: Bedtime Reading Gifts for a Shared Bedroom
-seo_title: Bedtime Reading Gifts for a Shared Bedroom
+seo_title: Bedtime Reading Gifts for a Shared Bedroom (2026)
 slug: bedtime-reading-gifts-shared-bedroom
 category: gifts
 description: Compare practical picks for a bedtime reader sharing a bedroom with another person, with verified Amazon ratings, honest trade-offs and buying guidance.

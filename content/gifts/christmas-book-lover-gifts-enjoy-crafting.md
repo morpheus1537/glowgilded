@@ -1,6 +1,6 @@
 ---
 title: Christmas Gifts for Book Lovers Who Enjoy Crafting
-seo_title: Christmas Gifts for Book Lovers Who Enjoy Crafting
+seo_title: Christmas Gifts for Book Lovers Who Enjoy Crafting (2026)
 slug: christmas-book-lover-gifts-enjoy-crafting
 category: gifts
 description: Compare practical picks for a book lover who also enjoys making things by hand, with verified Amazon ratings, honest trade-offs and buying guidance.

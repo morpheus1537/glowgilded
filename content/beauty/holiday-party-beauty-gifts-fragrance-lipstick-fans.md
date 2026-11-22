@@ -1,6 +1,6 @@
 ---
 title: Holiday Party Beauty Gifts for Fragrance and Lipstick Fans
-seo_title: Holiday Party Beauty Gifts for Fragrance and Lipstick Fans
+seo_title: Holiday Party Beauty Gifts for Fragrance and Lipstick Fans (2026)
 slug: holiday-party-beauty-gifts-fragrance-lipstick-fans
 category: beauty
 description: Compare practical picks for a holiday party gift for someone who already enjoys perfume and lipstick, with verified Amazon ratings, honest trade-offs and buying

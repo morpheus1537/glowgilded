@@ -1,6 +1,6 @@
 ---
 title: 'Christmas Morning Breakfast Essentials: Griddle, Waffle Makers and a Mess-Free Batter Dispenser'
-seo_title: 'Christmas Morning Breakfast Essentials for a Crowd'
+seo_title: Christmas Morning Breakfast Essentials for a Crowd (2026)
 slug: christmas-morning-breakfast-essentials
 category: kitchen
 description: >-

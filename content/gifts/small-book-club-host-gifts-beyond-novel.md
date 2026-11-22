@@ -1,6 +1,6 @@
 ---
 title: Small Book Club Host Gifts Beyond Another Novel
-seo_title: Small Book Club Host Gifts Beyond Another Novel
+seo_title: Small Book Club Host Gifts Beyond Another Novel (2026)
 slug: small-book-club-host-gifts-beyond-novel
 category: gifts
 description: Compare practical picks for a book club host you want to thank without choosing another novel, with verified Amazon ratings, honest trade-offs and buying guidan

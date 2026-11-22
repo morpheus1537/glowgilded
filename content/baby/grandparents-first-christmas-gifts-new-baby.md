@@ -1,6 +1,6 @@
 ---
 title: Grandparents First Christmas Gifts for a New Baby
-seo_title: Grandparents First Christmas Gifts for a New Baby
+seo_title: Grandparents First Christmas Gifts for a New Baby (2026)
 slug: grandparents-first-christmas-gifts-new-baby
 category: baby
 description: Compare practical picks for grandparents choosing a first Christmas gift for a new baby, with verified Amazon ratings, honest trade-offs and buying guidance.

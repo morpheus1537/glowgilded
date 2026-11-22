@@ -1,6 +1,6 @@
 ---
 title: Desk Comfort Gifts for Remote Workers Who Have Everything
-seo_title: Desk Comfort Gifts for Remote Workers Who Have Everything
+seo_title: Desk Comfort Gifts for Remote Workers Who Have Everything (2026)
 slug: desk-comfort-gifts-remote-workers-have-everything
 category: office
 description: Compare practical picks for a remote worker who already has the keyboard and monitor they want, with verified Amazon ratings, honest trade-offs and buying guida

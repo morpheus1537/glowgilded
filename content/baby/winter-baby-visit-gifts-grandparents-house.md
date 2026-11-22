@@ -1,6 +1,6 @@
 ---
 title: Winter Baby Visit Gift Ideas for a Grandparents House
-seo_title: Winter Baby Visit Gift Ideas for a Grandparents House
+seo_title: Winter Baby Visit Gift Ideas for a Grandparents House (2026)
 slug: winter-baby-visit-gifts-grandparents-house
 category: baby
 description: Compare practical picks for a grandparents’ house preparing for short winter visits from a baby, with verified Amazon ratings, honest trade-offs and buying guid

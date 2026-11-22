@@ -1,6 +1,6 @@
 ---
 title: 'Outdoor Gifts for Cabin Weekends: Lights and Seating'
-seo_title: 'Outdoor Gifts for Cabin Weekends: Lights and Seating'
+seo_title: 'Outdoor Gifts for Cabin Weekends: Lights and Seating (2026)'
 slug: outdoor-gifts-cabin-weekends-lights-seating
 category: outdoor
 description: Compare practical picks for a cabin-weekend gift for someone who spends time outside, with verified Amazon ratings, honest trade-offs and buying guidance.

@@ -1,6 +1,6 @@
 ---
 title: 'Luxury Beauty Gifts for Her: Body Cream, Perfume Mist & Lipstick Picks'
-seo_title: 'Luxury Beauty Gifts for Her: Body Cream, Mist & Lipstick'
+seo_title: 'Luxury Beauty Gifts for Her: Body Cream, Mist & Lipstick (2026)'
 slug: sol-de-janeiro-charlotte-tilbury-gift-guide
 category: beauty
 description: >-

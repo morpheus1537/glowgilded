@@ -1,6 +1,6 @@
 ---
 title: 'Leaving Your Cat Home Alone for a Holiday Weekend: Feeders, Water and a Camera'
-seo_title: 'Leaving a Cat Home Alone for a Weekend: 5 Essentials'
+seo_title: 'Leaving a Cat Home Alone for a Weekend: 5 Essentials (2026)'
 slug: leaving-cat-home-alone-holiday-weekend
 category: pets
 description: >-

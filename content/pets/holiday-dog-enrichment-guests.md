@@ -1,6 +1,6 @@
 ---
 title: 'Dog Enrichment for Holiday Guests: Treats, Mats and Chews'
-seo_title: 'Dog Enrichment for Holiday Guests: Treats, Mats and Chews'
+seo_title: 'Dog Enrichment for Holiday Guests: Treats, Mats and Chews (2026)'
 slug: holiday-dog-enrichment-guests
 category: pets
 description: Compare practical picks for a home welcoming holiday guests while keeping the dog supervised, with verified Amazon ratings, honest trade-offs and buying guidanc

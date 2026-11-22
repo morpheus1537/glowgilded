@@ -1,6 +1,6 @@
 ---
 title: Guest Room Tech Gifts That Do Not Need a Smart Home
-seo_title: Guest Room Tech Gifts That Do Not Need a Smart Home
+seo_title: Guest Room Tech Gifts That Do Not Need a Smart Home (2026)
 slug: guest-room-tech-gifts-without-smart-home
 category: tech
 description: Compare practical picks for a guest room where you do not want to install a smart-home system, with verified Amazon ratings, honest trade-offs and buying guidan

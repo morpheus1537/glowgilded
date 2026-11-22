@@ -1,6 +1,6 @@
 ---
 title: Quiet Carry-On Activities for Preschool Holiday Flights
-seo_title: Quiet Carry-On Activities for Preschool Holiday Flights
+seo_title: Quiet Carry-On Activities for Preschool Holiday Flights (2026)
 slug: quiet-carry-on-activities-preschool-holiday-flights
 category: travel
 description: Compare practical picks for a preschooler’s carry-on for a holiday flight, with verified Amazon ratings, honest trade-offs and buying guidance.

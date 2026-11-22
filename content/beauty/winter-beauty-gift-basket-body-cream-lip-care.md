@@ -1,6 +1,6 @@
 ---
 title: Winter Beauty Gift Basket With Body Cream and Lip Care
-seo_title: Winter Beauty Gift Basket With Body Cream and Lip Care
+seo_title: Winter Beauty Gift Basket With Body Cream and Lip Care (2026)
 slug: winter-beauty-gift-basket-body-cream-lip-care
 category: beauty
 description: Compare practical picks for a winter beauty gift basket for someone who enjoys fragrance and lip color, with verified Amazon ratings, honest trade-offs and buyi

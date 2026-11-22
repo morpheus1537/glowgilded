@@ -1,6 +1,6 @@
 ---
 title: 'Cozy Holiday Decor Gifts: Prelit Garland, Plaid Throw & Cable Knit Stockings'
-seo_title: 'Cozy Holiday Decor Gifts: Garland, Throw & Stockings'
+seo_title: 'Cozy Holiday Decor Gifts: Garland, Throw & Stockings (2026)'
 slug: cozy-holiday-decor-gifts
 category: home
 description: >-

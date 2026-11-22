@@ -1,6 +1,6 @@
 ---
 title: Hot Chocolate Supplies for Overnight Holiday Guests
-seo_title: Hot Chocolate Supplies for Overnight Holiday Guests
+seo_title: Hot Chocolate Supplies for Overnight Holiday Guests (2026)
 slug: hot-chocolate-supplies-overnight-holiday-guests
 category: kitchen
 description: Compare practical picks for a self-serve breakfast corner for overnight holiday guests, with verified Amazon ratings, honest trade-offs and buying guidance.

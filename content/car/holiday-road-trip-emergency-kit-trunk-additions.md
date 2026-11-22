@@ -1,6 +1,6 @@
 ---
 title: Holiday Road Trip Emergency Kit Additions for the Trunk
-seo_title: Holiday Road Trip Emergency Kit Additions for the Trunk
+seo_title: Holiday Road Trip Emergency Kit Additions for the Trunk (2026)
 slug: holiday-road-trip-emergency-kit-trunk-additions
 category: car
 description: Compare practical picks for a holiday road trip with a trunk already full of luggage, with verified Amazon ratings, honest trade-offs and buying guidance.
