@@ -806,7 +806,7 @@ products:
     count: 737
     checked: '2026-11-01'
   B00DT2WL26: {name: 'Catstages Tower of Tracks Interactive Cat Toy, 6 Spinning Balls', rating: '4.5', count: '68,612', checked: '2026-11-03'}
-  B000634MH8: {name: 'SmartCat Pioneer Pet Ultimate Scratching Post (Beige, 32 in)', rating: '4.7', count: '34,148', checked: '2026-11-03'}
+  B000634MH8: {name: 'SmartCat Pioneer Pet Ultimate Scratching Post (Beige, 32 in)', rating: '4.7', count: '34,165', checked: '2026-11-25'}
   B0CBV1TH46: {name: 'Zakkart Cat Perch for Windowsill with Bolsters (Large)', rating: '4.6', count: '6,108', checked: '2026-11-03'}
   B000AUJFHE: {name: 'Yeowww! Catnip Chi-CAT-a Banana Toy for Cats', rating: '4.7', count: '30,904', checked: '2026-11-03'}
   B0BJZMBBQM: {name: 'Potaroma Flapping Bird Rechargeable Cat Toy with Catnip', rating: '4.4', count: '21,914', checked: '2026-11-03'}
@@ -1373,8 +1373,8 @@ products:
   B07RLSTFCS:
     name: 'Helteko Backseat Car Organizer with Tablet Holder'
     rating: '4.6'
-    count: 12,740
-    checked: '2026-11-05'
+    count: 12,748
+    checked: '2026-11-25'
   B0DQ5WT6RQ:
     name: 'Kids Travel Tray for Car'
     rating: '4.5'
@@ -6025,3 +6025,298 @@ products:
     rating: '4.6'
     count: 197,585
     checked: '2026-11-24'
+  B07R6H4WKL:
+    name: 'Onlyeasy Foldable Underbed Storage Bags, 2 Pack'
+    rating: '4.4'
+    count: 11,497
+    checked: '2026-11-25'
+  B07JGWSB8T:
+    name: 'Amazon Basics Under Bed Storage Bags, 2-Pack'
+    rating: '4.3'
+    count: 15,860
+    checked: '2026-11-25'
+  B0DT517YGB:
+    name: 'ZOBER Under Bed Storage Bags, 90L 4-Pack'
+    rating: '4.3'
+    count: 24,261
+    checked: '2026-11-25'
+  B0CPSZT8FM:
+    name: 'Vailando Side-Supported Under Bed Storage Containers, 60L'
+    rating: '4.7'
+    count: 1,715
+    checked: '2026-11-25'
+  B0973DGD8P:
+    name: 'Cozy Essential Vacuum Storage Bags with Hand Pump, 20 Combo'
+    rating: '4.3'
+    count: 82,462
+    checked: '2026-11-25'
+  B06X9NQ8GX:
+    name: 'Amazon Basics Digital Kitchen Scale'
+    rating: '4.7'
+    count: 120,644
+    checked: '2026-11-25'
+  B0007GAWRS:
+    name: 'Escali Primo Digital Food Scale'
+    rating: '4.6'
+    count: 7,435
+    checked: '2026-11-25'
+  B0CJR9GJSH:
+    name: 'CROWNFUL 33lb Rechargeable Food Scale'
+    rating: '4.6'
+    count: 23,400
+    checked: '2026-11-25'
+  B08CZDYNF7:
+    name: 'Ultrean Digital Kitchen Scale'
+    rating: '4.6'
+    count: 22,752
+    checked: '2026-11-25'
+  B09QFWXSD8:
+    name: 'Greater Goods Digital Food Scale, 22lb'
+    rating: '4.6'
+    count: 4,290
+    checked: '2026-11-25'
+  B09B6XV6VB:
+    name: 'Govee Smart Light Bulbs, A19 Color Changing'
+    rating: '4.6'
+    count: 27,722
+    checked: '2026-11-25'
+  B0CG5VDC8P:
+    name: 'Amazon Basics Smart A19 LED Light Bulb, Color Changing'
+    rating: '4.4'
+    count: 14,908
+    checked: '2026-11-25'
+  B08TB6VXFL:
+    name: 'Kasa Smart Light Bulbs KL125P2, 2-Pack'
+    rating: '4.5'
+    count: 22,812
+    checked: '2026-11-25'
+  B0CXHLT1LL:
+    name: 'Linkind Smart Light Bulbs'
+    rating: '4.5'
+    count: 7,972
+    checked: '2026-11-25'
+  B0FMGP1P6W:
+    name: 'Philips Hue Essential Smart LED A19 Bulb, 4-Pack'
+    rating: '4.5'
+    count: 1,162
+    checked: '2026-11-25'
+  B0872LHKHZ:
+    name: 'Gaiam Yoga Block, 2 Pack'
+    rating: '4.8'
+    count: 30,394
+    checked: '2026-11-25'
+  B0D3F49GVH:
+    name: 'Syntus Cork Yoga Block 2 Pack with Strap'
+    rating: '4.7'
+    count: 4,927
+    checked: '2026-11-25'
+  B0C4Y43QKX:
+    name: 'Trideer Yoga Blocks 2 Pack'
+    rating: '4.7'
+    count: 3,784
+    checked: '2026-11-25'
+  B09KC72MM8:
+    name: 'KEEP High-Density EVA Foam Yoga Block, 2 Pack'
+    rating: '4.7'
+    count: 1,011
+    checked: '2026-11-25'
+  B0B154V8LM:
+    name: 'Trideer Cork Yoga Blocks 2 Pack'
+    rating: '4.7'
+    count: 661
+    checked: '2026-11-25'
+  B0921T6QFC:
+    name: 'MECOOL 34-Inch Cat Scratching Post'
+    rating: '4.5'
+    count: 15,686
+    checked: '2026-11-25'
+  B0B2NKLVCS:
+    name: 'FUKUMARU L-Shaped Cat Scratcher'
+    rating: '4.4'
+    count: 18,779
+    checked: '2026-11-25'
+  B0BML72176:
+    name: 'ANWA 32-Inch Tall Sisal Cat Scratching Post'
+    rating: '4.5'
+    count: 2,296
+    checked: '2026-11-25'
+  B0C818612T:
+    name: 'Karolpar 34-Inch Cat Scratching Post'
+    rating: '4.6'
+    count: 1,395
+    checked: '2026-11-25'
+  B017613C3C:
+    name: 'TempPro TempTrack Digital Meat Thermometer'
+    rating: '4.5'
+    count: 50,874
+    checked: '2026-11-25'
+  B083C4TBT5:
+    name: 'Thoughtfully Grilling Spice Set, 20 BBQ Rubs'
+    rating: '4.7'
+    count: 10,014
+    checked: '2026-11-25'
+  B09J746BHB:
+    name: 'Alpha Grillers Meat Shredder Claws'
+    rating: '4.8'
+    count: 3,955
+    checked: '2026-11-25'
+  B079J4KT8H:
+    name: 'Kaluns 21-Piece Grill Tool Set with Case and Apron'
+    rating: '4.7'
+    count: 5,094
+    checked: '2026-11-25'
+  B0CGX3ZGBK:
+    name: 'Ivtivfu Rolling Grill Basket'
+    rating: '4.5'
+    count: 4,049
+    checked: '2026-11-25'
+  B0CB6MR12S:
+    name: 'Cutluxe Carving Knife Set for Meat and BBQ'
+    rating: '4.8'
+    count: 1,644
+    checked: '2026-11-25'
+  B077QBJNVM:
+    name: 'Royal Angels 21-in-1 Baby Nail Trimmer'
+    rating: '4.6'
+    count: 36,581
+    checked: '2026-11-25'
+  B0CN12H8W4:
+    name: 'haakaa Electric Baby Nail File'
+    rating: '4.5'
+    count: 13,925
+    checked: '2026-11-25'
+  B0DM88S6CX:
+    name: 'Momcozy Electric Baby Nail File'
+    rating: '4.6'
+    count: 4,862
+    checked: '2026-11-25'
+  B01644OCVS:
+    name: 'Frida Baby NailFrida Clippers, File and Buffer'
+    rating: '4.5'
+    count: 7,703
+    checked: '2026-11-25'
+  B084JZ27SM:
+    name: 'Safety 1st Light Zoom Nail Clippers'
+    rating: '4.4'
+    count: 4,142
+    checked: '2026-11-25'
+  B08QZ8M5FS:
+    name: 'Lepro 1000LM Rechargeable LED Camping Lantern'
+    rating: '4.6'
+    count: 33,717
+    checked: '2026-11-25'
+  B09YT5D357:
+    name: 'AYL 1800LM Rechargeable LED Camping Lantern, 2 Pack'
+    rating: '4.7'
+    count: 7,596
+    checked: '2026-11-25'
+  B0716JV1SG:
+    name: 'LuminAID Nova Inflatable Solar LED Lantern'
+    rating: '4.6'
+    count: 8,021
+    checked: '2026-11-25'
+  B08YF4VY7P:
+    name: 'AlpsWolf 4-in-1 Rechargeable Camping Lantern'
+    rating: '4.6'
+    count: 5,105
+    checked: '2026-11-25'
+  B09KRQRRFL:
+    name: 'Glocusent 106 LED Rechargeable Camping Lantern'
+    rating: '4.5'
+    count: 3,800
+    checked: '2026-11-25'
+  B01N9HQM9F:
+    name: 'Simple Houseware Desk File Organizer with Drawer'
+    rating: '4.6'
+    count: 35,711
+    checked: '2026-11-25'
+  B0BWTT3WK1:
+    name: 'gianotter 4-Tier Desk Organizer with File Holder'
+    rating: '4.6'
+    count: 5,361
+    checked: '2026-11-25'
+  B0DF28BCMJ:
+    name: 'SKYDUE 360 Degree Rotating Desk Organizer'
+    rating: '4.7'
+    count: 7,130
+    checked: '2026-11-25'
+  B07VZNMNH9:
+    name: 'Amazon Basics Metal Mesh Desk Organizer, 6 Compartments'
+    rating: '4.8'
+    count: 2,619
+    checked: '2026-11-25'
+  B0DB8F7GDN:
+    name: 'OPNICE 2-Tier Monitor Stand Riser with Drawer'
+    rating: '4.7'
+    count: 6,242
+    checked: '2026-11-25'
+  B01MXQJU7S:
+    name: 'Lusso Gear Backseat Car Organizer, 12 Pockets'
+    rating: '4.4'
+    count: 4,599
+    checked: '2026-11-25'
+  B0F65YKBP2:
+    name: 'SURDOCA Backseat Car Organizer with Foldable Tray'
+    rating: '4.4'
+    count: 3,015
+    checked: '2026-11-25'
+  B07NY9H3GP:
+    name: 'ULEEKA Backseat Car Organizer, 2 Pack'
+    rating: '4.4'
+    count: 8,763
+    checked: '2026-11-25'
+  B07ZNRTQDN:
+    name: 'ONE PIX Backseat Car Organizer with Tablet Holder'
+    rating: '4.4'
+    count: 8,920
+    checked: '2026-11-25'
+  B01NAOEBZ0:
+    name: 'Forge TSA Approved Cable Luggage Locks, 4 Pack'
+    rating: '4.8'
+    count: 9,131
+    checked: '2026-11-25'
+  B016OYT1XM:
+    name: 'BV TSA008 Cable Luggage Locks, 2 Pack'
+    rating: '4.5'
+    count: 14,092
+    checked: '2026-11-25'
+  B000WO851U:
+    name: 'Master Lock 4689Q TSA Approved Luggage Lock, 4 Pack'
+    rating: '4.5'
+    count: 9,384
+    checked: '2026-11-25'
+  B076NTQJP7:
+    name: 'SURE LOCK TSA Approved 4-Digit Combination Lock'
+    rating: '4.6'
+    count: 4,496
+    checked: '2026-11-25'
+  B0186QMA2K:
+    name: 'TravelMore TSA Approved Cable Locks, 4 Pack'
+    rating: '4.6'
+    count: 12,476
+    checked: '2026-11-25'
+  B07VR1NDSQ:
+    name: 'OLAPLEX N°.7 Bonding Hair Oil'
+    rating: '4.7'
+    count: 64,323
+    checked: '2026-11-25'
+  B01MFXDAL8:
+    name: 'OUAI Hair Oil, 1.5 Fl Oz'
+    rating: '4.6'
+    count: 8,044
+    checked: '2026-11-25'
+  B078PJ4751:
+    name: 'Garnier Fructis Sleek & Shine Moroccan Smoothing Oil, 2 Count'
+    rating: '4.7'
+    count: 10,839
+    checked: '2026-11-25'
+  B002JLUY2M:
+    name: 'BioSilk Silk Therapy Original Leave-In Treatment, 12 Oz'
+    rating: '4.8'
+    count: 26,354
+    checked: '2026-11-25'
+  B00BC3YL2W:
+    name: 'HerStyler Argan Oil Hair Serum'
+    rating: '4.4'
+    count: 23,835
+    checked: '2026-11-25'
