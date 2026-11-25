@@ -1038,8 +1038,8 @@ products:
   B00ABGSX4S:
     name: 'Brome Squirrel Buster Standard Bird Feeder'
     rating: '4.6'
-    count: 12,136
-    checked: '2026-11-04'
+    count: 12,139
+    checked: '2026-11-26'
   B000LNQGTK:
     name: 'More Birds Double Suet Cake Feeder'
     rating: '4.7'
@@ -1118,8 +1118,8 @@ products:
   B0CG65PYBV:
     name: 'UNIHAND Rechargeable Hand Warmers, 2-Pack'
     rating: '4.6'
-    count: 9,673
-    checked: '2026-11-18'
+    count: 9,730
+    checked: '2026-11-26'
   B001J4HQ76:
     name: 'PEET Original Electric Boot Dryer'
     rating: '4.7'
@@ -1578,8 +1578,8 @@ products:
   B08X79B362:
     name: 'LickiMat Classic Soother & Buddy Lick Mats, 2 Pack'
     rating: '4.4'
-    count: 9,865
-    checked: '2026-11-08'
+    count: 9,860
+    checked: '2026-11-26'
   B000084F80:
     name: 'Hartz Chew ''n Clean Tuff Bone Dental Chew Toy, Large'
     rating: '4.6'
@@ -6335,3 +6335,293 @@ products:
     rating: '4.6'
     count: 14,237
     checked: '2026-11-25'
+  B07YK8VTJV:
+    name: 'Bedsure PureWoven Bamboo Sheets, Queen, 4-Piece'
+    rating: '4.4'
+    count: 65,441
+    checked: '2026-11-26'
+  B07MZ9223H:
+    name: 'PURE BAMBOO Viscose Sheet Set, Queen'
+    rating: '4.5'
+    count: 23,923
+    checked: '2026-11-26'
+  B01N9L2O9P:
+    name: 'Hotel Sheets Direct Bamboo Viscose Sheet Set, Queen'
+    rating: '4.4'
+    count: 37,151
+    checked: '2026-11-26'
+  B08KQKXQLS:
+    name: 'DECOLURE Bamboo Viscose Sheets, Queen, 4-Piece'
+    rating: '4.5'
+    count: 5,955
+    checked: '2026-11-26'
+  B08L866W2S:
+    name: 'BELLA COTERIE Luxury Bamboo Viscose Sheet Set, Queen'
+    rating: '4.4'
+    count: 6,009
+    checked: '2026-11-26'
+  B0732NXYNS:
+    name: 'CAROTE 8-Inch Classic Granite Nonstick Frying Pan'
+    rating: '4.6'
+    count: 36,822
+    checked: '2026-11-26'
+  B009HBKQ16:
+    name: 'Tramontina Professional 10-Inch Nonstick Frying Pan'
+    rating: '4.6'
+    count: 28,051
+    checked: '2026-11-26'
+  B086PHS2V8:
+    name: 'SENSARTE 9.5-Inch Swiss Granite Nonstick Skillet'
+    rating: '4.4'
+    count: 36,131
+    checked: '2026-11-26'
+  B08223PQFX:
+    name: 'Blue Diamond 8-Inch Diamond-Infused Ceramic Nonstick Pan'
+    rating: '4.3'
+    count: 15,699
+    checked: '2026-11-26'
+  B0DDKPJH5D:
+    name: 'Kordisen 8-Inch Nonstick Egg Pan'
+    rating: '4.7'
+    count: 2,824
+    checked: '2026-11-26'
+  B09FT58QQP:
+    name: 'TOZO A1 Wireless Earbuds'
+    rating: '4.3'
+    count: 119,555
+    checked: '2026-11-26'
+  B0CXGXT6W8:
+    name: 'JLab Go Air Pop+ Earbuds'
+    rating: '4.4'
+    count: 35,089
+    checked: '2026-11-26'
+  B0HP82ZCPC:
+    name: 'occiam Active Noise Cancelling Ear-Hook Earbuds'
+    rating: '4.3'
+    count: 36,880
+    checked: '2026-11-26'
+  B0CSXV3GK4:
+    name: 'Aptkdoe 75H Sport Earbuds with Ear Hooks'
+    rating: '4.3'
+    count: 25,824
+    checked: '2026-11-26'
+  B09KGLRF8J:
+    name: 'Boean Sport Bluetooth Headphones with Ear Hooks'
+    rating: '4.3'
+    count: 12,586
+    checked: '2026-11-26'
+  B01GE7F3R2:
+    name: 'Trideer Exercise Ball with Pump'
+    rating: '4.6'
+    count: 42,855
+    checked: '2026-11-26'
+  B001E8OUIU:
+    name: 'THERABAND Pro Series Exercise and Stability Ball, 65 cm'
+    rating: '4.6'
+    count: 3,697
+    checked: '2026-11-26'
+  B0CGLSCRVK:
+    name: 'APEXUP Anti-Burst Exercise Ball with Pump'
+    rating: '4.5'
+    count: 5,555
+    checked: '2026-11-26'
+  B000VDTECQ:
+    name: 'Gaiam Total Body Balance Ball Kit, 55 cm'
+    rating: '4.4'
+    count: 5,420
+    checked: '2026-11-26'
+  B00BL83I22:
+    name: 'BOSU Pro Balance Half-Ball Trainer, 26 Inch'
+    rating: '4.6'
+    count: 3,565
+    checked: '2026-11-26'
+  B09FPTDBRZ:
+    name: 'LUKITO Lick Mat with Suction Cups, 2-Pack'
+    rating: '4.4'
+    count: 8,836
+    checked: '2026-11-26'
+  B0BRXMY14L:
+    name: 'MateeyLife Small Lick Mat, 2-Pack'
+    rating: '4.5'
+    count: 8,672
+    checked: '2026-11-26'
+  B0BBTS457S:
+    name: 'Honomastry Premium Lick Pad with Suction Cups'
+    rating: '4.4'
+    count: 3,883
+    checked: '2026-11-26'
+  B08DXXGGP6:
+    name: 'Petbank Bone-Shaped Lick Mat, 2-Pack'
+    rating: '4.4'
+    count: 2,367
+    checked: '2026-11-26'
+  B072285D5L:
+    name: 'TrailBuddy Trekking Poles'
+    rating: '4.7'
+    count: 64,119
+    checked: '2026-11-26'
+  B0756BXDTX:
+    name: 'Occer 12x25 Compact Binoculars'
+    rating: '4.4'
+    count: 34,061
+    checked: '2026-11-26'
+  B01MD0MBKI:
+    name: 'UST Tool-a-Long Multi-Tool Carabiner'
+    rating: '4.7'
+    count: 3,243
+    checked: '2026-11-26'
+  B07F3FFTMK:
+    name: 'Alvada Merino Wool Hiking Socks, 3 Pairs'
+    rating: '4.5'
+    count: 38,174
+    checked: '2026-11-26'
+  B01M31R8B6:
+    name: 'Atomic Bear Paracord Bracelet, 2-Pack'
+    rating: '4.4'
+    count: 16,777
+    checked: '2026-11-26'
+  B0D99JVNVK:
+    name: 'Cumbor 30-48 Inch Auto-Close Baby Gate'
+    rating: '4.6'
+    count: 15,356
+    checked: '2026-11-26'
+  B087ZGBMX7:
+    name: 'Regalo 30.5-58 Inch Extra Wide Baby Gate'
+    rating: '4.5'
+    count: 11,167
+    checked: '2026-11-26'
+  B0846CC49J:
+    name: 'BalanceFrom Easy Walk-Thru Baby Safety Gate'
+    rating: '4.5'
+    count: 23,968
+    checked: '2026-11-26'
+  B09JKVBHKS:
+    name: 'Toddleroo Easy Swing and Lock Baby Gate'
+    rating: '4.5'
+    count: 1,915
+    checked: '2026-11-26'
+  B0GZ2LKGX2:
+    name: 'InnoTruth 27-36.6 Inch Baby Gate'
+    rating: '4.5'
+    count: 5,693
+    checked: '2026-11-26'
+  B0007LQ3RQ:
+    name: 'Squirrel Buster Plus Bird Feeder with Cardinal Ring'
+    rating: '4.7'
+    count: 10,758
+    checked: '2026-11-26'
+  B001FK81PU:
+    name: 'Squirrel Buster Mini Squirrel-Proof Bird Feeder'
+    rating: '4.6'
+    count: 6,382
+    checked: '2026-11-26'
+  B00AUFIQ1U:
+    name: 'Squirrel Solution200 Squirrel-Proof Bird Feeder'
+    rating: '4.5'
+    count: 5,657
+    checked: '2026-11-26'
+  B005F5NGZG:
+    name: 'More Birds X-1 Squirrel-Proof Bird Feeder'
+    rating: '4.3'
+    count: 1,964
+    checked: '2026-11-26'
+  B00N1YPXW2:
+    name: 'Logitech Blue Yeti USB Microphone'
+    rating: '4.6'
+    count: 57,269
+    checked: '2026-11-26'
+  B0BMFQP2ZZ:
+    name: 'FIFINE AmpliGame AM8 USB/XLR Dynamic Microphone'
+    rating: '4.5'
+    count: 12,517
+    checked: '2026-11-26'
+  B07GVGMW59:
+    name: 'TONOR G11 USB Conference Microphone'
+    rating: '4.4'
+    count: 4,297
+    checked: '2026-11-26'
+  B0872CFTGK:
+    name: 'CMTECK G009 USB Computer Microphone'
+    rating: '4.5'
+    count: 1,856
+    checked: '2026-11-26'
+  B07N2WRHMY:
+    name: 'JOUNIVO USB Gooseneck Microphone'
+    rating: '4.4'
+    count: 11,909
+    checked: '2026-11-26'
+  B0G31VKSYD:
+    name: 'Everlasting Comfort Car Seat Cushion'
+    rating: '4.3'
+    count: 19,844
+    checked: '2026-11-26'
+  B07Q2SX3MR:
+    name: 'Dreamer Car Wedge Seat Cushion'
+    rating: '4.4'
+    count: 10,613
+    checked: '2026-11-26'
+  B0BZCJRJML:
+    name: 'BlissTrends Memory Foam Seat Cushion'
+    rating: '4.4'
+    count: 9,595
+    checked: '2026-11-26'
+  B07MZJGYZ7:
+    name: 'kingphenix Memory Foam Car Seat Cushion'
+    rating: '4.3'
+    count: 12,092
+    checked: '2026-11-26'
+  B01CKMP34S:
+    name: 'Purple Royal Seat Cushion'
+    rating: '4.3'
+    count: 4,622
+    checked: '2026-11-26'
+  B0B14QQV6R:
+    name: 'MZOO Luxury 3D Sleep Mask'
+    rating: '4.6'
+    count: 101,876
+    checked: '2026-11-26'
+  B09H7FZ5JM:
+    name: 'LitBear Sleep Mask for Side Sleepers'
+    rating: '4.7'
+    count: 17,668
+    checked: '2026-11-26'
+  B07D3M5TTZ:
+    name: 'Mavogel Cotton Sleep Eye Mask'
+    rating: '4.4'
+    count: 95,250
+    checked: '2026-11-26'
+  B0B1RWJ4QJ:
+    name: 'nodpod Weighted Sleep Mask'
+    rating: '4.5'
+    count: 9,121
+    checked: '2026-11-26'
+  B07C7Y8QSW:
+    name: 'OLESILK 100% Mulberry Silk Sleep Mask'
+    rating: '4.3'
+    count: 2,475
+    checked: '2026-11-26'
+  B0002QB9NE:
+    name: 'O''Keeffe''s Healthy Feet Foot Cream, 3.2 oz'
+    rating: '4.6'
+    count: 117,356
+    checked: '2026-11-26'
+  B0013H8M5E:
+    name: 'Flexitol Heel Balm 25% Urea, 4 oz'
+    rating: '4.6'
+    count: 16,347
+    checked: '2026-11-26'
+  B000GCNC2U:
+    name: 'Kerasal Intensive Foot Repair Ointment, 1 oz'
+    rating: '4.5'
+    count: 52,627
+    checked: '2026-11-26'
+  B0073E7JFK:
+    name: 'Gold Bond Softening Foot Cream, 4 oz'
+    rating: '4.7'
+    count: 26,475
+    checked: '2026-11-26'
+  B08YZBKZPB:
+    name: 'Dr. Scholl''s Dry, Cracked Foot Repair Cream, 3.5 oz'
+    rating: '4.5'
+    count: 9,565
+    checked: '2026-11-26'
